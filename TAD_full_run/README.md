@@ -1,6 +1,4 @@
-# TSU full-dataset training on SCITAS Izar
-
-## What this bundle is, in one paragraph
+# TSU full-dataset ActionFormer TAD training on SCITAS Izar
 
 This is the cluster-side pipeline that produces our **TAD baseline** for the
 hybrid TAD+VLM project. It takes the Toyota Smarthome Untrimmed (TSU) dataset,
@@ -10,9 +8,9 @@ confidence)` tuple. The hybrid pipeline consumes this JSON as the structural
 anchor for VLM reasoning. Everything you need to reproduce the run, plus the
 actual outputs we shipped, is in this folder.
 
-## What we actually did, end-to-end
+## Full pipeline end-to-end
 
-In plain language, the pipeline does this:
+The pipeline does this:
 
 1. **Reads the TSU annotations** (`data_cs_split.json`) and reorganises them
    into a Cross-Subject train / validation / test split. Train uses 10 subjects
@@ -44,25 +42,6 @@ In plain language, the pipeline does this:
 7. **Verifies** the schema and **plots** training curves, score / class /
    duration distributions, and per-video Gantt overlays for sanity checks.
 
-## Why the install needed patches (the short version)
-
-OpenTAD ships with three CUDA extensions and several optional model families
-(TadTR, AFSD, VSGN, plus ViT / Swin / SlowFast backbones). None of these is
-on the ActionFormer code path, but OpenTAD eagerly imports all of them at
-module load. On Izar's environment:
-
-- `Align1D` and `boundary_pooling` (CUDA extensions used by TadTR, AFSD, GTAD,
-  and VSGN) fail to build because the conda PyTorch ships runtime libs but
-  not `nvcc`.
-- `mmcv` / `mmaction` (used by ViT / Swin / SlowFast backbones) are not
-  installed because we do not need them for feature-based ActionFormer.
-
-Rather than fight the install, `scripts/apply_opentad_patches.py` wraps the
-unused eager imports in `try` / `except` so missing models silently fall back
-to `None`. ActionFormer's required dependency `nms_1d_cpu` (the post-processing
-NMS) does build correctly. You will see `[opentad-patch] X unavailable: ...`
-lines at startup. They are informational, not errors.
-
 ## Headline results from the validated run
 
 Test set, 185 videos, 14,303 GT segments:
@@ -74,9 +53,9 @@ Test set, 185 videos, 14,303 GT segments:
 | mAP @ IoU 0.50 | 13.15 % |
 | mAP @ IoU 0.70 | 6.03 % |
 
-⚠️ **Event-mAP, not frame-mAP.** Prior TSU work (PDAN around 32.7 %, MS-Temba
+These are **Event-mAP, not frame-mAP!** Prior TSU work (PDAN around 32.7 %, MS-Temba
 around 38 %) reports frame-mAP, which is strictly easier. The two numbers are
-not directly comparable. Always disclose the metric difference when
+not directly comparable. We need to always disclose the metric difference when
 presenting.
 
 ## Folder layout
@@ -101,7 +80,7 @@ cluster_run/
     └── verify_predictions.py       # step 7b: schema check
 ```
 
-## Quick start (running the bundle)
+## Quick start (running the full dataset run)
 
 ### 1. Copy this folder to the cluster
 
@@ -197,7 +176,7 @@ recommended top-K, etc.).
 --cpus-per-task=8
 ```
 
-The validated run used **2 GPUs** (edit `--gres=gpu:2` in `submit_job.sh`),
+The run we did used **2 GPUs** (edit `--gres=gpu:2` in `submit_job.sh`),
 which is recommended. `run_pipeline.sh` reads the GPU count automatically and
 configures `torchrun --nproc_per_node` accordingly.
 
@@ -238,7 +217,7 @@ After a successful run, `outputs/` contains:
 (`<N>` is the number of GPUs used. The validated run used 2, so the path is
 `gpu2_id0/`.)
 
-## How this differs from the smoke notebook
+## How this differs from the smoke test notebook
 
 The smoke notebook was the proof of concept (4 train videos × 5 epochs on
 Colab). This bundle is the production version (315 train videos × 40 epochs on
@@ -251,7 +230,7 @@ SCITAS).
 | Test videos | 2 | **185** (full CS test split, 7 subjects) |
 | Epochs | 5 | 40 |
 | Gradient steps | around 5 | **around 12,480** (156 batches × 40 epochs / 2 GPUs) |
-| Test mAP @ IoU 0.3 | 0 % (4-video toy) | **18.38 %** |
+| Test mAP @ IoU 0.3 | 0 % (4-video) | **18.38 %** |
 | Wall clock | around 5 min | around 30 min on 2 GPUs (plus 2 h once for feature extraction) |
 | Goal | "pipeline works" | "produce a real, reportable baseline" |
 
@@ -298,15 +277,10 @@ SCITAS).
   one subject is high enough that the metric reads as 0 every time. The
   training loop selects the *best* checkpoint by val *loss*, not val mAP, so
   this does not break best-checkpoint tracking. To get a less noisy val
-  signal, hold out 2 subjects:
+  signal, we could later on hold out 2 subjects:
   ```bash
   python scripts/build_full_split.py --val-subjects P25,P19 ...
   ```
-- **Test-time mAP is computed against the testing subset.** Earlier OpenTAD
-  defaults compared test predictions against the validation GT, which is a
-  known logging pitfall. `run_pipeline.sh` passes
-  `--cfg-options evaluation.subset=testing` to `tools/test.py`, which fixes
-  this.
 - **The `result_detection.json` schema differs from
   `predictions_canonical.json`.** OpenTAD writes `{segment, label, score}` per
   detection. The canonical schema the hybrid pipeline consumes adds `label_id`
@@ -319,4 +293,4 @@ SCITAS).
 The headline number to report is **Average-mAP on the test set** from
 `outputs/log.json`'s final `Test INFO` block. The same number is captured in
 `verify.txt`. For internal use, hand `outputs/predictions_canonical.json` to
-the hybrid pipeline. See `HANDOFF.md` for the consumption contract.
+the hybrid pipeline.
