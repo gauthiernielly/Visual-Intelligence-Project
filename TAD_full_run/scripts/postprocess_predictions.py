@@ -32,27 +32,41 @@ def main():
 
     results = raw.get("results", raw)
     canon = {}
-    n_kept = n_drop_dur = n_drop_score = n_drop_label = 0
+    n_kept = n_drop_dur = n_drop_score = n_drop_label = n_drop_dup = 0
     for vid, segs in results.items():
-        out = []
+        # Dedup key: (rounded start, rounded end, label_id). Keeps the highest
+        # score among any duplicates. DDP test-time inference can produce exact
+        # duplicate predictions when DistributedSampler pads the test set by
+        # repeating videos to make len(test_set) divisible by world_size.
+        seen = {}
         for s in segs:
             label = s["label"]
             if label not in name_to_id:
-                n_drop_label += 1; continue
+                n_drop_label += 1
+                continue
             start, end = s["segment"]
             if end - start < args.min_duration:
-                n_drop_dur += 1; continue
+                n_drop_dur += 1
+                continue
             score = float(s["score"])
             if score < args.min_score:
-                n_drop_score += 1; continue
-            out.append({
+                n_drop_score += 1
+                continue
+            label_id = int(name_to_id[label])
+            key = (round(float(start), 4), round(float(end), 4), label_id)
+            if key in seen:
+                n_drop_dup += 1
+                if score > seen[key]["score"]:
+                    seen[key]["score"] = score
+                continue
+            seen[key] = {
                 "segment":  [float(start), float(end)],
                 "label":    label,
-                "label_id": int(name_to_id[label]),
+                "label_id": label_id,
                 "score":    score,
-            })
+            }
             n_kept += 1
-        out.sort(key=lambda x: x["segment"][0])
+        out = sorted(seen.values(), key=lambda x: x["segment"][0])
         canon[vid] = out
 
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
@@ -64,6 +78,7 @@ def main():
     print(f"  segments kept : {n_kept}")
     print(f"  dropped (zero/short duration < {args.min_duration}s): {n_drop_dur}")
     print(f"  dropped (low score < {args.min_score}): {n_drop_score}")
+    print(f"  dropped (exact duplicates from DDP test): {n_drop_dup}")
     if n_drop_label:
         print(f"  dropped (unknown label): {n_drop_label}")
 

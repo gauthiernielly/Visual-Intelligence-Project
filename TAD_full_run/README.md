@@ -1,5 +1,7 @@
 # TSU full-dataset ActionFormer TAD training on SCITAS Izar
 
+## What this bundle is, in one paragraph
+
 This is the cluster-side pipeline that produces our **TAD baseline** for the
 hybrid TAD+VLM project. It takes the Toyota Smarthome Untrimmed (TSU) dataset,
 trains an ActionFormer model on the full Cross-Subject (CS) split, and outputs
@@ -8,9 +10,9 @@ confidence)` tuple. The hybrid pipeline consumes this JSON as the structural
 anchor for VLM reasoning. Everything you need to reproduce the run, plus the
 actual outputs we shipped, is in this folder.
 
-## Full pipeline end-to-end
+## What we actually did, end-to-end
 
-The pipeline does this:
+In plain language, the pipeline does this:
 
 1. **Reads the TSU annotations** (`data_cs_split.json`) and reorganises them
    into a Cross-Subject train / validation / test split. Train uses 10 subjects
@@ -36,13 +38,35 @@ The pipeline does this:
 5. **Runs inference** on the 185 test videos and saves the raw predictions.
 6. **Post-processes** the raw predictions. This step adds an integer
    `label_id` per segment (the canonical schema agreed with the hybrid
-   pipeline), drops degenerate segments shorter than 0.1 s, and discards noise
-   below score 0.05. The output is `predictions_canonical.json`, which is the
-   artifact the hybrid pipeline consumes.
+   pipeline), drops degenerate segments shorter than 0.1 s, discards noise
+   below score 0.05, and deduplicates exact-duplicate predictions that arise
+   from DDP test-time inference. The output is `predictions_canonical.json`,
+   which is the artifact the hybrid pipeline consumes.
 7. **Verifies** the schema and **plots** training curves, score / class /
    duration distributions, and per-video Gantt overlays for sanity checks.
 
+## Why the install needed patches (the short version)
+
+OpenTAD ships with three CUDA extensions and several optional model families
+(TadTR, AFSD, VSGN, plus ViT / Swin / SlowFast backbones). None of these is
+on the ActionFormer code path, but OpenTAD eagerly imports all of them at
+module load. On Izar's environment:
+
+- `Align1D` and `boundary_pooling` (CUDA extensions used by TadTR, AFSD, GTAD,
+  and VSGN) fail to build because the conda PyTorch ships runtime libs but
+  not `nvcc`.
+- `mmcv` / `mmaction` (used by ViT / Swin / SlowFast backbones) are not
+  installed because we do not need them for feature-based ActionFormer.
+
+Rather than fight the install, `scripts/apply_opentad_patches.py` wraps the
+unused eager imports in `try` / `except` so missing models silently fall back
+to `None`. ActionFormer's required dependency `nms_1d_cpu` (the post-processing
+NMS) does build correctly. You will see `[opentad-patch] X unavailable: ...`
+lines at startup. They are informational, not errors.
+
 ## Headline results from the validated run
+
+### Standard TAD metric (event-mAP)
 
 Test set, 185 videos, 14,303 GT segments:
 
@@ -53,39 +77,76 @@ Test set, 185 videos, 14,303 GT segments:
 | mAP @ IoU 0.50 | 13.15 % |
 | mAP @ IoU 0.70 | 6.03 % |
 
-These are **Event-mAP, not frame-mAP!** Prior TSU work (PDAN around 32.7 %, MS-Temba
+⚠️ **Event-mAP, not frame-mAP.** Prior TSU work (PDAN around 32.7 %, MS-Temba
 around 38 %) reports frame-mAP, which is strictly easier. The two numbers are
-not directly comparable. We need to always disclose the metric difference when
+not directly comparable. Always disclose the metric difference when
 presenting.
+
+### Cross-pipeline metric (LCS recall, matched with the hybrid pipeline)
+
+To allow direct comparison between the TAD-only, VLM-only, and Hybrid
+pipelines, we also evaluate using the **Order-Preserving Longest Common
+Subsequence (LCS) recall** introduced by the hybrid pipeline. For each video,
+the GT label sequence (sorted by start time) and the predicted label sequence
+(sorted by start time, with consecutive duplicates collapsed) are aligned via
+LCS, and recall is computed as `LCS_length / GT_length`.
+
+| Set | TAD-only LCS recall |
+|---|---|
+| Full test set (185 videos) | **84.57 %** |
+| Hybrid eval subset (50 videos, 4 subjects: P10, P11, P16, P20) | **82.01 %** |
+
+Filter applied before LCS: `score >= 0.1`. Per-video results are in
+`outputs/tad_lcs_full_test.csv` and `outputs/tad_lcs_hybrid_eval_50.csv`. The
+subset of 50 video IDs is in `outputs/hybrid_eval_50.txt`.
+
+The 82.01 % number on the 50-video subset is the one directly comparable to
+the hybrid and VLM-only pipelines, since all three teams evaluate on the same
+videos with the same metric.
 
 ## Folder layout
 
 ```
-cluster_run/
+TAD_full_run/
 ├── README.md                       # this file
 ├── HANDOFF.md                      # interface contract for the hybrid pipeline
 ├── submit_job.sh                   # SLURM batch script
 ├── run_pipeline.sh                 # the actual end-to-end pipeline (called by SLURM)
 ├── prepare_env.sh                  # one-time conda env setup
 ├── data_cs_split.json              # master annotations (all 536 videos)
+├── tsu_full_<jobid>.out / .err     # SLURM logs from the validated run
 ├── configs/
 │   ├── tsu_features_clip_full.py   # OpenTAD dataset config (templated, paths injected)
 │   └── tsu_clip_full.py            # ActionFormer training config
-└── scripts/
-    ├── build_full_split.py         # step 1: tsu_cs_full.json with train/val/test
-    ├── extract_clip_features.py    # step 2: CLIP ViT-B/32 features (resumable)
-    ├── apply_opentad_patches.py    # step 3: defensive patches for missing extensions
-    ├── postprocess_predictions.py  # step 7: augment predictions to canonical schema
-    ├── visualize_results.py        # step 8: produce all the figures
-    └── verify_predictions.py       # step 7b: schema check
+├── scripts/
+│   ├── build_full_split.py         # step 1: tsu_cs_full.json with train/val/test
+│   ├── extract_clip_features.py    # step 2: CLIP ViT-B/32 features (resumable)
+│   ├── apply_opentad_patches.py    # step 3: defensive patches for missing extensions
+│   ├── postprocess_predictions.py  # step 7: augment predictions, dedup, write canonical schema
+│   ├── visualize_results.py        # step 8: produce all the figures
+│   ├── verify_predictions.py       # step 7b: schema check
+│   └── tad_lcs_eval.py             # LCS-recall eval matching the hybrid pipeline
+├── outputs/
+│   ├── tsu_cs_full.json            # train/val/test split annotations with `frame` field
+│   ├── category_idx.txt            # 51-class map, alphabetical, line N is label_id N
+│   ├── predictions_canonical.json  # the canonical output the hybrid pipeline consumes
+│   ├── hybrid_eval_50.txt          # 50-video subset used for cross-pipeline comparison
+│   ├── tad_lcs_full_test.csv       # per-video LCS recall on the 185 test videos
+│   ├── tad_lcs_hybrid_eval_50.csv  # per-video LCS recall on the 50-video subset
+│   ├── log.json                    # full training log
+│   ├── verify.txt                  # output of verify_predictions.py
+│   ├── figures/                    # training_curves, predictions_analysis, gantt_overlays
+│   ├── exps/tsu_full/gpu2_id0/     # OpenTAD checkpoints + raw result_detection.json
+│   └── features/clip_vitb32/       # per-video CLIP feature .npy files (~5 MB each)
+└── work/                           # OpenTAD checkout (re-cloned by run_pipeline.sh)
 ```
 
-## Quick start (running the full dataset run)
+## Quick start (running the bundle)
 
 ### 1. Copy this folder to the cluster
 
 ```bash
-scp -r cluster_run/ <user>@izar.epfl.ch:~/tsu_full_run/
+scp -r TAD_full_run/ <user>@izar.epfl.ch:~/tsu_full_run/
 ```
 
 ### 2. Create the conda env (one-time)
@@ -128,42 +189,42 @@ tail -f tsu_full_*.out              # live training log
 ls -la outputs/                      # artifacts as they appear
 ```
 
-## The artifacts the hybrid pipeline actually needs
+## Cross-pipeline LCS evaluation
 
-Once the job finishes, the file that matters for downstream consumption is:
+After the training and inference are done, you can compute the LCS recall
+that lets you compare TAD-only against the hybrid pipeline and the VLM-only
+baseline. The metric and label normalisation match the hybrid pipeline's
+evaluation script exactly.
 
-```
-outputs/predictions_canonical.json
-```
+### Full test set (185 videos)
 
-Schema:
-
-```json
-{
-  "results": {
-    "P02T08C04": [
-      {
-        "segment": [12.4, 18.7],     // [start_seconds, end_seconds]
-        "label": "Cook.Stir",          // class name
-        "label_id": 12,                // integer class id, where classes[label_id] equals label
-        "score": 0.42                  // confidence in [0, 1]
-      },
-      ...
-    ],
-    ...
-  }
-}
+```bash
+python scripts/tad_lcs_eval.py \
+    --predictions outputs/predictions_canonical.json \
+    --annotations data_cs_split.json \
+    --subset testing \
+    --min-score 0.1 \
+    --out-csv outputs/tad_lcs_full_test.csv
 ```
 
-If you also need ground truth or the class vocabulary:
+### Comparison subset (50 videos, same set as the hybrid pipeline uses)
 
-- `outputs/tsu_cs_full.json` contains the train/val/test split annotations in
-  the same OpenTAD format.
-- `outputs/category_idx.txt` lists the 51 classes alphabetically. Line N is
-  `label_id` N.
+```bash
+python scripts/tad_lcs_eval.py \
+    --predictions outputs/predictions_canonical.json \
+    --annotations data_cs_split.json \
+    --video-list outputs/hybrid_eval_50.txt \
+    --min-score 0.1 \
+    --out-csv outputs/tad_lcs_hybrid_eval_50.csv
+```
 
-See `HANDOFF.md` for the full consumption contract (suggested filtering,
-recommended top-K, etc.).
+The same script works on any predictions JSON that follows the canonical
+schema `{"results": {video_id: [{segment, label, score}]}}`. The VLM-only and
+hybrid teams can reuse it directly on their own outputs.
+
+The `--video-list` flag accepts a plain text file (one ID per line), a CSV
+with a `video_id` column, a JSON in the canonical schema (any predictions
+JSON works), or a comma-separated string of IDs.
 
 ## Resource configuration
 
@@ -176,7 +237,7 @@ recommended top-K, etc.).
 --cpus-per-task=8
 ```
 
-The run we did used **2 GPUs** (edit `--gres=gpu:2` in `submit_job.sh`),
+The validated run used **2 GPUs** (edit `--gres=gpu:2` in `submit_job.sh`),
 which is recommended. `run_pipeline.sh` reads the GPU count automatically and
 configures `torchrun --nproc_per_node` accordingly.
 
@@ -197,27 +258,14 @@ Once features are cached on disk, **a full re-run takes about 30 minutes**.
 The 18 h budget exists for safety margin and queue jitter, not because
 anything genuinely takes that long.
 
-## Expected outputs
-
-After a successful run, `outputs/` contains:
-
-- `tsu_cs_full.json` (train/val/test split annotations, with `frame` field added)
-- `category_idx.txt` (51-class map, alphabetical, line N is `label_id` N)
-- `features/clip_vitb32/*.npy` (per-video CLIP features, around 5 MB each, around 566 files)
-- `exps/tsu_full/gpu<N>_id0/checkpoint/best.pth` (trained checkpoint)
-- `exps/tsu_full/gpu<N>_id0/checkpoint/epoch_*.pth` (periodic checkpoints, every 5 epochs, around 412 MB each)
-- `exps/tsu_full/gpu<N>_id0/result_detection.json` (raw OpenTAD output, schema `{segment, label, score}`)
-- `predictions_canonical.json` (**the canonical schema for the hybrid pipeline**, schema `{segment, label, label_id, score}`)
-- `figures/training_curves.png` (train/val loss + val mAP across epochs)
-- `figures/predictions_analysis.png` (score / per-class / duration distributions)
-- `figures/gantt_overlay_<vid>.png` (top-K test videos by GT density)
-- `log.json` (full training log)
-- `verify.txt` (output of `verify_predictions.py`)
-
 (`<N>` is the number of GPUs used. The validated run used 2, so the path is
 `gpu2_id0/`.)
 
 ## How this differs from the smoke test notebook
+
+The smoke notebook was the proof of concept (4 train videos × 5 epochs on
+Colab). This bundle is the production version (315 train videos × 40 epochs on
+SCITAS).
 
 The smoke notebook was the proof of concept (4 train videos × 5 epochs on
 Colab). This bundle is the production version (315 train videos × 40 epochs on
@@ -230,7 +278,7 @@ SCITAS).
 | Test videos | 2 | **185** (full CS test split, 7 subjects) |
 | Epochs | 5 | 40 |
 | Gradient steps | around 5 | **around 12,480** (156 batches × 40 epochs / 2 GPUs) |
-| Test mAP @ IoU 0.3 | 0 % (4-video) | **18.38 %** |
+| Test mAP @ IoU 0.3 | 0 % (4-video toy) | **18.38 %** |
 | Wall clock | around 5 min | around 30 min on 2 GPUs (plus 2 h once for feature extraction) |
 | Goal | "pipeline works" | "produce a real, reportable baseline" |
 
@@ -264,6 +312,7 @@ SCITAS).
 | `ImportError: No module named 'mmcv'` during opentad import | MMCV / mmaction backbones eagerly imported by `opentad/models/backbones/__init__.py` | `apply_opentad_patches.py` wraps each heavy backbone import in try/except. We never use the ViT/Swin/SlowFast backbones. |
 | `ModuleNotFoundError: 'Align1D'` / `'boundary_max_pooling_cuda'` during opentad import | OpenTAD eagerly imports TadTR, ROIAlignExtractor, GTADExtractor, AFSDRefineHead, AFSDCoarseHead, etc. | `apply_opentad_patches.py` wraps all of these. None is on the ActionFormer code path. Look for `[opentad-patch]` lines at startup. They are informational, not errors. |
 | `AssertionError: batch size 1 should be divided by world size 2` | OpenTAD's dataloader builder requires `batch_size % world_size == 0`. With 2 GPUs, val/test batch=1 fails. | Configs set `val.batch_size=2` and `test.batch_size=2`. Each rank still loads 1 sample at a time. `run_pipeline.sh` launches `tools/test.py` with `nproc_per_node=$N_GPUS` so the same constraint holds at standalone test time. |
+| Exact-duplicate predictions in `predictions_canonical.json` | DDP test-time inference with 2 GPUs: when 185 videos is not divisible by world size, `DistributedSampler` pads by repeating a video, and OpenTAD's gather merges by concatenation | `postprocess_predictions.py` deduplicates by `(start, end, label_id)` and keeps the highest score |
 | `numpy` version error | OpenTAD pins `numpy==1.23.5` but conda may install newer | `prepare_env.sh` installs `numpy==1.23.5` explicitly. If hit on a stale env, run `pip install -q numpy==1.23.5` inside `tsu`. |
 | `decord` import error during feature extraction | `decord` not in env | `pip install decord` inside the `tsu` env (already in `prepare_env.sh`). |
 | Validation mAP = 0 % at every training-time eval | Single-subject (P25) validation has very high variance | Not a bug. See *Known quirks* below. Test mAP is the headline number. |
@@ -277,20 +326,29 @@ SCITAS).
   one subject is high enough that the metric reads as 0 every time. The
   training loop selects the *best* checkpoint by val *loss*, not val mAP, so
   this does not break best-checkpoint tracking. To get a less noisy val
-  signal, we could later on hold out 2 subjects:
+  signal, hold out 2 subjects:
   ```bash
   python scripts/build_full_split.py --val-subjects P25,P19 ...
   ```
+- **Test-time mAP is computed against the testing subset.** Earlier OpenTAD
+  defaults compared test predictions against the validation GT, which is a
+  known logging pitfall. `run_pipeline.sh` passes
+  `--cfg-options evaluation.subset=testing` to `tools/test.py`, which fixes
+  this.
 - **The `result_detection.json` schema differs from
   `predictions_canonical.json`.** OpenTAD writes `{segment, label, score}` per
   detection. The canonical schema the hybrid pipeline consumes adds `label_id`
-  (integer). The `postprocess_predictions.py` script performs the conversion
-  and also drops segments with `duration < 0.1 s` and `score < 0.05`. See
-  `HANDOFF.md` for the full interface.
+  (integer). The `postprocess_predictions.py` script performs the conversion,
+  deduplicates exact duplicates introduced by DDP test inference, and also
+  drops segments with `duration < 0.1 s` and `score < 0.05`.
 
 ## After the run
 
-The headline number to report is **Average-mAP on the test set** from
-`outputs/log.json`'s final `Test INFO` block. The same number is captured in
-`verify.txt`. For internal use, hand `outputs/predictions_canonical.json` to
-the hybrid pipeline.
+The headline numbers to report are:
+
+- **event-mAP on the test set** from `outputs/log.json`'s final `Test INFO` block (12.52 % avg, 18.38 % @ IoU 0.3). This is the standard TAD metric for literature comparison.
+- **LCS recall on the hybrid eval subset** from `outputs/tad_lcs_hybrid_eval_50.csv` (82.01 %). This is the metric directly comparable to the hybrid and VLM-only pipelines.
+
+For internal use, hand `outputs/predictions_canonical.json` to the hybrid
+pipeline. The schema is `{"results": {video_id: [{segment, label, label_id, score}]}}`
+with segments sorted by start time and exact duplicates already removed.
