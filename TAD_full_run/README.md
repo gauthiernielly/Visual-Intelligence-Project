@@ -82,27 +82,45 @@ around 38 %) reports frame-mAP, which is strictly easier. The two numbers are
 not directly comparable. Always disclose the metric difference when
 presenting.
 
-### Cross-pipeline metric (LCS recall, matched with the hybrid pipeline)
+### Cross-pipeline metric (shared `hybrid_complete_eval.py`)
 
-To allow direct comparison between the TAD-only, VLM-only, and Hybrid
-pipelines, we also evaluate using the **Order-Preserving Longest Common
-Subsequence (LCS) recall** introduced by the hybrid pipeline. For each video,
-the GT label sequence (sorted by start time) and the predicted label sequence
-(sorted by start time, with consecutive duplicates collapsed) are aligned via
-LCS, and recall is computed as `LCS_length / GT_length`.
+To allow a direct, apples-to-apples comparison between the TAD-only,
+VLM-only, and Hybrid pipelines, all three pipelines are now scored by the
+**same** `scripts/hybrid_complete_eval.py` script. It builds a label sequence
+from each pipeline's segments (sorted by start time, consecutive duplicates
+collapsed), aligns it with the GT label sequence via Longest Common
+Subsequence, and derives **Recall, Precision and F1** from the LCS length.
 
-| Set | TAD-only LCS recall |
+Because the hybrid pipeline prefilters TAD segments before invoking the VLM
+(deduplicate, `score >= 0.15`, per-class temporal NMS at IoU 0.3), the TAD
+JSON has to go through the **same** prefilter before we score it. That is
+exactly what `scripts/prefilter_tad_for_hybrid_eval.py` does: it reads
+`predictions_canonical.json`, applies the three-step filter, restricts to
+the agreed video subset, and writes a JSON in the format
+`hybrid_complete_eval.py` consumes (`outputs/tad_pipeline_results.json`).
+
+Results on the **68-video** cross-pipeline subset (6 test subjects: P02,
+P10, P11, P16, P18, P20), GT mean 77 actions / video, TAD mean 212 actions
+/ video after matched prefilter:
+
+| Metric | TAD-only |
 |---|---|
-| Full test set (185 videos) | **84.57 %** |
-| Hybrid eval subset (50 videos, 4 subjects: P10, P11, P16, P20) | **82.01 %** |
+| Average **Recall**    | **69.6 %** |
+| Average **Precision** | **27.9 %** |
+| Average **F1-Score**  | **37.1 %** |
 
-Filter applied before LCS: `score >= 0.1`. Per-video results are in
-`outputs/tad_lcs_full_test.csv` and `outputs/tad_lcs_hybrid_eval_50.csv`. The
-subset of 50 video IDs is in `outputs/hybrid_eval_50.txt`.
+Per-video numbers are in `outputs/tad_complete_evaluation_results.csv`. The
+68-video ID list is in `outputs/hybrid_eval_68.txt`.
 
-The 82.01 % number on the 50-video subset is the one directly comparable to
-the hybrid and VLM-only pipelines, since all three teams evaluate on the same
-videos with the same metric.
+The 68-video Recall / Precision / F1 numbers are the ones directly comparable
+to the VLM-only and hybrid pipelines, since all three pipelines now run on
+the same 68 videos with the same script.
+
+A standalone LCS-recall script (`scripts/tad_lcs_eval.py`) is also kept in
+this bundle for historical comparison. It evaluates LCS recall only, with
+flexible filtering, and is the script that produced the earlier
+`outputs/tad_lcs_full_test.csv` (185 videos, 84.57 %) and
+`outputs/tad_lcs_hybrid_eval_50.csv` (older 50-video subset, 82.01 %).
 
 ## Folder layout
 
@@ -119,26 +137,31 @@ TAD_full_run/
 │   ├── tsu_features_clip_full.py   # OpenTAD dataset config (templated, paths injected)
 │   └── tsu_clip_full.py            # ActionFormer training config
 ├── scripts/
-│   ├── build_full_split.py         # step 1: tsu_cs_full.json with train/val/test
-│   ├── extract_clip_features.py    # step 2: CLIP ViT-B/32 features (resumable)
-│   ├── apply_opentad_patches.py    # step 3: defensive patches for missing extensions
-│   ├── postprocess_predictions.py  # step 7: augment predictions, dedup, write canonical schema
-│   ├── visualize_results.py        # step 8: produce all the figures
-│   ├── verify_predictions.py       # step 7b: schema check
-│   └── tad_lcs_eval.py             # LCS-recall eval matching the hybrid pipeline
+│   ├── build_full_split.py             # step 1: tsu_cs_full.json with train/val/test
+│   ├── extract_clip_features.py        # step 2: CLIP ViT-B/32 features (resumable)
+│   ├── apply_opentad_patches.py        # step 3: defensive patches for missing extensions
+│   ├── postprocess_predictions.py      # step 7: augment predictions, dedup, write canonical schema
+│   ├── visualize_results.py            # step 8: produce all the figures
+│   ├── verify_predictions.py           # step 7b: schema check
+│   ├── tad_lcs_eval.py                 # standalone LCS-recall eval (185 + older 50 subsets)
+│   ├── prefilter_tad_for_hybrid_eval.py # apply hybrid prefilter to predictions_canonical.json
+│   └── hybrid_complete_eval.py         # shared Recall/Precision/F1 eval used by all 3 pipelines
 ├── outputs/
-│   ├── tsu_cs_full.json            # train/val/test split annotations with `frame` field
-│   ├── category_idx.txt            # 51-class map, alphabetical, line N is label_id N
-│   ├── predictions_canonical.json  # the canonical output the hybrid pipeline consumes
-│   ├── hybrid_eval_50.txt          # 50-video subset used for cross-pipeline comparison
-│   ├── tad_lcs_full_test.csv       # per-video LCS recall on the 185 test videos
-│   ├── tad_lcs_hybrid_eval_50.csv  # per-video LCS recall on the 50-video subset
-│   ├── log.json                    # full training log
-│   ├── verify.txt                  # output of verify_predictions.py
-│   ├── figures/                    # training_curves, predictions_analysis, gantt_overlays
-│   ├── exps/tsu_full/gpu2_id0/     # OpenTAD checkpoints + raw result_detection.json
-│   └── features/clip_vitb32/       # per-video CLIP feature .npy files (~5 MB each)
-└── work/                           # OpenTAD checkout (re-cloned by run_pipeline.sh)
+│   ├── tsu_cs_full.json                # train/val/test split annotations with `frame` field
+│   ├── category_idx.txt                # 51-class map, alphabetical, line N is label_id N
+│   ├── predictions_canonical.json      # the canonical output the hybrid pipeline consumes
+│   ├── tad_pipeline_results.json       # predictions_canonical.json after the matched prefilter
+│   ├── hybrid_eval_50.txt              # older 50-video subset
+│   ├── hybrid_eval_68.txt              # current 68-video subset shared with VLM + Hybrid
+│   ├── tad_lcs_full_test.csv           # per-video LCS recall on the 185 test videos
+│   ├── tad_lcs_hybrid_eval_50.csv      # per-video LCS recall on the 50-video subset
+│   ├── tad_complete_evaluation_results.csv # per-video Recall/Precision/F1 on the 68-video subset
+│   ├── log.json                        # full training log
+│   ├── verify.txt                      # output of verify_predictions.py
+│   ├── figures/                        # training_curves, predictions_analysis, gantt_overlays
+│   ├── exps/tsu_full/gpu2_id0/         # OpenTAD checkpoints + raw result_detection.json
+│   └── features/clip_vitb32/           # per-video CLIP feature .npy files (~5 MB each)
+└── work/                               # OpenTAD checkout (re-cloned by run_pipeline.sh)
 ```
 
 ## Quick start (running the bundle)
@@ -189,14 +212,49 @@ tail -f tsu_full_*.out              # live training log
 ls -la outputs/                      # artifacts as they appear
 ```
 
-## Cross-pipeline LCS evaluation
+## Cross-pipeline evaluation
 
-After the training and inference are done, you can compute the LCS recall
-that lets you compare TAD-only against the hybrid pipeline and the VLM-only
-baseline. The metric and label normalisation match the hybrid pipeline's
-evaluation script exactly.
+After training + inference, two evaluation paths are available, both starting
+from `outputs/predictions_canonical.json`.
 
-### Full test set (185 videos)
+### 1. Shared Recall / Precision / F1 on the 68-video subset (preferred)
+
+This is the path that produces the **numbers directly comparable to the
+VLM-only and Hybrid pipelines**, since all three pipelines run the same
+`scripts/hybrid_complete_eval.py` script on the same 68 videos. Two steps:
+
+**Step 1.** Prefilter the TAD JSON exactly as the hybrid pipeline would
+before sending segments to the VLM (deduplicate, `score >= 0.15`, per-class
+temporal NMS at IoU 0.3), and restrict to the 68-video subset:
+
+```bash
+python scripts/prefilter_tad_for_hybrid_eval.py \
+    --predictions outputs/predictions_canonical.json \
+    --video-list  outputs/hybrid_eval_68.txt \
+    --output      outputs/tad_pipeline_results.json
+```
+
+**Step 2.** Point `hybrid_complete_eval.py` at the prefiltered JSON. The
+shared script reads `JSON_PATH` and `ANNOTATIONS_DIR` from constants at the
+top of the file. Either edit those two lines, or invoke it via a tiny wrapper
+that overrides them:
+
+```bash
+JSON_PATH=outputs/tad_pipeline_results.json \
+ANNOTATIONS_DIR=/work/cs-503/sadgal/Annotation \
+OUTPUT_CSV=outputs/tad_complete_evaluation_results.csv \
+python scripts/hybrid_complete_eval.py
+```
+
+(`ANNOTATIONS_DIR` is the per-subject CSV folder used by all three pipelines.
+On Izar the canonical path is `/work/cs-503/sadgal/Annotation`.)
+
+### 2. Standalone LCS-recall on the full 185 test set (historical)
+
+For the standalone LCS-recall view on the full test split, use
+`scripts/tad_lcs_eval.py`. It reads GT directly from `data_cs_split.json`
+(no dependency on the cluster CSV folder) and exposes `--min-score`,
+`--topk`, `--nms-iou` filters.
 
 ```bash
 python scripts/tad_lcs_eval.py \
@@ -207,24 +265,9 @@ python scripts/tad_lcs_eval.py \
     --out-csv outputs/tad_lcs_full_test.csv
 ```
 
-### Comparison subset (50 videos, same set as the hybrid pipeline uses)
-
-```bash
-python scripts/tad_lcs_eval.py \
-    --predictions outputs/predictions_canonical.json \
-    --annotations data_cs_split.json \
-    --video-list outputs/hybrid_eval_50.txt \
-    --min-score 0.1 \
-    --out-csv outputs/tad_lcs_hybrid_eval_50.csv
-```
-
-The same script works on any predictions JSON that follows the canonical
-schema `{"results": {video_id: [{segment, label, score}]}}`. The VLM-only and
-hybrid teams can reuse it directly on their own outputs.
-
-The `--video-list` flag accepts a plain text file (one ID per line), a CSV
-with a `video_id` column, a JSON in the canonical schema (any predictions
-JSON works), or a comma-separated string of IDs.
+Both scripts accept any predictions JSON that follows the canonical schema
+`{"results": {video_id: [{segment, label, score}]}}`, so the VLM-only and
+hybrid teams can reuse them directly on their own outputs.
 
 ## Resource configuration
 
@@ -347,7 +390,7 @@ SCITAS).
 The headline numbers to report are:
 
 - **event-mAP on the test set** from `outputs/log.json`'s final `Test INFO` block (12.52 % avg, 18.38 % @ IoU 0.3). This is the standard TAD metric for literature comparison.
-- **LCS recall on the hybrid eval subset** from `outputs/tad_lcs_hybrid_eval_50.csv` (82.01 %). This is the metric directly comparable to the hybrid and VLM-only pipelines.
+- **Recall / Precision / F1 on the 68-video cross-pipeline subset** from `outputs/tad_complete_evaluation_results.csv` (**69.6 % / 27.9 % / 37.1 %**). These are the numbers directly comparable to the VLM-only and hybrid pipelines, since all three pipelines run the same `scripts/hybrid_complete_eval.py` on the same 68 videos.
 
 For internal use, hand `outputs/predictions_canonical.json` to the hybrid
 pipeline. The schema is `{"results": {video_id: [{segment, label, label_id, score}]}}`
