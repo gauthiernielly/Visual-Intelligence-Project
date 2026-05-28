@@ -85,7 +85,7 @@ TAD_full_run/
 └── work/                                    OpenTAD checkout
 ```
 
-## Quick start
+## How to run
 
 ```bash
 # 1. Copy this folder to the cluster
@@ -113,9 +113,6 @@ Useful env vars on `sbatch submit_job.sh`:
 | `RESUME_CKPT=<path>` | resume training from a previous checkpoint |
 | `DATASET_ROOT=<path>` | parent of `Videos_mp4` and `Annotation` if your dataset lives elsewhere |
 
-Once features are cached on disk, a full re-run takes about 30 minutes on
-2 V100 GPUs.
-
 ## Evaluating a different system on the same 86 videos
 
 `scripts/complete_eval.py` is the shared evaluator used by the TAD, VLM and
@@ -137,7 +134,7 @@ arguments together with `--names`.
 ## Regenerating the showcase figures locally
 
 The head-to-head bar chart and the two 3-row Gantts (GT vs TAD vs Hybrid)
-require the Hybrid pipeline's predictions JSON. Once you have it, regenerate
+require the Hybrid pipeline's predictions JSON. Once you have it, you can regenerate
 them with:
 
 ```bash
