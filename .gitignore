@@ -1,1 +1,33 @@
-VLM_Baseline/Annotation/
+# ML binary artifacts (huge, regeneratable)
+*.pth
+*.pt
+*.ckpt
+*.npy
+*.npz
+
+# OpenTAD checkout (re-cloned by run_pipeline.sh)
+TAD_full_run/work/
+
+# Video clips for Q&A benchmarking
+VLM_Baseline/outputs/clips/
+
+# Notebook / Python / system junk
+*.ipynb_checkpoints/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.idea/
+.vscode/
+
+# Raw video data
+*.mp4
+*.avi
+*.mov
+*.mkv
+mini_dataset/
+
+# Envs
+env/
+venv/
+.conda/

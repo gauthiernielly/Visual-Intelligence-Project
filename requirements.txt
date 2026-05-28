@@ -1,0 +1,11 @@
+accelerate==1.13.0
+decord==0.6.0
+jupyterlab==4.5.7
+numpy==2.2.6
+matplotlib==3.10.9
+pandas==2.3.3
+pillow==12.2.0
+plotly==6.7.0
+qwen-vl-utils
+tqdm==4.67.2
+transformers==5.6.2

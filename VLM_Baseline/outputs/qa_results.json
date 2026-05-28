@@ -1,0 +1,1154 @@
+{
+  "P02T14C06": [
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person mix something or cut food first ?",
+        "answer": "cut food",
+        "event_a": "cut food",
+        "event_b": "cut food"
+      },
+      "responses": {
+        "normal": "mix something",
+        "shuffled": "mix",
+        "blind": "The person cuts food first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person walk or use a drawer (until it is closed) first ?",
+        "answer": "use a drawer (until it is closed)",
+        "event_a": "use a drawer (until it is closed)",
+        "event_b": "use a drawer (until it is closed)"
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "walk",
+        "blind": "The person walks first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person mix something or use a drawer (until it is closed) first ?",
+        "answer": "use a drawer (until it is closed)",
+        "event_a": "use a drawer (until it is closed)",
+        "event_b": "use a drawer (until it is closed)"
+      },
+      "responses": {
+        "normal": "The person mixes something first.",
+        "shuffled": "The person mixes something first.",
+        "blind": "The person uses the drawer first, then mixes something."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person put something on a table or mix something first ?",
+        "answer": "mix something",
+        "event_a": "mix something",
+        "event_b": "mix something"
+      },
+      "responses": {
+        "normal": "mix something",
+        "shuffled": "mix something",
+        "blind": "The person mixes something first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person use a drawer (until it is closed) or cut food first ?",
+        "answer": "cut food",
+        "event_a": "cut food",
+        "event_b": "cut food"
+      },
+      "responses": {
+        "normal": "The person cuts food first.",
+        "shuffled": "The person cuts food first.",
+        "blind": "The person cuts food first."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person use a drawer (until it is closed) in the video?",
+        "answer": 2,
+        "event": "use a drawer (until it is closed)"
+      },
+      "responses": {
+        "normal": "0",
+        "shuffled": "2",
+        "blind": "The person uses the drawer 3 times until it is closed."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person take something off a table in the video?",
+        "answer": 2,
+        "event": "take something off a table"
+      },
+      "responses": {
+        "normal": "1",
+        "shuffled": "2",
+        "blind": "The person takes three items off the table."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person put something on a table in the video?",
+        "answer": 4,
+        "event": "put something on a table"
+      },
+      "responses": {
+        "normal": "1",
+        "shuffled": "2",
+        "blind": "The person puts something on a table 3 times."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person mix something in the video?",
+        "answer": 2,
+        "event": "mix something"
+      },
+      "responses": {
+        "normal": "2",
+        "shuffled": "2",
+        "blind": "The person mixes something 3 times in the video."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'use oven' or 'take something off a table'?",
+        "answer": "use oven",
+        "event_a": "use oven",
+        "event_b": "take something off a table",
+        "dur_a_sec": 5.92,
+        "dur_b_sec": 0.48
+      },
+      "responses": {
+        "normal": "use oven",
+        "shuffled": "use oven",
+        "blind": "\"use oven\" lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'walk' or 'use the fridge (until it is closed)'?",
+        "answer": "use the fridge (until it is closed)",
+        "event_a": "walk",
+        "event_b": "use the fridge (until it is closed)",
+        "dur_a_sec": 0.48,
+        "dur_b_sec": 3.2
+      },
+      "responses": {
+        "normal": "use the fridge (until it is closed)",
+        "shuffled": "use the fridge (until it is closed)",
+        "blind": "The 'walk' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'cut food' or 'put something on a table'?",
+        "answer": "cut food",
+        "event_a": "cut food",
+        "event_b": "put something on a table",
+        "dur_a_sec": 24.28,
+        "dur_b_sec": 2.44
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "'Cut food' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'put something on a table' or 'mix something'?",
+        "answer": "mix something",
+        "event_a": "put something on a table",
+        "event_b": "mix something",
+        "dur_a_sec": 0.88,
+        "dur_b_sec": 6.36
+      },
+      "responses": {
+        "normal": "mix something",
+        "shuffled": "mix something",
+        "blind": "'Put something on a table' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'walk' or 'use a drawer (until it is closed)'?",
+        "answer": "use a drawer (until it is closed)",
+        "event_a": "walk",
+        "event_b": "use a drawer (until it is closed)",
+        "dur_a_sec": 0.48,
+        "dur_b_sec": 3.0
+      },
+      "responses": {
+        "normal": "use a drawer (until it is closed)",
+        "shuffled": "use a drawer (until it is closed)",
+        "blind": "The 'walk' lasts longer."
+      }
+    }
+  ],
+  "P14T05C05": [
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person drink from a bottle or put something on a table first ?",
+        "answer": "put something on a table",
+        "event_a": "put something on a table",
+        "event_b": "put something on a table"
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "The person puts something on a table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person take something off a table or put something on a table first ?",
+        "answer": "put something on a table",
+        "event_a": "put something on a table",
+        "event_b": "put something on a table"
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "The person takes something off the table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person take something off a table or walk first ?",
+        "answer": "walk",
+        "event_a": "walk",
+        "event_b": "walk"
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "walk",
+        "blind": "The person walks first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person put something on a table or take something off a table first ?",
+        "answer": "take something off a table",
+        "event_a": "take something off a table",
+        "event_b": "take something off a table"
+      },
+      "responses": {
+        "normal": "The person takes something off a table first.",
+        "shuffled": "The person takes something off a table first.",
+        "blind": "The person puts something on a table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person put something on a table or sit down first ?",
+        "answer": "sit down",
+        "event_a": "sit down",
+        "event_b": "sit down"
+      },
+      "responses": {
+        "normal": "The person sits down first.",
+        "shuffled": "The person sits down first.",
+        "blind": "The person sits down first."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person take something off a table in the video?",
+        "answer": 5,
+        "event": "take something off a table"
+      },
+      "responses": {
+        "normal": "Once.",
+        "shuffled": "2",
+        "blind": "The person takes three items off the table."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person walk in the video?",
+        "answer": 3,
+        "event": "walk"
+      },
+      "responses": {
+        "normal": "2",
+        "shuffled": "3",
+        "blind": "The person walks twice in the video."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person put something on a table in the video?",
+        "answer": 5,
+        "event": "put something on a table"
+      },
+      "responses": {
+        "normal": "Once.",
+        "shuffled": "2",
+        "blind": "The person puts something on a table 3 times."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'walk' or 'drink from a can'?",
+        "answer": "drink from a can",
+        "event_a": "walk",
+        "event_b": "drink from a can",
+        "dur_a_sec": 2.6,
+        "dur_b_sec": 4.36
+      },
+      "responses": {
+        "normal": "drink from a can",
+        "shuffled": "drink from a can",
+        "blind": "The 'walk' lasts longer than 'drink from a can'."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'walk' or 'put something on a table'?",
+        "answer": "walk",
+        "event_a": "walk",
+        "event_b": "put something on a table",
+        "dur_a_sec": 4.0,
+        "dur_b_sec": 1.36
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "The 'walk' activity lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'take something off a table' or 'watch the TV'?",
+        "answer": "watch the TV",
+        "event_a": "take something off a table",
+        "event_b": "watch the TV",
+        "dur_a_sec": 0.52,
+        "dur_b_sec": 11.2
+      },
+      "responses": {
+        "normal": "watch the TV",
+        "shuffled": "watch the TV",
+        "blind": "'Watch the TV' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'walk' or 'sit down'?",
+        "answer": "walk",
+        "event_a": "walk",
+        "event_b": "sit down",
+        "dur_a_sec": 2.04,
+        "dur_b_sec": 1.48
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "walk",
+        "blind": "The 'walk' activity lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'take pills' or 'take something off a table'?",
+        "answer": "take pills",
+        "event_a": "take pills",
+        "event_b": "take something off a table",
+        "dur_a_sec": 7.88,
+        "dur_b_sec": 0.52
+      },
+      "responses": {
+        "normal": "take something off a table",
+        "shuffled": "take something off a table",
+        "blind": "'take pills' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 12:22.80 and 12:26.80?",
+        "answer": [
+          "put something on a table",
+          "walk"
+        ],
+        "t_start": 742.8,
+        "t_end": 746.8
+      },
+      "responses": {
+        "normal": "The man walks to the TV stand, picks up a remote, and sits on the couch.",
+        "shuffled": "The man walks to the TV stand, picks up an object, and returns to the couch.",
+        "blind": "A person is seen walking through a room, briefly interacting with objects on a table, and then exiting the frame."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 12:25.04 and 12:27.32?",
+        "answer": [
+          "put something on a table",
+          "walk"
+        ],
+        "t_start": 745.04,
+        "t_end": 747.32
+      },
+      "responses": {
+        "normal": "The man walks to the TV stand, picks up a remote, and sits on the couch.",
+        "shuffled": "The man walks to the TV stand, picks up an object, and walks back to the couch.",
+        "blind": "A person is seen walking across a room while holding a phone."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 12:28.24 and 12:30.28?",
+        "answer": [
+          "take something off a table",
+          "walk"
+        ],
+        "t_start": 748.24,
+        "t_end": 750.28
+      },
+      "responses": {
+        "normal": "The man sits on the couch and watches TV.",
+        "shuffled": "The man walks to the TV stand, picks up an object, and walks back to the couch.",
+        "blind": "A person is seen walking through a room, briefly interacting with objects on a table, and then continuing to walk toward the camera."
+      }
+    }
+  ],
+  "P16T06C02": [
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person walk or eat his/her breakfast first ?",
+        "answer": "eat his/her breakfast",
+        "event_a": "eat his/her breakfast",
+        "event_b": "eat his/her breakfast"
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "walk",
+        "blind": "The person walks first, then eats breakfast."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person sit down or take something off a table first ?",
+        "answer": "take something off a table",
+        "event_a": "take something off a table",
+        "event_b": "take something off a table"
+      },
+      "responses": {
+        "normal": "take something off a table",
+        "shuffled": "take something off a table",
+        "blind": "The person takes something off the table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person get up or walk first ?",
+        "answer": "walk",
+        "event_a": "walk",
+        "event_b": "walk"
+      },
+      "responses": {
+        "normal": "The person gets up first, then walks.",
+        "shuffled": "The person gets up first.",
+        "blind": "The person gets up first, then walks."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person walk or read first ?",
+        "answer": "read",
+        "event_a": "read",
+        "event_b": "read"
+      },
+      "responses": {
+        "normal": "read",
+        "shuffled": "walk",
+        "blind": "The person reads first, then walks."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person walk or eat his/her breakfast first ?",
+        "answer": "eat his/her breakfast",
+        "event_a": "eat his/her breakfast",
+        "event_b": "eat his/her breakfast"
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "walk",
+        "blind": "The person walks first, then eats breakfast."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person eat his/her breakfast in the video?",
+        "answer": 2,
+        "event": "eat his/her breakfast"
+      },
+      "responses": {
+        "normal": "0",
+        "shuffled": "0",
+        "blind": "The person eats breakfast once in the video."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person walk in the video?",
+        "answer": 3,
+        "event": "walk"
+      },
+      "responses": {
+        "normal": "2",
+        "shuffled": "2",
+        "blind": "The person walks twice in the video."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person read in the video?",
+        "answer": 2,
+        "event": "read"
+      },
+      "responses": {
+        "normal": "1",
+        "shuffled": "1",
+        "blind": "The person reads zero times in the video."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'take something off a table' or 'drink from a cup'?",
+        "answer": "drink from a cup",
+        "event_a": "take something off a table",
+        "event_b": "drink from a cup",
+        "dur_a_sec": 0.72,
+        "dur_b_sec": 3.08
+      },
+      "responses": {
+        "normal": "drink from a cup",
+        "shuffled": "drink from a cup",
+        "blind": "\"Take something off a table\" lasts longer than \"drink from a cup\"."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'put something on a table' or 'walk'?",
+        "answer": "walk",
+        "event_a": "put something on a table",
+        "event_b": "walk",
+        "dur_a_sec": 0.72,
+        "dur_b_sec": 3.28
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "put something on a table",
+        "blind": "'Walk' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'drink from a cup' or 'walk'?",
+        "answer": "drink from a cup",
+        "event_a": "drink from a cup",
+        "event_b": "walk",
+        "dur_a_sec": 3.08,
+        "dur_b_sec": 0.36
+      },
+      "responses": {
+        "normal": "drink from a cup",
+        "shuffled": "drink from a cup",
+        "blind": "'Walk' lasts longer than 'drink from a cup'."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'get up' or 'sit down'?",
+        "answer": "get up",
+        "event_a": "get up",
+        "event_b": "sit down",
+        "dur_a_sec": 1.24,
+        "dur_b_sec": 1.08
+      },
+      "responses": {
+        "normal": "get up",
+        "shuffled": "get up",
+        "blind": "'Get up' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'put something on a table' or 'walk'?",
+        "answer": "walk",
+        "event_a": "put something on a table",
+        "event_b": "walk",
+        "dur_a_sec": 0.72,
+        "dur_b_sec": 2.92
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "put something on a table",
+        "blind": "'Walk' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 10:17.44 and 10:18.16?",
+        "answer": [
+          "drink from a cup",
+          "take something off a table"
+        ],
+        "t_start": 617.44,
+        "t_end": 618.16
+      },
+      "responses": {
+        "normal": "The woman is sitting at the table.",
+        "shuffled": "The woman is sitting at the table and writing on a piece of paper.",
+        "blind": "A person is seen walking across a room while holding a phone."
+      }
+    }
+  ],
+  "P18T12C01": [
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person sit down or put something on a table first ?",
+        "answer": "put something on a table",
+        "event_a": "put something on a table",
+        "event_b": "put something on a table"
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "The person puts something on the table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person walk or put something on a table first ?",
+        "answer": "put something on a table",
+        "event_a": "put something on a table",
+        "event_b": "put something on a table"
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "The person puts something on the table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person walk or read first ?",
+        "answer": "read",
+        "event_a": "read",
+        "event_b": "read"
+      },
+      "responses": {
+        "normal": "The person reads first.",
+        "shuffled": "read",
+        "blind": "The person reads first, then walks."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person enter the room or drink from a cup first ?",
+        "answer": "drink from a cup",
+        "event_a": "drink from a cup",
+        "event_b": "drink from a cup"
+      },
+      "responses": {
+        "normal": "The person drinks from a cup first.",
+        "shuffled": "The person drinks from a cup first.",
+        "blind": "The person enters the room first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person eat a snack or read first ?",
+        "answer": "read",
+        "event_a": "read",
+        "event_b": "read"
+      },
+      "responses": {
+        "normal": "The person reads first.",
+        "shuffled": "The person reads first.",
+        "blind": "The person reads first, then eats a snack."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person walk in the video?",
+        "answer": 3,
+        "event": "walk"
+      },
+      "responses": {
+        "normal": "2",
+        "shuffled": "2",
+        "blind": "The person walks twice in the video."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'leave the room' or 'walk'?",
+        "answer": "leave the room",
+        "event_a": "leave the room",
+        "event_b": "walk",
+        "dur_a_sec": 1.32,
+        "dur_b_sec": 0.4
+      },
+      "responses": {
+        "normal": "walk",
+        "shuffled": "walk",
+        "blind": "'Walk' lasts longer than 'leave the room'."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'put on or take off glasses' or 'get up'?",
+        "answer": "get up",
+        "event_a": "put on or take off glasses",
+        "event_b": "get up",
+        "dur_a_sec": 0.56,
+        "dur_b_sec": 1.12
+      },
+      "responses": {
+        "normal": "get up",
+        "shuffled": "get up",
+        "blind": "'Put on or take off glasses' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'get up' or 'sit down'?",
+        "answer": "get up",
+        "event_a": "get up",
+        "event_b": "sit down",
+        "dur_a_sec": 1.12,
+        "dur_b_sec": 0.88
+      },
+      "responses": {
+        "normal": "get up",
+        "shuffled": "get up",
+        "blind": "'Get up' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'leave the room' or 'enter the room'?",
+        "answer": "leave the room",
+        "event_a": "leave the room",
+        "event_b": "enter the room",
+        "dur_a_sec": 1.32,
+        "dur_b_sec": 0.84
+      },
+      "responses": {
+        "normal": "leave the room",
+        "shuffled": "leave the room",
+        "blind": "\"Leave the room\" lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'read' or 'sit down'?",
+        "answer": "read",
+        "event_a": "read",
+        "event_b": "sit down",
+        "dur_a_sec": 72.92,
+        "dur_b_sec": 0.88
+      },
+      "responses": {
+        "normal": "read",
+        "shuffled": "read",
+        "blind": "The 'sit down' activity lasts longer than 'read'."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 18:00.84 and 19:13.76?",
+        "answer": [
+          "drink from a cup",
+          "put on or take off glasses",
+          "put something on a table",
+          "read",
+          "take something off a table"
+        ],
+        "t_start": 1080.84,
+        "t_end": 1153.76
+      },
+      "responses": {
+        "normal": "A man sits at a table, reads a magazine, stands up, walks to the kitchen, and returns to his seat.",
+        "shuffled": "A man sits at a table, reading a magazine, and occasionally sips from a cup.",
+        "blind": "A person is seen engaging in various household tasks including cooking, cleaning, and organizing items around the home."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 18:48.68 and 18:49.12?",
+        "answer": [
+          "read",
+          "take something off a table"
+        ],
+        "t_start": 1128.68,
+        "t_end": 1129.12
+      },
+      "responses": {
+        "normal": "The man walks to the counter and picks up a cup.",
+        "shuffled": "The man stands up from the table.",
+        "blind": "A person is seen bending down and picking up a small object from the floor."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 18:49.16 and 18:51.20?",
+        "answer": [
+          "drink from a cup",
+          "read"
+        ],
+        "t_start": 1129.16,
+        "t_end": 1131.2
+      },
+      "responses": {
+        "normal": "The man walks to the counter and returns to his seat.",
+        "shuffled": "The man stands up from his chair.",
+        "blind": "A person is seen walking across a room while holding a phone."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 18:51.28 and 18:51.76?",
+        "answer": [
+          "put something on a table",
+          "read"
+        ],
+        "t_start": 1131.28,
+        "t_end": 1131.76
+      },
+      "responses": {
+        "normal": "The man walks to the kitchen counter.",
+        "shuffled": "The man is sitting at the table and reading a magazine.",
+        "blind": "A person is seen bending down and picking up a small object from the floor."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 19:12.00 and 19:12.56?",
+        "answer": [
+          "put on or take off glasses",
+          "read"
+        ],
+        "t_start": 1152.0,
+        "t_end": 1152.56
+      },
+      "responses": {
+        "normal": "The man is sitting at the table.",
+        "shuffled": "The man is sitting at the table and reading a magazine.",
+        "blind": "A person is seen walking across a room while holding a phone."
+      }
+    }
+  ],
+  "P20T16C03": [
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person put something on a table or take something off a table first ?",
+        "answer": "take something off a table",
+        "event_a": "take something off a table",
+        "event_b": "take something off a table"
+      },
+      "responses": {
+        "normal": "The person takes something off a table first.",
+        "shuffled": "The person takes something off a table first.",
+        "blind": "The person puts something on a table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person wipe a surface or put something on a table first ?",
+        "answer": "put something on a table",
+        "event_a": "put something on a table",
+        "event_b": "put something on a table"
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "The person puts something on the table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person use the fridge (until it is closed) or put something on a table first ?",
+        "answer": "put something on a table",
+        "event_a": "put something on a table",
+        "event_b": "put something on a table"
+      },
+      "responses": {
+        "normal": "The person puts something on a table first.",
+        "shuffled": "The person puts something on a table first.",
+        "blind": "The person puts something on a table first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person drink from a cup or take pills first ?",
+        "answer": "take pills",
+        "event_a": "take pills",
+        "event_b": "take pills"
+      },
+      "responses": {
+        "normal": "The person drinks from a cup first.",
+        "shuffled": "The person drinks from a cup first.",
+        "blind": "The person takes pills first."
+      }
+    },
+    {
+      "question": {
+        "family": "ordering",
+        "question": "Does the person take something off a table or rince dishes with water first ?",
+        "answer": "rince dishes with water",
+        "event_a": "rince dishes with water",
+        "event_b": "rince dishes with water"
+      },
+      "responses": {
+        "normal": "rinse dishes with water",
+        "shuffled": "rinse dishes with water",
+        "blind": "The person rinses dishes with water first."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person put something on a table in the video?",
+        "answer": 2,
+        "event": "put something on a table"
+      },
+      "responses": {
+        "normal": "0",
+        "shuffled": "0",
+        "blind": "The person puts something on a table 3 times."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person use the fridge (until it is closed) in the video?",
+        "answer": 3,
+        "event": "use the fridge (until it is closed)"
+      },
+      "responses": {
+        "normal": "2",
+        "shuffled": "2",
+        "blind": "The person uses the fridge 3 times until it is closed."
+      }
+    },
+    {
+      "question": {
+        "family": "counting",
+        "question": "How many times does the person take something off a table in the video?",
+        "answer": 4,
+        "event": "take something off a table"
+      },
+      "responses": {
+        "normal": "0",
+        "shuffled": "0",
+        "blind": "The person takes three items off the table."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'rince dishes with water' or 'put something on a table'?",
+        "answer": "rince dishes with water",
+        "event_a": "rince dishes with water",
+        "event_b": "put something on a table",
+        "dur_a_sec": 2.12,
+        "dur_b_sec": 0.28
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "'rince dishes with water' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'take something off a table' or 'wipe a surface'?",
+        "answer": "take something off a table",
+        "event_a": "take something off a table",
+        "event_b": "wipe a surface",
+        "dur_a_sec": 0.4,
+        "dur_b_sec": 0.32
+      },
+      "responses": {
+        "normal": "wipe a surface",
+        "shuffled": "wipe a surface",
+        "blind": "'Wipe a surface' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'take pills' or 'drink from a cup'?",
+        "answer": "take pills",
+        "event_a": "take pills",
+        "event_b": "drink from a cup",
+        "dur_a_sec": 8.56,
+        "dur_b_sec": 3.16
+      },
+      "responses": {
+        "normal": "drink from a cup",
+        "shuffled": "drink from a cup",
+        "blind": "\"Drink from a cup\" lasts longer than \"take pills\"."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'clean dishes' or 'use the fridge (until it is closed)'?",
+        "answer": "clean dishes",
+        "event_a": "clean dishes",
+        "event_b": "use the fridge (until it is closed)",
+        "dur_a_sec": 2.08,
+        "dur_b_sec": 2.04
+      },
+      "responses": {
+        "normal": "use the fridge (until it is closed)",
+        "shuffled": "use the fridge (until it is closed)",
+        "blind": "'Clean dishes' lasts longer."
+      }
+    },
+    {
+      "question": {
+        "family": "duration_comparison",
+        "question": "Which activity lasts longer: 'take something off a table' or 'put something on a table'?",
+        "answer": "take something off a table",
+        "event_a": "take something off a table",
+        "event_b": "put something on a table",
+        "dur_a_sec": 0.44,
+        "dur_b_sec": 0.28
+      },
+      "responses": {
+        "normal": "put something on a table",
+        "shuffled": "put something on a table",
+        "blind": "\"Put something on a table\" typically lasts longer because it often involves more deliberate placement and adjustment."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 04:08.04 and 04:26.40?",
+        "answer": [
+          "take pills",
+          "use a cupboard (until it is closed)",
+          "use a drawer (until it is closed)"
+        ],
+        "t_start": 248.04,
+        "t_end": 266.4
+      },
+      "responses": {
+        "normal": "The woman drinks from a cup, puts it down, and then washes her hands.",
+        "shuffled": "The woman opens the oven, takes out a dish, and puts it on the counter.",
+        "blind": "A person is seen cleaning a kitchen counter with a sponge and water, then wiping down the sink area."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 04:09.64 and 04:24.56?",
+        "answer": [
+          "take pills",
+          "use a cupboard (until it is closed)",
+          "use a drawer (until it is closed)"
+        ],
+        "t_start": 249.64,
+        "t_end": 264.56
+      },
+      "responses": {
+        "normal": "The woman drinks from a cup, puts it down, and then washes her hands.",
+        "shuffled": "The woman opens the oven, takes out a dish, and puts it on the counter.",
+        "blind": "A person is seen cleaning a kitchen counter with a sponge and water."
+      }
+    },
+    {
+      "question": {
+        "family": "composite",
+        "question": "What activities are happening between 04:14.04 and 04:22.60?",
+        "answer": [
+          "take pills",
+          "use a cupboard (until it is closed)",
+          "use a drawer (until it is closed)"
+        ],
+        "t_start": 254.04,
+        "t_end": 262.6
+      },
+      "responses": {
+        "normal": "The woman drinks from a cup, puts it down, and then opens a cabinet.",
+        "shuffled": "The woman opens the oven, takes out a dish, and puts it on the counter.",
+        "blind": "A person is seen walking around the house, briefly interacting with objects, and then sitting down on a couch."
+      }
+    }
+  ]
+}

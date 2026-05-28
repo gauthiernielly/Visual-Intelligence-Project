@@ -1,0 +1,3864 @@
+SLURM_JOB_ID=2942324
+HOSTNAME=i17
+ARGS: generate --limit 50
+Loaded 185 videos from test_videos.json
+Loading model Qwen/Qwen3-VL-8B-Instruct ...
+Model loaded in 80.5s  |  device map: {'model.visual': 0, 'model.language_model.embed_tokens': 0, 'model.language_model.layers.0': 0, 'model.language_model.layers.1': 0, 'model.language_model.layers.2': 0, 'model.language_model.layers.3': 0, 'model.language_model.layers.4': 0, 'model.language_model.layers.5': 0, 'model.language_model.layers.6': 0, 'model.language_model.layers.7': 0, 'model.language_model.layers.8': 0, 'model.language_model.layers.9': 0, 'model.language_model.layers.10': 0, 'model.language_model.layers.11': 0, 'model.language_model.layers.12': 0, 'model.language_model.layers.13': 0, 'model.language_model.layers.14': 1, 'model.language_model.layers.15': 1, 'model.language_model.layers.16': 1, 'model.language_model.layers.17': 1, 'model.language_model.layers.18': 1, 'model.language_model.layers.19': 1, 'model.language_model.layers.20': 1, 'model.language_model.layers.21': 1, 'model.language_model.layers.22': 1, 'model.language_model.layers.23': 1, 'model.language_model.layers.24': 1, 'model.language_model.layers.25': 1, 'model.language_model.layers.26': 1, 'model.language_model.layers.27': 1, 'model.language_model.layers.28': 1, 'model.language_model.layers.29': 1, 'model.language_model.layers.30': 1, 'model.language_model.layers.31': 1, 'model.language_model.layers.32': 1, 'model.language_model.layers.33': 1, 'model.language_model.layers.34': 1, 'model.language_model.layers.35': 1, 'model.language_model.norm': 1, 'model.language_model.rotary_emb': 1, 'lm_head': 1}
+
+[start] P10T07C05
+  29231 frames, 19.5 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 155
+    → 4 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 20 column 66 (char 1222)
+    → 0 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1351)
+    → 0 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 106
+    → 2 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 204
+    → 5 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 194
+    → 3 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 153
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 18 column 71 (char 1171)
+    → 0 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 111
+    → 2 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 20/20: frames 28500–29230 (29s, 17 frames)
+    Input tokens: 3,988
+    Generated tokens: 81
+    → 2 segments parsed
+[done]  P10T07C05 → 23 segments  (476s)
+
+[start] P10T09C01
+  29310 frames, 19.5 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 158
+    → 6 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 138
+    → 1 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 271
+    → 6 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 207
+    → 6 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 94
+    → 3 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 107
+    → 3 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 154
+    → 2 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 173
+    → 5 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1236)
+    → 0 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 165
+    → 6 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 80
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 80
+    → 2 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 231
+    → 6 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 159
+    → 4 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 215
+    → 6 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 20/20: frames 28500–29309 (32s, 18 frames)
+    Input tokens: 4,013
+    Generated tokens: 47
+    → 1 segments parsed
+[done]  P10T09C01 → 53 segments  (435s)
+
+[start] P10T07C04
+  29210 frames, 19.5 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 107
+    → 4 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 219
+    → 3 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 69 (char 1292)
+    → 0 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 108
+    → 2 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1385)
+    → 0 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 103
+    → 2 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 258
+    → 5 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 114
+    → 3 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 154
+    → 4 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 200
+    → 4 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1290)
+    → 0 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 115
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1285)
+    → 0 segments parsed
+  Window 20/20: frames 28500–29209 (28s, 16 frames)
+    Input tokens: 3,648
+    Generated tokens: 80
+    → 1 segments parsed
+[done]  P10T07C04 → 30 segments  (507s)
+
+[start] P10T05C05
+  29642 frames, 19.8 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 165
+    → 6 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1327)
+    → 0 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 191
+    → 5 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 206
+    → 4 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 140
+    → 3 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 82
+    → 1 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 19 column 68 (char 1159)
+    → 0 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 82
+    → 2 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 236
+    → 4 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 188
+    → 4 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 77
+    → 0 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 118
+    → 1 segments parsed
+  Window 20/20: frames 28500–29641 (46s, 26 frames)
+    Input tokens: 5,473
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1311)
+    → 0 segments parsed
+[done]  P10T05C05 → 13 segments  (464s)
+
+[start] P10T05C04
+  29620 frames, 19.7 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 84
+    → 2 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 20 column 78 (char 1248)
+    → 0 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 115
+    → 3 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 0 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 121
+    → 2 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 63
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 101
+    → 2 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 120
+    → 2 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 163
+    → 4 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 161
+    → 4 segments parsed
+  Window 20/20: frames 28500–29619 (45s, 26 frames)
+    Input tokens: 5,473
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1364)
+    → 0 segments parsed
+[done]  P10T05C04 → 23 segments  (393s)
+
+[start] P10T01C04
+  28492 frames, 19.0 min → 19 windows
+  Window 1/19: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 131
+    → 5 segments parsed
+  Window 2/19: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 220
+    → 6 segments parsed
+  Window 3/19: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1411)
+    → 0 segments parsed
+  Window 4/19: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 42
+    → 1 segments parsed
+  Window 5/19: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 172
+    → 4 segments parsed
+  Window 6/19: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 143
+    → 4 segments parsed
+  Window 7/19: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 8/19: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 202
+    → 6 segments parsed
+  Window 9/19: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 305
+    → 9 segments parsed
+  Window 10/19: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 267
+    → 7 segments parsed
+  Window 11/19: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 84
+    → 2 segments parsed
+  Window 12/19: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 73
+    → 1 segments parsed
+  Window 13/19: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 14/19: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 15/19: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 119
+    → 3 segments parsed
+  Window 16/19: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 130
+    → 2 segments parsed
+  Window 17/19: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 77
+    → 1 segments parsed
+  Window 18/19: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 182
+    → 6 segments parsed
+  Window 19/19: frames 27000–28491 (60s, 34 frames)
+    Input tokens: 6,933
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1341)
+    → 0 segments parsed
+[done]  P10T01C04 → 51 segments  (460s)
+
+[start] P10T01C05
+  28516 frames, 19.0 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 154
+    → 5 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 213
+    → 3 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 230
+    → 4 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 168
+    → 3 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 413
+    → 6 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 193
+    → 5 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 74
+    → 1 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 118
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 154
+    → 4 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 212
+    → 4 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 116
+    → 2 segments parsed
+  Window 20/20: frames 28500–28515 (1s, 2 frames)
+    Input tokens: 1,092
+    Generated tokens: 40
+    → 1 segments parsed
+[done]  P10T01C05 → 31 segments  (406s)
+
+[start] P10T13C07
+  20280 frames, 13.5 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 57
+    → 2 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 82 column 6 (char 1376)
+    → 0 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 22 column 60 (char 1242)
+    → 0 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 78
+    → 2 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 86
+    → 2 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 3 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 103
+    → 3 segments parsed
+  Window 14/14: frames 19500–20279 (31s, 18 frames)
+    Input tokens: 4,004
+    Generated tokens: 117
+    → 3 segments parsed
+[done]  P10T13C07 → 17 segments  (284s)
+
+[start] P10T11C03
+  28715 frames, 19.1 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 309
+    → 11 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 79
+    → 2 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 151
+    → 4 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 183
+    → 5 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 208
+    → 6 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 286
+    → 8 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 114
+    → 3 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 142
+    → 4 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 78
+    → 2 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 145
+    → 4 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1230)
+    → 0 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 120
+    → 3 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 85
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 171
+    → 4 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 195
+    → 5 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 122
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 20/20: frames 28500–28714 (9s, 5 frames)
+    Input tokens: 1,797
+    Generated tokens: 84
+    → 2 segments parsed
+[done]  P10T11C03 → 59 segments  (448s)
+
+[start] P10T13C06
+  20233 frames, 13.5 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 163
+    → 6 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 163
+    → 6 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 139
+    → 4 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 66 (char 1235)
+    → 0 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 113
+    → 4 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 147
+    → 5 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 177
+    → 5 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 228
+    → 7 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 2 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 72
+    → 2 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 64 (char 1251)
+    → 0 segments parsed
+  Window 14/14: frames 19500–20232 (29s, 17 frames)
+    Input tokens: 3,979
+    Generated tokens: 129
+    → 2 segments parsed
+[done]  P10T13C06 → 43 segments  (347s)
+
+[start] P10T11C07
+  28740 frames, 19.2 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 80
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 74
+    → 2 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 105
+    → 2 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 80
+    → 1 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 20/20: frames 28500–28739 (10s, 5 frames)
+    Input tokens: 1,797
+    Generated tokens: 8
+    → 0 segments parsed
+[done]  P10T11C07 → 8 segments  (229s)
+
+[start] P10T11C06
+  28694 frames, 19.1 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 171
+    → 7 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 99
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 168
+    → 5 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 35
+    → 1 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 118
+    → 3 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 230
+    → 7 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 147
+    → 5 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 405
+    → 12 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 3 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 175
+    → 5 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 160
+    → 3 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 388
+    → 12 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 3 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 83
+    → 2 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 104
+    → 3 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 103
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 116
+    → 3 segments parsed
+  Window 20/20: frames 28500–28693 (8s, 4 frames)
+    Input tokens: 1,457
+    Generated tokens: 79
+    → 1 segments parsed
+[done]  P10T11C06 → 69 segments  (429s)
+
+[start] P10T13C03
+  20258 frames, 13.5 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 133
+    → 5 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1339)
+    → 0 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 173
+    → 5 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 60 (char 1255)
+    → 0 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 60
+    → 2 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 90
+    → 2 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 181
+    → 5 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 219
+    → 5 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 146
+    → 4 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1307)
+    → 0 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 274
+    → 6 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1254)
+    → 0 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1335)
+    → 0 segments parsed
+  Window 14/14: frames 19500–20257 (30s, 17 frames)
+    Input tokens: 3,979
+    Generated tokens: 113
+    → 4 segments parsed
+[done]  P10T13C03 → 31 segments  (460s)
+
+[start] P10T03C04
+  33959 frames, 22.6 min → 23 windows
+  Window 1/23: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 129
+    → 4 segments parsed
+  Window 2/23: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 19 column 62 (char 1161)
+    → 0 segments parsed
+  Window 3/23: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 254
+    → 7 segments parsed
+  Window 4/23: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 140
+    → 3 segments parsed
+  Window 5/23: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 6/23: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 142
+    → 4 segments parsed
+  Window 7/23: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 8/23: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 9/23: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 107
+    → 3 segments parsed
+  Window 10/23: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 11/23: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 211
+    → 5 segments parsed
+  Window 12/23: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 279
+    → 10 segments parsed
+  Window 13/23: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 140
+    → 1 segments parsed
+  Window 14/23: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 15/23: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 113
+    → 4 segments parsed
+  Window 16/23: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 144
+    → 4 segments parsed
+  Window 17/23: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 141
+    → 3 segments parsed
+  Window 18/23: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1207)
+    → 0 segments parsed
+  Window 19/23: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 20/23: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 21/23: frames 30000–31500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 205
+    → 5 segments parsed
+  Window 22/23: frames 31500–33000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 23/23: frames 33000–33958 (38s, 22 frames)
+    Input tokens: 4,743
+    Generated tokens: 89
+    → 0 segments parsed
+[done]  P10T03C04 → 60 segments  (509s)
+
+[start] P10T03C05
+  33999 frames, 22.7 min → 23 windows
+  Window 1/23: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 199
+    → 7 segments parsed
+  Window 2/23: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 19 column 72 (char 1186)
+    → 0 segments parsed
+  Window 3/23: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 296
+    → 5 segments parsed
+  Window 4/23: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 146
+    → 3 segments parsed
+  Window 5/23: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 6/23: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1318)
+    → 0 segments parsed
+  Window 7/23: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 138
+    → 4 segments parsed
+  Window 8/23: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 9/23: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 119
+    → 1 segments parsed
+  Window 10/23: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 11/23: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 82
+    → 1 segments parsed
+  Window 12/23: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 19 column 68 (char 1164)
+    → 0 segments parsed
+  Window 13/23: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 101
+    → 2 segments parsed
+  Window 14/23: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 83
+    → 2 segments parsed
+  Window 15/23: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 153
+    → 3 segments parsed
+  Window 16/23: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 152
+    → 2 segments parsed
+  Window 17/23: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 121
+    → 2 segments parsed
+  Window 18/23: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 79
+    → 2 segments parsed
+  Window 19/23: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 20/23: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 83
+    → 2 segments parsed
+  Window 21/23: frames 30000–31500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 230
+    → 6 segments parsed
+  Window 22/23: frames 31500–33000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 23/23: frames 33000–33998 (40s, 23 frames)
+    Input tokens: 5,083
+    Generated tokens: 128
+    → 2 segments parsed
+[done]  P10T03C05 → 28 segments  (546s)
+
+[start] P10T06C04
+  29595 frames, 19.7 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 60
+    → 2 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 231
+    → 7 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 191
+    → 3 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 337
+    → 9 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 129
+    → 4 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 86
+    → 2 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 103
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 17 column 74 (char 1141)
+    → 0 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 103
+    → 3 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 17 column 74 (char 1136)
+    → 0 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 150
+    → 4 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 20/20: frames 28500–29594 (44s, 25 frames)
+    Input tokens: 5,448
+    Generated tokens: 80
+    → 2 segments parsed
+[done]  P10T06C04 → 36 segments  (433s)
+
+[start] P10T06C05
+  29613 frames, 19.7 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 57
+    → 2 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 20 column 64 (char 1186)
+    → 0 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 232
+    → 4 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 19 column 66 (char 1165)
+    → 0 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 225
+    → 4 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 136
+    → 4 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 69
+    → 2 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 69
+    → 2 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 70
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 190
+    → 2 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 146
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 20/20: frames 28500–29612 (45s, 25 frames)
+    Input tokens: 5,448
+    Generated tokens: 110
+    → 2 segments parsed
+[done]  P10T06C05 → 19 segments  (436s)
+
+[start] P10T14C07
+  20429 frames, 13.6 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 56
+    → 2 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 72
+    → 2 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 14/14: frames 19500–20428 (37s, 21 frames)
+    Input tokens: 4,707
+    Generated tokens: 81
+    → 1 segments parsed
+[done]  P10T14C07 → 6 segments  (159s)
+
+[start] P10T14C06
+  20386 frames, 13.6 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 103
+    → 2 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 79
+    → 2 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 279
+    → 8 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 175
+    → 5 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 36
+    → 1 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 40
+    → 1 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 112
+    → 4 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 40
+    → 1 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 40
+    → 1 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 36
+    → 1 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 40
+    → 1 segments parsed
+  Window 14/14: frames 19500–20385 (35s, 20 frames)
+    Input tokens: 4,368
+    Generated tokens: 231
+    → 5 segments parsed
+[done]  P10T14C06 → 30 segments  (238s)
+
+[start] P10T14C03
+  20410 frames, 13.6 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 101
+    → 2 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 291
+    → 7 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 183
+    → 5 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1344)
+    → 0 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 180
+    → 4 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 167
+    → 4 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 14/14: frames 19500–20409 (36s, 21 frames)
+    Input tokens: 4,707
+    Generated tokens: 154
+    → 3 segments parsed
+[done]  P10T14C03 → 26 segments  (292s)
+
+[start] P10T12C06
+  21136 frames, 14.1 min → 15 windows
+  Window 1/15: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 60
+    → 2 segments parsed
+  Window 2/15: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 3/15: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 393
+    → 0 segments parsed
+  Window 4/15: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 5/15: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 88
+    → 3 segments parsed
+  Window 6/15: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 148
+    → 4 segments parsed
+  Window 7/15: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 61
+    → 2 segments parsed
+  Window 8/15: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 267
+    → 7 segments parsed
+  Window 9/15: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 226
+    → 6 segments parsed
+  Window 10/15: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 11/15: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 89
+    → 2 segments parsed
+  Window 12/15: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1273)
+    → 0 segments parsed
+  Window 13/15: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 19 column 64 (char 1121)
+    → 0 segments parsed
+  Window 14/15: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 188
+    → 5 segments parsed
+  Window 15/15: frames 21000–21135 (5s, 3 frames)
+    Input tokens: 1,430
+    Generated tokens: 81
+    → 2 segments parsed
+[done]  P10T12C06 → 38 segments  (378s)
+
+[start] P10T12C07
+  21185 frames, 14.1 min → 15 windows
+  Window 1/15: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 85
+    → 2 segments parsed
+  Window 2/15: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 73
+    → 1 segments parsed
+  Window 3/15: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 22 column 60 (char 1237)
+    → 0 segments parsed
+  Window 4/15: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 140
+    → 4 segments parsed
+  Window 5/15: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 6/15: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 7/15: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 72
+    → 2 segments parsed
+  Window 8/15: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 88
+    → 2 segments parsed
+  Window 9/15: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 74
+    → 2 segments parsed
+  Window 10/15: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 11/15: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 12/15: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 13/15: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 125
+    → 3 segments parsed
+  Window 14/15: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 15/15: frames 21000–21184 (7s, 4 frames)
+    Input tokens: 1,455
+    Generated tokens: 8
+    → 0 segments parsed
+[done]  P10T12C07 → 14 segments  (249s)
+
+[start] P10T10C01
+  29168 frames, 19.4 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 375
+    → 10 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 174
+    → 5 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 42
+    → 1 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 177
+    → 4 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 174
+    → 6 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 144
+    → 4 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1303)
+    → 0 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 100
+    → 3 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1292)
+    → 0 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 168
+    → 2 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 169
+    → 5 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 246
+    → 7 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 20/20: frames 28500–29167 (27s, 15 frames)
+    Input tokens: 3,623
+    Generated tokens: 48
+    → 1 segments parsed
+[done]  P10T10C01 → 50 segments  (463s)
+
+[start] P10T02C05
+  21998 frames, 14.7 min → 15 windows
+  Window 1/15: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 161
+    → 3 segments parsed
+  Window 2/15: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 181
+    → 5 segments parsed
+  Window 3/15: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 4/15: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 18 column 80 (char 1262)
+    → 0 segments parsed
+  Window 5/15: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 139
+    → 3 segments parsed
+  Window 6/15: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 181
+    → 5 segments parsed
+  Window 7/15: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 8/15: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 232
+    → 7 segments parsed
+  Window 9/15: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1367)
+    → 0 segments parsed
+  Window 10/15: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 172
+    → 4 segments parsed
+  Window 11/15: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 17 column 74 (char 1135)
+    → 0 segments parsed
+  Window 12/15: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 202
+    → 5 segments parsed
+  Window 13/15: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 14/15: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 312
+    → 0 segments parsed
+  Window 15/15: frames 21000–21997 (40s, 23 frames)
+    Input tokens: 5,071
+    Generated tokens: 188
+    → 3 segments parsed
+[done]  P10T02C05 → 27 segments  (437s)
+
+[start] P10T02C04
+  21939 frames, 14.6 min → 15 windows
+  Window 1/15: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 146
+    → 5 segments parsed
+  Window 2/15: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 125
+    → 3 segments parsed
+  Window 3/15: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1416)
+    → 0 segments parsed
+  Window 4/15: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1383)
+    → 0 segments parsed
+  Window 5/15: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 117
+    → 4 segments parsed
+  Window 6/15: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 202
+    → 5 segments parsed
+  Window 7/15: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 8/15: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 237
+    → 5 segments parsed
+  Window 9/15: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 114
+    → 3 segments parsed
+  Window 10/15: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 144
+    → 3 segments parsed
+  Window 11/15: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 2 segments parsed
+  Window 12/15: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 174
+    → 4 segments parsed
+  Window 13/15: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 249
+    → 1 segments parsed
+  Window 14/15: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 143
+    → 4 segments parsed
+  Window 15/15: frames 21000–21938 (38s, 21 frames)
+    Input tokens: 4,707
+    Generated tokens: 269
+    → 7 segments parsed
+[done]  P10T02C04 → 29 segments  (397s)
+
+[start] P10T12C03
+  21176 frames, 14.1 min → 15 windows
+  Window 1/15: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 155
+    → 6 segments parsed
+  Window 2/15: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 122
+    → 1 segments parsed
+  Window 3/15: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 239
+    → 5 segments parsed
+  Window 4/15: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 109
+    → 1 segments parsed
+  Window 5/15: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 146
+    → 3 segments parsed
+  Window 6/15: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1381)
+    → 0 segments parsed
+  Window 7/15: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 72
+    → 2 segments parsed
+  Window 8/15: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 126
+    → 3 segments parsed
+  Window 9/15: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 142
+    → 3 segments parsed
+  Window 10/15: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 146
+    → 4 segments parsed
+  Window 11/15: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 154
+    → 4 segments parsed
+  Window 12/15: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 177
+    → 5 segments parsed
+  Window 13/15: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1346)
+    → 0 segments parsed
+  Window 14/15: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 180
+    → 5 segments parsed
+  Window 15/15: frames 21000–21175 (7s, 4 frames)
+    Input tokens: 1,455
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P10T12C03 → 39 segments  (374s)
+
+[start] P11T01C04
+  19092 frames, 12.7 min → 13 windows
+  Window 1/13: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 67
+    → 1 segments parsed
+  Window 2/13: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 3/13: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 239
+    → 5 segments parsed
+  Window 4/13: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 125
+    → 4 segments parsed
+  Window 5/13: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 6/13: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 7/13: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 8/13: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/13: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 10/13: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/13: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/13: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/13: frames 18000–19091 (44s, 25 frames)
+    Input tokens: 5,435
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P11T01C04 → 13 segments  (194s)
+
+[start] P11T13C07
+  34542 frames, 23.0 min → 24 windows
+  Window 1/24: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 110
+    → 4 segments parsed
+  Window 2/24: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 66
+    → 2 segments parsed
+  Window 3/24: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1352)
+    → 0 segments parsed
+  Window 4/24: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 5/24: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 6/24: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 7/24: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 8/24: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 9/24: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 20 column 64 (char 1186)
+    → 0 segments parsed
+  Window 10/24: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 165
+    → 5 segments parsed
+  Window 11/24: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 12/24: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 13/24: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 14/24: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1238)
+    → 0 segments parsed
+  Window 15/24: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 16/24: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 82
+    → 2 segments parsed
+  Window 17/24: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 205
+    → 6 segments parsed
+  Window 18/24: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 78
+    → 2 segments parsed
+  Window 19/24: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 79
+    → 2 segments parsed
+  Window 20/24: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1303)
+    → 0 segments parsed
+  Window 21/24: frames 30000–31500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1334)
+    → 0 segments parsed
+  Window 22/24: frames 31500–33000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 23/24: frames 33000–34500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 24/24: frames 34500–34541 (2s, 2 frames)
+    Input tokens: 1,092
+    Generated tokens: 8
+    → 0 segments parsed
+[done]  P11T13C07 → 29 segments  (554s)
+
+[start] P11T13C06
+  34464 frames, 23.0 min → 23 windows
+  Window 1/23: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 109
+    → 4 segments parsed
+  Window 2/23: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 78
+    → 2 segments parsed
+  Window 3/23: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 4/23: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 5/23: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 106
+    → 3 segments parsed
+  Window 6/23: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 7/23: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 8/23: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 83
+    → 2 segments parsed
+  Window 9/23: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 74
+    → 2 segments parsed
+  Window 10/23: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 156
+    → 4 segments parsed
+  Window 11/23: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 120
+    → 3 segments parsed
+  Window 12/23: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 3 segments parsed
+  Window 13/23: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 100
+    → 3 segments parsed
+  Window 14/23: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 102
+    → 3 segments parsed
+  Window 15/23: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 36
+    → 1 segments parsed
+  Window 16/23: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 136
+    → 4 segments parsed
+  Window 17/23: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 119
+    → 3 segments parsed
+  Window 18/23: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 85
+    → 2 segments parsed
+  Window 19/23: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 82
+    → 2 segments parsed
+  Window 20/23: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 118
+    → 3 segments parsed
+  Window 21/23: frames 30000–31500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 158
+    → 4 segments parsed
+  Window 22/23: frames 31500–33000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1293)
+    → 0 segments parsed
+  Window 23/23: frames 33000–34463 (59s, 34 frames)
+    Input tokens: 6,933
+    Generated tokens: 151
+    → 3 segments parsed
+[done]  P11T13C06 → 41 segments  (451s)
+
+[start] P11T11C03
+  13578 frames, 9.1 min → 10 windows
+  Window 1/10: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 136
+    → 4 segments parsed
+  Window 2/10: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1348)
+    → 0 segments parsed
+  Window 3/10: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 80
+    → 2 segments parsed
+  Window 4/10: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1395)
+    → 0 segments parsed
+  Window 5/10: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 410
+    → 12 segments parsed
+  Window 6/10: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 7/10: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 8/10: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 127
+    → 0 segments parsed
+  Window 9/10: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 10/10: frames 13500–13577 (3s, 2 frames)
+    Input tokens: 1,091
+    Generated tokens: 47
+    → 1 segments parsed
+[done]  P11T11C03 → 23 segments  (261s)
+
+[start] P11T11C07
+  13560 frames, 9.0 min → 10 windows
+  Window 1/10: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 79
+    → 3 segments parsed
+  Window 2/10: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 305
+    → 11 segments parsed
+  Window 3/10: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 62 (char 1184)
+    → 0 segments parsed
+  Window 4/10: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 20 column 66 (char 1222)
+    → 0 segments parsed
+  Window 5/10: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 114
+    → 4 segments parsed
+  Window 6/10: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 108
+    → 3 segments parsed
+  Window 7/10: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 138
+    → 3 segments parsed
+  Window 8/10: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 60 (char 1254)
+    → 0 segments parsed
+  Window 9/10: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 100
+    → 3 segments parsed
+  Window 10/10: frames 13500–13559 (2s, 2 frames)
+    Input tokens: 1,091
+    Generated tokens: 68
+    → 1 segments parsed
+[done]  P11T11C07 → 13 segments  (291s)
+
+[start] P11T13C03
+  34520 frames, 23.0 min → 24 windows
+  Window 1/24: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 83
+    → 3 segments parsed
+  Window 2/24: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 101
+    → 3 segments parsed
+  Window 3/24: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 4/24: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 5/24: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 6/24: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 7/24: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 8/24: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 9/24: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 63
+    → 1 segments parsed
+  Window 10/24: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1253)
+    → 0 segments parsed
+  Window 11/24: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1343)
+    → 0 segments parsed
+  Window 12/24: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 185
+    → 5 segments parsed
+  Window 13/24: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 14/24: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 18 column 72 (char 1110)
+    → 0 segments parsed
+  Window 15/24: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 16/24: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 105
+    → 2 segments parsed
+  Window 17/24: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 81
+    → 1 segments parsed
+  Window 18/24: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 216
+    → 5 segments parsed
+  Window 19/24: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 147
+    → 4 segments parsed
+  Window 20/24: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 21/24: frames 30000–31500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 214
+    → 6 segments parsed
+  Window 22/24: frames 31500–33000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1298)
+    → 0 segments parsed
+  Window 23/24: frames 33000–34500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 80
+    → 2 segments parsed
+  Window 24/24: frames 34500–34519 (1s, 2 frames)
+    Input tokens: 1,092
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P11T13C03 → 38 segments  (524s)
+
+[start] P11T03C04
+  29507 frames, 19.7 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 134
+    → 5 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 149
+    → 2 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 196
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 141
+    → 3 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 119
+    → 3 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 199
+    → 6 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 175
+    → 5 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 83
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 143
+    → 4 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 376
+    → 5 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 147
+    → 5 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 84
+    → 1 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 270
+    → 6 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 112
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 78
+    → 1 segments parsed
+  Window 20/20: frames 28500–29506 (40s, 23 frames)
+    Input tokens: 5,083
+    Generated tokens: 87
+    → 2 segments parsed
+[done]  P11T03C04 → 51 segments  (415s)
+
+[start] P11T07C04
+  26081 frames, 17.4 min → 18 windows
+  Window 1/18: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 68 (char 1320)
+    → 0 segments parsed
+  Window 2/18: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 136
+    → 5 segments parsed
+  Window 3/18: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 64
+    → 0 segments parsed
+  Window 4/18: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 138
+    → 4 segments parsed
+  Window 5/18: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 496
+    → 18 segments parsed
+  Window 6/18: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 76
+    → 1 segments parsed
+  Window 7/18: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 296
+    → 8 segments parsed
+  Window 8/18: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 152
+    → 2 segments parsed
+  Window 9/18: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 97
+    → 3 segments parsed
+  Window 10/18: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1360)
+    → 0 segments parsed
+  Window 11/18: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 139
+    → 2 segments parsed
+  Window 12/18: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 13/18: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 105
+    → 3 segments parsed
+  Window 14/18: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 229
+    → 6 segments parsed
+  Window 15/18: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 205
+    → 6 segments parsed
+  Window 16/18: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 110
+    → 3 segments parsed
+  Window 17/18: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 181
+    → 3 segments parsed
+  Window 18/18: frames 25500–26080 (23s, 13 frames)
+    Input tokens: 3,258
+    Generated tokens: 115
+    → 1 segments parsed
+[done]  P11T07C04 → 45 segments  (464s)
+
+[start] P11T09C01
+  27667 frames, 18.4 min → 19 windows
+  Window 1/19: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 106
+    → 2 segments parsed
+  Window 2/19: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 80
+    → 1 segments parsed
+  Window 3/19: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 76
+    → 0 segments parsed
+  Window 4/19: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 267
+    → 8 segments parsed
+  Window 5/19: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 139
+    → 3 segments parsed
+  Window 6/19: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 171
+    → 4 segments parsed
+  Window 7/19: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 390
+    → 11 segments parsed
+  Window 8/19: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 83
+    → 1 segments parsed
+  Window 9/19: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 74
+    → 2 segments parsed
+  Window 10/19: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 11/19: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 73
+    → 2 segments parsed
+  Window 12/19: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 37
+    → 1 segments parsed
+  Window 13/19: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 109
+    → 3 segments parsed
+  Window 14/19: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 82
+    → 2 segments parsed
+  Window 15/19: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 16/19: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 82
+    → 2 segments parsed
+  Window 17/19: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 79
+    → 2 segments parsed
+  Window 18/19: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 78
+    → 0 segments parsed
+  Window 19/19: frames 27000–27666 (27s, 15 frames)
+    Input tokens: 3,623
+    Generated tokens: 82
+    → 2 segments parsed
+[done]  P11T09C01 → 45 segments  (350s)
+
+[start] P11T05C04
+  27158 frames, 18.1 min → 19 windows
+  Window 1/19: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 80
+    → 3 segments parsed
+  Window 2/19: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 103
+    → 3 segments parsed
+  Window 3/19: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 92
+    → 1 segments parsed
+  Window 4/19: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 111
+    → 2 segments parsed
+  Window 5/19: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 162
+    → 4 segments parsed
+  Window 6/19: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 110
+    → 1 segments parsed
+  Window 7/19: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 73
+    → 2 segments parsed
+  Window 8/19: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 190
+    → 2 segments parsed
+  Window 9/19: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 80
+    → 2 segments parsed
+  Window 10/19: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 11/19: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 128
+    → 2 segments parsed
+  Window 12/19: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 13/19: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 200
+    → 3 segments parsed
+  Window 14/19: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 280
+    → 7 segments parsed
+  Window 15/19: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 334
+    → 9 segments parsed
+  Window 16/19: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 105
+    → 3 segments parsed
+  Window 17/19: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 101
+    → 2 segments parsed
+  Window 18/19: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 8
+    → 0 segments parsed
+  Window 19/19: frames 27000–27157 (6s, 3 frames)
+    Input tokens: 1,432
+    Generated tokens: 8
+    → 0 segments parsed
+[done]  P11T05C04 → 40 segments  (357s)
+
+[start] P11T15C01
+  22760 frames, 15.2 min → 16 windows
+  Window 1/16: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 40
+    → 1 segments parsed
+  Window 2/16: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 3/16: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 82 column 6 (char 1409)
+    → 0 segments parsed
+  Window 4/16: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 107
+    → 3 segments parsed
+  Window 5/16: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 6/16: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1381)
+    → 0 segments parsed
+  Window 7/16: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 8/16: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 118
+    → 2 segments parsed
+  Window 9/16: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 21 column 60 (char 1211)
+    → 0 segments parsed
+  Window 10/16: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 129
+    → 3 segments parsed
+  Window 11/16: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 12/16: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 13/16: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 42
+    → 1 segments parsed
+  Window 14/16: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 15/16: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 157
+    → 4 segments parsed
+  Window 16/16: frames 22500–22759 (10s, 6 frames)
+    Input tokens: 1,819
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P11T15C01 → 21 segments  (351s)
+
+[start] P11T12C06
+  30569 frames, 20.4 min → 21 windows
+  Window 1/21: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 168
+    → 5 segments parsed
+  Window 2/21: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 105
+    → 3 segments parsed
+  Window 3/21: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 90
+    → 3 segments parsed
+  Window 4/21: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 111
+    → 3 segments parsed
+  Window 5/21: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 142
+    → 4 segments parsed
+  Window 6/21: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 7/21: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 73
+    → 2 segments parsed
+  Window 8/21: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1221)
+    → 0 segments parsed
+  Window 9/21: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 10/21: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 465
+    → 12 segments parsed
+  Window 11/21: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1268)
+    → 0 segments parsed
+  Window 12/21: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 106
+    → 3 segments parsed
+  Window 13/21: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1233)
+    → 0 segments parsed
+  Window 14/21: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 3 segments parsed
+  Window 15/21: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 286
+    → 6 segments parsed
+  Window 16/21: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1368)
+    → 0 segments parsed
+  Window 17/21: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 120
+    → 2 segments parsed
+  Window 18/21: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 291
+    → 8 segments parsed
+  Window 19/21: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 279
+    → 7 segments parsed
+  Window 20/21: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 266
+    → 7 segments parsed
+  Window 21/21: frames 30000–30568 (23s, 13 frames)
+    Input tokens: 3,258
+    Generated tokens: 104
+    → 3 segments parsed
+[done]  P11T12C06 → 50 segments  (607s)
+
+[start] P11T10C01
+  25275 frames, 16.9 min → 17 windows
+  Window 1/17: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 209
+    → 7 segments parsed
+  Window 2/17: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 150
+    → 4 segments parsed
+  Window 3/17: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 72
+    → 2 segments parsed
+  Window 4/17: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 42
+    → 1 segments parsed
+  Window 5/17: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 204
+    → 6 segments parsed
+  Window 6/17: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 7/17: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 72
+    → 2 segments parsed
+  Window 8/17: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/17: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 10/17: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/17: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/17: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 144
+    → 3 segments parsed
+  Window 13/17: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 42
+    → 1 segments parsed
+  Window 14/17: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 15/17: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 16/17: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 17/17: frames 24000–25274 (51s, 29 frames)
+    Input tokens: 6,167
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P11T10C01 → 26 segments  (274s)
+
+[start] P11T02C04
+  24724 frames, 16.5 min → 17 windows
+  Window 1/17: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 66
+    → 2 segments parsed
+  Window 2/17: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 121
+    → 2 segments parsed
+  Window 3/17: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 139
+    → 2 segments parsed
+  Window 4/17: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 5/17: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 77 column 6 (char 1331)
+    → 0 segments parsed
+  Window 6/17: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 355
+    → 2 segments parsed
+  Window 7/17: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 177
+    → 4 segments parsed
+  Window 8/17: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/17: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 10/17: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/17: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 118
+    → 2 segments parsed
+  Window 12/17: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 13/17: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 14/17: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 119
+    → 1 segments parsed
+  Window 15/17: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 1 segments parsed
+  Window 16/17: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 1 segments parsed
+  Window 17/17: frames 24000–24723 (29s, 16 frames)
+    Input tokens: 3,640
+    Generated tokens: 81
+    → 1 segments parsed
+[done]  P11T02C04 → 16 segments  (337s)
+
+[start] P11T12C03
+  30593 frames, 20.4 min → 21 windows
+  Window 1/21: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 276
+    → 10 segments parsed
+  Window 2/21: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 95
+    → 2 segments parsed
+  Window 3/21: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 4/21: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 107
+    → 3 segments parsed
+  Window 5/21: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 186
+    → 5 segments parsed
+  Window 6/21: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 176
+    → 4 segments parsed
+  Window 7/21: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 173
+    → 3 segments parsed
+  Window 8/21: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 296
+    → 4 segments parsed
+  Window 9/21: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 218
+    → 6 segments parsed
+  Window 10/21: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 78
+    → 2 segments parsed
+  Window 11/21: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1222)
+    → 0 segments parsed
+  Window 12/21: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 142
+    → 4 segments parsed
+  Window 13/21: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 72 column 6 (char 1314)
+    → 0 segments parsed
+  Window 14/21: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 466
+    → 12 segments parsed
+  Window 15/21: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 117
+    → 3 segments parsed
+  Window 16/21: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 235
+    → 5 segments parsed
+  Window 17/21: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 84
+    → 0 segments parsed
+  Window 18/21: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 156
+    → 4 segments parsed
+  Window 19/21: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 454
+    → 12 segments parsed
+  Window 20/21: frames 28500–30000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 159
+    → 4 segments parsed
+  Window 21/21: frames 30000–30592 (24s, 13 frames)
+    Input tokens: 3,258
+    Generated tokens: 111
+    → 3 segments parsed
+[done]  P11T12C03 → 76 segments  (581s)
+
+[start] P11T06C04
+  20378 frames, 13.6 min → 14 windows
+  Window 1/14: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 22 column 60 (char 1256)
+    → 0 segments parsed
+  Window 2/14: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 93
+    → 2 segments parsed
+  Window 3/14: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 142
+    → 2 segments parsed
+  Window 4/14: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 104
+    → 2 segments parsed
+  Window 5/14: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 6/14: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 173
+    → 5 segments parsed
+  Window 7/14: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 141
+    → 4 segments parsed
+  Window 8/14: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 83
+    → 1 segments parsed
+  Window 9/14: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 106
+    → 2 segments parsed
+  Window 10/14: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 186
+    → 4 segments parsed
+  Window 11/14: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 85
+    → 2 segments parsed
+  Window 12/14: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 1 segments parsed
+  Window 13/14: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 143
+    → 3 segments parsed
+  Window 14/14: frames 19500–20377 (35s, 20 frames)
+    Input tokens: 4,368
+    Generated tokens: 80
+    → 2 segments parsed
+[done]  P11T06C04 → 27 segments  (294s)
+
+[start] P11T08C01
+  29327 frames, 19.6 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 170
+    → 5 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 198
+    → 5 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 185
+    → 4 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 46
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 172
+    → 4 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 40
+    → 1 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 343
+    → 10 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 16 column 82 (char 1178)
+    → 0 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 224
+    → 5 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 172
+    → 4 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 212
+    → 5 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 214
+    → 6 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 107
+    → 3 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 20/20: frames 28500–29326 (33s, 19 frames)
+    Input tokens: 4,353
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P11T08C01 → 41 segments  (440s)
+
+[start] P11T14C01
+  25677 frames, 17.1 min → 18 windows
+  Window 1/18: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 60
+    → 2 segments parsed
+  Window 2/18: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 503
+    → 17 segments parsed
+  Window 3/18: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 4/18: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 42
+    → 1 segments parsed
+  Window 5/18: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 6/18: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 7/18: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 74
+    → 2 segments parsed
+  Window 8/18: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/18: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 10/18: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 11/18: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/18: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/18: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 143
+    → 4 segments parsed
+  Window 14/18: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 15/18: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 16/18: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 17/18: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 18/18: frames 25500–25676 (7s, 4 frames)
+    Input tokens: 1,457
+    Generated tokens: 47
+    → 1 segments parsed
+[done]  P11T14C01 → 27 segments  (283s)
+
+[start] P11T04C04
+  26026 frames, 17.4 min → 18 windows
+  Window 1/18: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 137
+    → 5 segments parsed
+  Window 2/18: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 3/18: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 113
+    → 3 segments parsed
+  Window 4/18: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 94
+    → 1 segments parsed
+  Window 5/18: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 142
+    → 4 segments parsed
+  Window 6/18: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 199
+    → 5 segments parsed
+  Window 7/18: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 61
+    → 2 segments parsed
+  Window 8/18: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 9/18: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 98
+    → 2 segments parsed
+  Window 10/18: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 118
+    → 2 segments parsed
+  Window 11/18: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 198
+    → 4 segments parsed
+  Window 12/18: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 269
+    → 7 segments parsed
+  Window 13/18: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 188
+    → 4 segments parsed
+  Window 14/18: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 82 column 6 (char 1408)
+    → 0 segments parsed
+  Window 15/18: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 115
+    → 2 segments parsed
+  Window 16/18: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 67 column 6 (char 1334)
+    → 0 segments parsed
+  Window 17/18: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 83
+    → 1 segments parsed
+  Window 18/18: frames 25500–26025 (21s, 12 frames)
+    Input tokens: 2,918
+    Generated tokens: 125
+    → 2 segments parsed
+[done]  P11T04C04 → 35 segments  (422s)
+
+[start] P16T05C04
+  23855 frames, 15.9 min → 16 windows
+  Window 1/16: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 131
+    → 5 segments parsed
+  Window 2/16: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 77
+    → 1 segments parsed
+  Window 3/16: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 4/16: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 5/16: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 171
+    → 5 segments parsed
+  Window 6/16: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 114
+    → 2 segments parsed
+  Window 7/16: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 216
+    → 5 segments parsed
+  Window 8/16: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 101
+    → 2 segments parsed
+  Window 9/16: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 39
+    → 1 segments parsed
+  Window 10/16: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 11/16: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 62
+    → 1 segments parsed
+  Window 12/16: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 13/16: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 14/16: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 15/16: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 37
+    → 1 segments parsed
+  Window 16/16: frames 22500–23854 (54s, 31 frames)
+    Input tokens: 6,527
+    Generated tokens: 47
+    → 1 segments parsed
+[done]  P16T05C04 → 29 segments  (261s)
+
+[start] P16T07C01
+  29435 frames, 19.6 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 157
+    → 5 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 124
+    → 3 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 44
+    → 1 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 198
+    → 7 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 391
+    → 12 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 135
+    → 4 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 171
+    → 3 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 75
+    → 2 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 84
+    → 2 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 64
+    → 2 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 111
+    → 2 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 47
+    → 1 segments parsed
+  Window 20/20: frames 28500–29434 (37s, 21 frames)
+    Input tokens: 4,718
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P16T07C01 → 42 segments  (352s)
+
+[start] P16T05C05
+  23872 frames, 15.9 min → 16 windows
+  Window 1/16: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 230
+    → 9 segments parsed
+  Window 2/16: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 145
+    → 2 segments parsed
+  Window 3/16: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 73
+    → 2 segments parsed
+  Window 4/16: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 73
+    → 2 segments parsed
+  Window 5/16: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 6/16: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 77
+    → 2 segments parsed
+  Window 7/16: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 198
+    → 6 segments parsed
+  Window 8/16: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 118
+    → 2 segments parsed
+  Window 9/16: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 69
+    → 2 segments parsed
+  Window 10/16: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 100
+    → 3 segments parsed
+  Window 11/16: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 69
+    → 2 segments parsed
+  Window 12/16: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 69
+    → 2 segments parsed
+  Window 13/16: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 69
+    → 2 segments parsed
+  Window 14/16: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 81
+    → 2 segments parsed
+  Window 15/16: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 100
+    → 3 segments parsed
+  Window 16/16: frames 22500–23871 (55s, 32 frames)
+    Input tokens: 6,552
+    Generated tokens: 83
+    → 2 segments parsed
+[done]  P16T05C05 → 24 segments  (287s)
+
+[start] P16T07C02
+  29417 frames, 19.6 min → 20 windows
+  Window 1/20: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 184
+    → 6 segments parsed
+  Window 2/20: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 263
+    → 7 segments parsed
+  Window 3/20: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 37
+    → 1 segments parsed
+  Window 4/20: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 76
+    → 2 segments parsed
+  Window 5/20: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 37
+    → 1 segments parsed
+  Window 6/20: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 78
+    → 2 segments parsed
+  Window 7/20: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 8/20: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 41
+    → 1 segments parsed
+  Window 9/20: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 171
+    → 5 segments parsed
+  Window 10/20: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 71
+    → 2 segments parsed
+  Window 11/20: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 12/20: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 13/20: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 14/20: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 107
+    → 2 segments parsed
+  Window 15/20: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 39
+    → 1 segments parsed
+  Window 16/20: frames 22500–24000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 17/20: frames 24000–25500 (60s, 35 frames)
+    Input tokens: 7,261
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 18/20: frames 25500–27000 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 19/20: frames 27000–28500 (60s, 35 frames)
+    Input tokens: 7,273
+    Generated tokens: 45
+    → 1 segments parsed
+  Window 20/20: frames 28500–29416 (37s, 21 frames)
+    Input tokens: 4,718
+    Generated tokens: 45
+    → 1 segments parsed
+[done]  P16T07C02 → 22 segments  (316s)
+
+[start] P16T15C03
+  23844 frames, 15.9 min → 16 windows
+  Window 1/16: frames 0–1500 (60s, 35 frames)
+    Input tokens: 7,159
+    Generated tokens: 105
+    → 4 segments parsed
+  Window 2/16: frames 1500–3000 (60s, 35 frames)
+    Input tokens: 7,202
+    Generated tokens: 43
+    → 1 segments parsed
+  Window 3/16: frames 3000–4500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 172
+    → 5 segments parsed
+  Window 4/16: frames 4500–6000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 186
+    → 5 segments parsed
+  Window 5/16: frames 6000–7500 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 146
+    → 4 segments parsed
+  Window 6/16: frames 7500–9000 (60s, 35 frames)
+    Input tokens: 7,214
+    Generated tokens: 208
+    → 0 segments parsed
+  Window 7/16: frames 9000–10500 (60s, 35 frames)
+    Input tokens: 7,227
+    Generated tokens: 177
+    → 2 segments parsed
+  Window 8/16: frames 10500–12000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 382
+    → 3 segments parsed
+  Window 9/16: frames 12000–13500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 106
+    → 3 segments parsed
+  Window 10/16: frames 13500–15000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 121
+    → 2 segments parsed
+  Window 11/16: frames 15000–16500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 152
+    → 4 segments parsed
+  Window 12/16: frames 16500–18000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 141
+    → 3 segments parsed
+  Window 13/16: frames 18000–19500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 180
+    → 5 segments parsed
+  Window 14/16: frames 19500–21000 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 512
+    [parse] failed: Expecting ',' delimiter: line 62 column 6 (char 1269)
+    → 0 segments parsed
+  Window 15/16: frames 21000–22500 (60s, 35 frames)
+    Input tokens: 7,255
+    Generated tokens: 128
+    → 3 segments parsed
+  Window 16/16: frames 22500–23843 (54s, 31 frames)
+    Input tokens: 6,527
+    Generated tokens: 117
+    → 2 segments parsed
+[done]  P16T15C03 → 44 segments  (395s)
+
+Finished: 50/50 succeeded, 0 failed.
+Results written to outputs/generated_segments.json

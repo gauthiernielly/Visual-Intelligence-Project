@@ -1,0 +1,565 @@
+{
+  "event_map": {
+    "mAP@0.05": 0.0235,
+    "mAP@0.1": 0.0213,
+    "mAP@0.3": 0.0142
+  },
+  "per_class_ap": {
+    "0.05": {
+      "Breakfast": 0.1364,
+      "Breakfast.Cut_bread": 0.0727,
+      "Breakfast.Eat_at_table": 0.0152,
+      "Breakfast.Spread_jam_or_butter": 0.0048,
+      "Breakfast.Take_ham": 0.0,
+      "Clean_dishes": 0.0114,
+      "Clean_dishes.Clean_with_water": 0.0,
+      "Clean_dishes.Dry_up": 0.0,
+      "Clean_dishes.Put_something_in_sink": 0.0,
+      "Cook": 0.0295,
+      "Cook.Cut": 0.0753,
+      "Cook.Stir": 0.0682,
+      "Cook.Use_oven": 0.0101,
+      "Cook.Use_stove": 0.0,
+      "Drink.From_bottle": 0.0,
+      "Drink.From_can": 0.0,
+      "Drink.From_cup": 0.0071,
+      "Drink.From_glass": 0.0,
+      "Dump_in_trash": 0.0,
+      "Eat_snack": 0.0,
+      "Enter": 0.0069,
+      "Get_up": 0.0909,
+      "Get_water": 0.0,
+      "Insert_tea_bag": 0.0,
+      "Lay_down": 0.0,
+      "Leave": 0.0063,
+      "Make_coffee": 0.0182,
+      "Make_coffee.Pour_grains": 0.0,
+      "Make_coffee.Pour_water": 0.0101,
+      "Make_tea": 0.0,
+      "Make_tea.Boil_water": 0.0,
+      "Pour.From_bottle": 0.0,
+      "Pour.From_can": 0.0,
+      "Pour.From_kettle": 0.0,
+      "Put_something_on_table": 0.0015,
+      "Read": 0.151,
+      "Sit_down": 0.0034,
+      "Stir_coffee/tea": 0.0,
+      "Take_pills": 0.0,
+      "Take_something_off_table": 0.0065,
+      "Use_Drawer": 0.0055,
+      "Use_cupboard": 0.0,
+      "Use_fridge": 0.0,
+      "Use_glasses": 0.0,
+      "Use_laptop": 0.1601,
+      "Use_tablet": 0.1487,
+      "Use_telephone": 0.0227,
+      "Walk": 0.016,
+      "Watch_TV": 0.0764,
+      "Wipe_table": 0.0091,
+      "Write": 0.0333
+    },
+    "0.1": {
+      "Breakfast": 0.1364,
+      "Breakfast.Cut_bread": 0.0727,
+      "Breakfast.Eat_at_table": 0.0152,
+      "Breakfast.Spread_jam_or_butter": 0.0048,
+      "Breakfast.Take_ham": 0.0,
+      "Clean_dishes": 0.0114,
+      "Clean_dishes.Clean_with_water": 0.0,
+      "Clean_dishes.Dry_up": 0.0,
+      "Clean_dishes.Put_something_in_sink": 0.0,
+      "Cook": 0.0191,
+      "Cook.Cut": 0.0753,
+      "Cook.Stir": 0.0682,
+      "Cook.Use_oven": 0.0101,
+      "Cook.Use_stove": 0.0,
+      "Drink.From_bottle": 0.0,
+      "Drink.From_can": 0.0,
+      "Drink.From_cup": 0.0052,
+      "Drink.From_glass": 0.0,
+      "Dump_in_trash": 0.0,
+      "Eat_snack": 0.0,
+      "Enter": 0.0044,
+      "Get_up": 0.0909,
+      "Get_water": 0.0,
+      "Insert_tea_bag": 0.0,
+      "Lay_down": 0.0,
+      "Leave": 0.0063,
+      "Make_coffee": 0.0182,
+      "Make_coffee.Pour_grains": 0.0,
+      "Make_coffee.Pour_water": 0.0101,
+      "Make_tea": 0.0,
+      "Make_tea.Boil_water": 0.0,
+      "Pour.From_bottle": 0.0,
+      "Pour.From_can": 0.0,
+      "Pour.From_kettle": 0.0,
+      "Put_something_on_table": 0.0015,
+      "Read": 0.1412,
+      "Sit_down": 0.0034,
+      "Stir_coffee/tea": 0.0,
+      "Take_pills": 0.0,
+      "Take_something_off_table": 0.0065,
+      "Use_Drawer": 0.0045,
+      "Use_cupboard": 0.0,
+      "Use_fridge": 0.0,
+      "Use_glasses": 0.0,
+      "Use_laptop": 0.1461,
+      "Use_tablet": 0.1425,
+      "Use_telephone": 0.0101,
+      "Walk": 0.0135,
+      "Watch_TV": 0.0303,
+      "Wipe_table": 0.0091,
+      "Write": 0.0303
+    },
+    "0.3": {
+      "Breakfast": 0.1364,
+      "Breakfast.Cut_bread": 0.0455,
+      "Breakfast.Eat_at_table": 0.0076,
+      "Breakfast.Spread_jam_or_butter": 0.0048,
+      "Breakfast.Take_ham": 0.0,
+      "Clean_dishes": 0.0114,
+      "Clean_dishes.Clean_with_water": 0.0,
+      "Clean_dishes.Dry_up": 0.0,
+      "Clean_dishes.Put_something_in_sink": 0.0,
+      "Cook": 0.0048,
+      "Cook.Cut": 0.0532,
+      "Cook.Stir": 0.0227,
+      "Cook.Use_oven": 0.0,
+      "Cook.Use_stove": 0.0,
+      "Drink.From_bottle": 0.0,
+      "Drink.From_can": 0.0,
+      "Drink.From_cup": 0.0028,
+      "Drink.From_glass": 0.0,
+      "Dump_in_trash": 0.0,
+      "Eat_snack": 0.0,
+      "Enter": 0.0015,
+      "Get_up": 0.0909,
+      "Get_water": 0.0,
+      "Insert_tea_bag": 0.0,
+      "Lay_down": 0.0,
+      "Leave": 0.0031,
+      "Make_coffee": 0.0152,
+      "Make_coffee.Pour_grains": 0.0,
+      "Make_coffee.Pour_water": 0.0101,
+      "Make_tea": 0.0,
+      "Make_tea.Boil_water": 0.0,
+      "Pour.From_bottle": 0.0,
+      "Pour.From_can": 0.0,
+      "Pour.From_kettle": 0.0,
+      "Put_something_on_table": 0.0,
+      "Read": 0.0701,
+      "Sit_down": 0.0,
+      "Stir_coffee/tea": 0.0,
+      "Take_pills": 0.0,
+      "Take_something_off_table": 0.0,
+      "Use_Drawer": 0.0,
+      "Use_cupboard": 0.0,
+      "Use_fridge": 0.0,
+      "Use_glasses": 0.0,
+      "Use_laptop": 0.0951,
+      "Use_tablet": 0.0878,
+      "Use_telephone": 0.0101,
+      "Walk": 0.0114,
+      "Watch_TV": 0.0207,
+      "Wipe_table": 0.0,
+      "Write": 0.0182
+    }
+  },
+  "mean_recall": 0.0688,
+  "per_class_recall": {
+    "Breakfast": 0.2,
+    "Breakfast.Cut_bread": 0.1154,
+    "Breakfast.Eat_at_table": 0.0365,
+    "Breakfast.Spread_jam_or_butter": 0.0435,
+    "Breakfast.Take_ham": 0.0,
+    "Clean_dishes": 0.0862,
+    "Clean_dishes.Clean_with_water": 0.0,
+    "Clean_dishes.Dry_up": 0.0,
+    "Clean_dishes.Put_something_in_sink": 0.0,
+    "Cook": 0.1795,
+    "Cook.Cut": 0.3226,
+    "Cook.Stir": 0.1398,
+    "Cook.Use_oven": 0.0222,
+    "Cook.Use_stove": 0.0,
+    "Drink.From_bottle": 0.0,
+    "Drink.From_can": 0.0,
+    "Drink.From_cup": 0.0494,
+    "Drink.From_glass": 0.0,
+    "Dump_in_trash": 0.0,
+    "Eat_snack": 0.0,
+    "Enter": 0.0319,
+    "Get_up": 0.0058,
+    "Get_water": 0.0,
+    "Insert_tea_bag": 0.0,
+    "Lay_down": 0.0,
+    "Leave": 0.0112,
+    "Make_coffee": 0.0909,
+    "Make_coffee.Pour_grains": 0.0,
+    "Make_coffee.Pour_water": 0.0667,
+    "Make_tea": 0.0,
+    "Make_tea.Boil_water": 0.0,
+    "Pour.From_bottle": 0.0,
+    "Pour.From_can": 0.0,
+    "Pour.From_kettle": 0.0,
+    "Put_something_on_table": 0.0011,
+    "Read": 0.5871,
+    "Sit_down": 0.003,
+    "Stir_coffee/tea": 0.0,
+    "Take_pills": 0.0,
+    "Take_something_off_table": 0.0052,
+    "Use_Drawer": 0.0189,
+    "Use_cupboard": 0.0,
+    "Use_fridge": 0.0,
+    "Use_glasses": 0.0,
+    "Use_laptop": 0.3846,
+    "Use_tablet": 0.541,
+    "Use_telephone": 0.0972,
+    "Walk": 0.0639,
+    "Watch_TV": 0.1696,
+    "Wipe_table": 0.0167,
+    "Write": 0.2188
+  },
+  "hallucination_rate": 0.5224,
+  "hallucination_by_class": [
+    {
+      "class": "Walk",
+      "count": 186,
+      "fraction": 0.1507
+    },
+    {
+      "class": "Drink.From_cup",
+      "count": 165,
+      "fraction": 0.1337
+    },
+    {
+      "class": "Get_up",
+      "count": 119,
+      "fraction": 0.0964
+    },
+    {
+      "class": "Take_something_off_table",
+      "count": 98,
+      "fraction": 0.0794
+    },
+    {
+      "class": "Sit_down",
+      "count": 77,
+      "fraction": 0.0624
+    },
+    {
+      "class": "Enter",
+      "count": 63,
+      "fraction": 0.0511
+    },
+    {
+      "class": "Read",
+      "count": 55,
+      "fraction": 0.0446
+    },
+    {
+      "class": "Put_something_on_table",
+      "count": 44,
+      "fraction": 0.0357
+    },
+    {
+      "class": "Use_cupboard",
+      "count": 32,
+      "fraction": 0.0259
+    },
+    {
+      "class": "Watch_TV",
+      "count": 30,
+      "fraction": 0.0243
+    },
+    {
+      "class": "Use_telephone",
+      "count": 28,
+      "fraction": 0.0227
+    },
+    {
+      "class": "Use_tablet",
+      "count": 26,
+      "fraction": 0.0211
+    },
+    {
+      "class": "Use_fridge",
+      "count": 22,
+      "fraction": 0.0178
+    },
+    {
+      "class": "Leave",
+      "count": 21,
+      "fraction": 0.017
+    },
+    {
+      "class": "Use_laptop",
+      "count": 21,
+      "fraction": 0.017
+    },
+    {
+      "class": "Use_Drawer",
+      "count": 19,
+      "fraction": 0.0154
+    },
+    {
+      "class": "Clean_dishes.Put_something_in_sink",
+      "count": 18,
+      "fraction": 0.0146
+    },
+    {
+      "class": "Clean_dishes.Clean_with_water",
+      "count": 17,
+      "fraction": 0.0138
+    },
+    {
+      "class": "Make_coffee",
+      "count": 16,
+      "fraction": 0.013
+    },
+    {
+      "class": "Write",
+      "count": 16,
+      "fraction": 0.013
+    },
+    {
+      "class": "Cook",
+      "count": 15,
+      "fraction": 0.0122
+    },
+    {
+      "class": "Clean_dishes",
+      "count": 14,
+      "fraction": 0.0113
+    },
+    {
+      "class": "Breakfast.Spread_jam_or_butter",
+      "count": 12,
+      "fraction": 0.0097
+    },
+    {
+      "class": "Cook.Use_stove",
+      "count": 11,
+      "fraction": 0.0089
+    },
+    {
+      "class": "Cook.Stir",
+      "count": 11,
+      "fraction": 0.0089
+    },
+    {
+      "class": "Breakfast.Take_ham",
+      "count": 10,
+      "fraction": 0.0081
+    },
+    {
+      "class": "Lay_down",
+      "count": 9,
+      "fraction": 0.0073
+    },
+    {
+      "class": "Cook.Use_oven",
+      "count": 9,
+      "fraction": 0.0073
+    },
+    {
+      "class": "Wipe_table",
+      "count": 8,
+      "fraction": 0.0065
+    },
+    {
+      "class": "Drink.From_can",
+      "count": 7,
+      "fraction": 0.0057
+    },
+    {
+      "class": "Breakfast.Cut_bread",
+      "count": 7,
+      "fraction": 0.0057
+    },
+    {
+      "class": "Clean_dishes.Dry_up",
+      "count": 6,
+      "fraction": 0.0049
+    },
+    {
+      "class": "Make_coffee.Pour_water",
+      "count": 6,
+      "fraction": 0.0049
+    },
+    {
+      "class": "Drink.From_bottle",
+      "count": 5,
+      "fraction": 0.0041
+    },
+    {
+      "class": "Eat_snack",
+      "count": 4,
+      "fraction": 0.0032
+    },
+    {
+      "class": "Breakfast.Eat_at_table",
+      "count": 4,
+      "fraction": 0.0032
+    },
+    {
+      "class": "Make_coffee.Pour_grains",
+      "count": 4,
+      "fraction": 0.0032
+    },
+    {
+      "class": "Dump_in_trash",
+      "count": 3,
+      "fraction": 0.0024
+    },
+    {
+      "class": "Make_tea",
+      "count": 3,
+      "fraction": 0.0024
+    },
+    {
+      "class": "Use_glasses",
+      "count": 2,
+      "fraction": 0.0016
+    },
+    {
+      "class": "Take_pills",
+      "count": 2,
+      "fraction": 0.0016
+    },
+    {
+      "class": "Get_water",
+      "count": 2,
+      "fraction": 0.0016
+    },
+    {
+      "class": "Cook.Cut",
+      "count": 2,
+      "fraction": 0.0016
+    },
+    {
+      "class": "Breakfast",
+      "count": 1,
+      "fraction": 0.0008
+    },
+    {
+      "class": "Stir_coffee/tea",
+      "count": 1,
+      "fraction": 0.0008
+    },
+    {
+      "class": "Make_tea.Boil_water",
+      "count": 1,
+      "fraction": 0.0008
+    },
+    {
+      "class": "Pour.From_kettle",
+      "count": 1,
+      "fraction": 0.0008
+    },
+    {
+      "class": "Drink.From_glass",
+      "count": 1,
+      "fraction": 0.0008
+    }
+  ],
+  "lcs_recall": 0.223,
+  "lcs_precision": 0.5945,
+  "lcs_f1": 0.3089,
+  "detection_by_duration": [
+    {
+      "bin": "<1s",
+      "total": 1951,
+      "detected": 8,
+      "recall": 0.0041
+    },
+    {
+      "bin": "1-2s",
+      "total": 1722,
+      "detected": 18,
+      "recall": 0.0105
+    },
+    {
+      "bin": "2-10s",
+      "total": 2219,
+      "detected": 64,
+      "recall": 0.0288
+    },
+    {
+      "bin": "10-30s",
+      "total": 426,
+      "detected": 38,
+      "recall": 0.0892
+    },
+    {
+      "bin": ">30s",
+      "total": 413,
+      "detected": 220,
+      "recall": 0.5327
+    }
+  ],
+  "substitutions": [
+    {
+      "predicted_class": "Read",
+      "gt_class": "Watch_TV",
+      "count": 25
+    },
+    {
+      "predicted_class": "Walk",
+      "gt_class": "Put_something_on_table",
+      "count": 22
+    },
+    {
+      "predicted_class": "Walk",
+      "gt_class": "Watch_TV",
+      "count": 21
+    },
+    {
+      "predicted_class": "Walk",
+      "gt_class": "Get_up",
+      "count": 18
+    },
+    {
+      "predicted_class": "Use_tablet",
+      "gt_class": "Watch_TV",
+      "count": 18
+    },
+    {
+      "predicted_class": "Walk",
+      "gt_class": "Take_something_off_table",
+      "count": 14
+    },
+    {
+      "predicted_class": "Walk",
+      "gt_class": "Drink.From_cup",
+      "count": 13
+    },
+    {
+      "predicted_class": "Use_laptop",
+      "gt_class": "Watch_TV",
+      "count": 12
+    },
+    {
+      "predicted_class": "Watch_TV",
+      "gt_class": "Cook.Stir",
+      "count": 12
+    },
+    {
+      "predicted_class": "Watch_TV",
+      "gt_class": "Walk",
+      "count": 11
+    }
+  ],
+  "meta": {
+    "n_videos": 86,
+    "n_predictions": 2362,
+    "n_gt_segments": 6731,
+    "iou_thresholds": [
+      0.05,
+      0.1,
+      0.3
+    ],
+    "class_recall_iou": 0.05,
+    "duration_recall_iou": 0.1,
+    "hallucination_iou": 0.05
+  }
+}
