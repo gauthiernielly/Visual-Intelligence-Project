@@ -1,0 +1,13 @@
+Loading predictions: /home/elqabli/Visual Intelligence/tsu_full_run/outputs/predictions_canonical.json
+  videos with predictions: 185
+Loading ground truth: /home/elqabli/Visual Intelligence/tsu_full_run/outputs/tsu_cs_full.json
+
+--- Summary ---
+  total segments:        180400
+  problems:              0
+  score range:           [0.050, 0.786]
+  duration min/median/max: 0.1 / 2.4 / 240.9 sec
+  unique classes:        50
+  most common classes:   [(16, 23993), (34, 23352), (39, 19462), (47, 17669), (2, 15154)]
+
+OK — predictions JSON looks good.

@@ -1,0 +1,3225 @@
+{
+  "feature_backbone": "ViT-B-32/laion2b_s34b_b79k",
+  "feature_dim": 512,
+  "target_fps": 25.0,
+  "feat_stride": 16,
+  "videos_done": 536,
+  "videos": [
+    {
+      "video_id": "P02T01C06",
+      "num_snippets": 1110,
+      "duration": 710.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T01C07",
+      "num_snippets": 1112,
+      "duration": 712.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T02C03",
+      "num_snippets": 1398,
+      "duration": 894.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T02C06",
+      "num_snippets": 45,
+      "duration": 29.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T02C07",
+      "num_snippets": 1397,
+      "duration": 894.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T03C03",
+      "num_snippets": 48,
+      "duration": 30.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T03C07",
+      "num_snippets": 47,
+      "duration": 30.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T04C04",
+      "num_snippets": 1379,
+      "duration": 883.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T04C05",
+      "num_snippets": 1377,
+      "duration": 881.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T05C04",
+      "num_snippets": 1419,
+      "duration": 908.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T05C05",
+      "num_snippets": 1418,
+      "duration": 907.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T06C05",
+      "num_snippets": 1394,
+      "duration": 892.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T07C04",
+      "num_snippets": 1473,
+      "duration": 942.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T07C05",
+      "num_snippets": 1471,
+      "duration": 941.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T08C04",
+      "num_snippets": 1720,
+      "duration": 1100.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T08C05",
+      "num_snippets": 1719,
+      "duration": 1100.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T09C05",
+      "num_snippets": 1597,
+      "duration": 1022.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T10C06",
+      "num_snippets": 315,
+      "duration": 201.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T11C01",
+      "num_snippets": 1417,
+      "duration": 907.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T11C02",
+      "num_snippets": 1416,
+      "duration": 906.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T12C02",
+      "num_snippets": 1639,
+      "duration": 1049.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T13C06",
+      "num_snippets": 1108,
+      "duration": 709.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T14C03",
+      "num_snippets": 1474,
+      "duration": 943.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T14C06",
+      "num_snippets": 1471,
+      "duration": 941.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T15C06",
+      "num_snippets": 1434,
+      "duration": 917.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T16C06",
+      "num_snippets": 614,
+      "duration": 393.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T17C05",
+      "num_snippets": 1182,
+      "duration": 756.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P02T18C05",
+      "num_snippets": 1246,
+      "duration": 797.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T01C05",
+      "num_snippets": 1504,
+      "duration": 962.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T02C04",
+      "num_snippets": 1530,
+      "duration": 979.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T02C05",
+      "num_snippets": 1531,
+      "duration": 979.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T03C04",
+      "num_snippets": 1510,
+      "duration": 966.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T03C05",
+      "num_snippets": 1512,
+      "duration": 967.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T04C04",
+      "num_snippets": 1643,
+      "duration": 1051.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T04C05",
+      "num_snippets": 1645,
+      "duration": 1052.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T05C04",
+      "num_snippets": 609,
+      "duration": 390.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T05C05",
+      "num_snippets": 1613,
+      "duration": 1032.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T06C04",
+      "num_snippets": 1528,
+      "duration": 978.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T06C05",
+      "num_snippets": 1530,
+      "duration": 979.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T07C04",
+      "num_snippets": 1651,
+      "duration": 1056.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T07C05",
+      "num_snippets": 1651,
+      "duration": 1057.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T08C04",
+      "num_snippets": 834,
+      "duration": 533.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T08C05",
+      "num_snippets": 1646,
+      "duration": 1053.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T10C01",
+      "num_snippets": 486,
+      "duration": 311.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T10C02",
+      "num_snippets": 485,
+      "duration": 310.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T11C01",
+      "num_snippets": 1518,
+      "duration": 971.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T11C02",
+      "num_snippets": 1515,
+      "duration": 970.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T12C01",
+      "num_snippets": 3158,
+      "duration": 2021.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T12C02",
+      "num_snippets": 1578,
+      "duration": 1010.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T13C01",
+      "num_snippets": 1655,
+      "duration": 1059.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T13C02",
+      "num_snippets": 1653,
+      "duration": 1058.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T15C03",
+      "num_snippets": 1202,
+      "duration": 769.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T15C06",
+      "num_snippets": 1201,
+      "duration": 768.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T15C07",
+      "num_snippets": 1199,
+      "duration": 767.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T16C03",
+      "num_snippets": 1439,
+      "duration": 921.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T16C06",
+      "num_snippets": 1439,
+      "duration": 920.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T16C07",
+      "num_snippets": 1437,
+      "duration": 919.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T18C03",
+      "num_snippets": 887,
+      "duration": 568.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T18C06",
+      "num_snippets": 886,
+      "duration": 567.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T18C07",
+      "num_snippets": 884,
+      "duration": 566.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T19C04",
+      "num_snippets": 1780,
+      "duration": 1139.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P03T19C05",
+      "num_snippets": 1782,
+      "duration": 1140.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T01C04",
+      "num_snippets": 1498,
+      "duration": 959.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T01C05",
+      "num_snippets": 1500,
+      "duration": 960.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T03C04",
+      "num_snippets": 1579,
+      "duration": 1010.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T03C05",
+      "num_snippets": 1580,
+      "duration": 1011.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T04C04",
+      "num_snippets": 1937,
+      "duration": 1240.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T04C05",
+      "num_snippets": 1938,
+      "duration": 1240.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T05C04",
+      "num_snippets": 1650,
+      "duration": 1056.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T05C05",
+      "num_snippets": 1651,
+      "duration": 1057.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T06C04",
+      "num_snippets": 1503,
+      "duration": 962.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T06C05",
+      "num_snippets": 1504,
+      "duration": 962.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T07C04",
+      "num_snippets": 1514,
+      "duration": 969.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T07C05",
+      "num_snippets": 1515,
+      "duration": 970.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T08C01",
+      "num_snippets": 1802,
+      "duration": 1153.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T08C02",
+      "num_snippets": 1801,
+      "duration": 1152.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T09C01",
+      "num_snippets": 1566,
+      "duration": 1002.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T09C02",
+      "num_snippets": 1565,
+      "duration": 1001.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T10C01",
+      "num_snippets": 1598,
+      "duration": 1022.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T10C02",
+      "num_snippets": 1597,
+      "duration": 1022.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T11C02",
+      "num_snippets": 1868,
+      "duration": 1195.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T12C01",
+      "num_snippets": 1743,
+      "duration": 1116.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T12C02",
+      "num_snippets": 1742,
+      "duration": 1115.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T13C01",
+      "num_snippets": 1718,
+      "duration": 1100.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T13C02",
+      "num_snippets": 1717,
+      "duration": 1099.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T14C03",
+      "num_snippets": 1577,
+      "duration": 1009.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T14C06",
+      "num_snippets": 1579,
+      "duration": 1011.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T14C07",
+      "num_snippets": 1579,
+      "duration": 1011.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T15C03",
+      "num_snippets": 929,
+      "duration": 595.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T15C06",
+      "num_snippets": 932,
+      "duration": 596.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T15C07",
+      "num_snippets": 931,
+      "duration": 596.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T16C03",
+      "num_snippets": 684,
+      "duration": 438.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T16C06",
+      "num_snippets": 686,
+      "duration": 439.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T16C07",
+      "num_snippets": 686,
+      "duration": 439.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T17C03",
+      "num_snippets": 1059,
+      "duration": 677.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T17C06",
+      "num_snippets": 1061,
+      "duration": 679.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T17C07",
+      "num_snippets": 1061,
+      "duration": 679.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T18C03",
+      "num_snippets": 656,
+      "duration": 420.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T18C06",
+      "num_snippets": 659,
+      "duration": 421.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P04T18C07",
+      "num_snippets": 658,
+      "duration": 421.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T01C04",
+      "num_snippets": 1491,
+      "duration": 954.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T02C04",
+      "num_snippets": 1856,
+      "duration": 1188.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T02C05",
+      "num_snippets": 1854,
+      "duration": 1187.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T03C04",
+      "num_snippets": 1858,
+      "duration": 1189.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T03C05",
+      "num_snippets": 1857,
+      "duration": 1188.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T04C04",
+      "num_snippets": 1775,
+      "duration": 1136.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T04C05",
+      "num_snippets": 1774,
+      "duration": 1135.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T05C04",
+      "num_snippets": 1839,
+      "duration": 1177.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T05C05",
+      "num_snippets": 1837,
+      "duration": 1175.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T06C04",
+      "num_snippets": 1707,
+      "duration": 1093.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T06C05",
+      "num_snippets": 1706,
+      "duration": 1092.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T07C01",
+      "num_snippets": 848,
+      "duration": 543.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T07C02",
+      "num_snippets": 847,
+      "duration": 542.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T08C01",
+      "num_snippets": 1491,
+      "duration": 954.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T08C02",
+      "num_snippets": 1488,
+      "duration": 952.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T09C01",
+      "num_snippets": 1538,
+      "duration": 984.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T09C02",
+      "num_snippets": 1537,
+      "duration": 983.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T10C01",
+      "num_snippets": 2343,
+      "duration": 1500.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T10C02",
+      "num_snippets": 2342,
+      "duration": 1499.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T11C01",
+      "num_snippets": 2046,
+      "duration": 1310.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T11C02",
+      "num_snippets": 2046,
+      "duration": 1309.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T12C03",
+      "num_snippets": 2082,
+      "duration": 1332.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T12C06",
+      "num_snippets": 2081,
+      "duration": 1331.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T12C07",
+      "num_snippets": 2079,
+      "duration": 1330.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T13C03",
+      "num_snippets": 1851,
+      "duration": 1184.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T13C06",
+      "num_snippets": 1850,
+      "duration": 1184.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T13C07",
+      "num_snippets": 1849,
+      "duration": 1183.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T14C01",
+      "num_snippets": 1537,
+      "duration": 983.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T14C02",
+      "num_snippets": 1536,
+      "duration": 983.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T15C01",
+      "num_snippets": 1636,
+      "duration": 1047.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T15C02",
+      "num_snippets": 1635,
+      "duration": 1046.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T26C01",
+      "num_snippets": 1870,
+      "duration": 1197.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P06T27C01",
+      "num_snippets": 1986,
+      "duration": 1271.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T01C03",
+      "num_snippets": 1722,
+      "duration": 1102.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T01C05",
+      "num_snippets": 1687,
+      "duration": 1080.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T02C03",
+      "num_snippets": 1811,
+      "duration": 1159.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T02C05",
+      "num_snippets": 1781,
+      "duration": 1140.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T03C03",
+      "num_snippets": 1852,
+      "duration": 1185.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T03C05",
+      "num_snippets": 1819,
+      "duration": 1164.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T04C05",
+      "num_snippets": 1790,
+      "duration": 1145.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T04C07",
+      "num_snippets": 1838,
+      "duration": 1176.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T05C05",
+      "num_snippets": 1843,
+      "duration": 1179.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T06C03",
+      "num_snippets": 2874,
+      "duration": 1839.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T06C05",
+      "num_snippets": 1875,
+      "duration": 1200.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T06C06",
+      "num_snippets": 2873,
+      "duration": 1839.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T07C04",
+      "num_snippets": 1977,
+      "duration": 1265.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T07C05",
+      "num_snippets": 1975,
+      "duration": 1264.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T08C01",
+      "num_snippets": 1948,
+      "duration": 1247.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T08C02",
+      "num_snippets": 1947,
+      "duration": 1246.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T09C01",
+      "num_snippets": 2179,
+      "duration": 1394.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T09C02",
+      "num_snippets": 2178,
+      "duration": 1394.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T10C01",
+      "num_snippets": 2487,
+      "duration": 1591.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T10C02",
+      "num_snippets": 2485,
+      "duration": 1590.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T11C01",
+      "num_snippets": 2597,
+      "duration": 1662.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T11C02",
+      "num_snippets": 2596,
+      "duration": 1661.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T12C01",
+      "num_snippets": 844,
+      "duration": 540.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T12C02",
+      "num_snippets": 843,
+      "duration": 540.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T20C03",
+      "num_snippets": 1242,
+      "duration": 795.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T20C06",
+      "num_snippets": 1241,
+      "duration": 794.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T20C07",
+      "num_snippets": 1240,
+      "duration": 793.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T21C06",
+      "num_snippets": 2390,
+      "duration": 1529.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T21C07",
+      "num_snippets": 2389,
+      "duration": 1528.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T22C03",
+      "num_snippets": 755,
+      "duration": 483.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T22C06",
+      "num_snippets": 755,
+      "duration": 483.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P07T22C07",
+      "num_snippets": 753,
+      "duration": 482.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T01C04",
+      "num_snippets": 1756,
+      "duration": 1124.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T01C05",
+      "num_snippets": 1759,
+      "duration": 1125.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T02C04",
+      "num_snippets": 1799,
+      "duration": 1151.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T02C05",
+      "num_snippets": 1800,
+      "duration": 1152.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T03C04",
+      "num_snippets": 2021,
+      "duration": 1293.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T04C04",
+      "num_snippets": 1807,
+      "duration": 1156.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T04C05",
+      "num_snippets": 1807,
+      "duration": 1156.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T05C04",
+      "num_snippets": 1716,
+      "duration": 1098.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T05C05",
+      "num_snippets": 1718,
+      "duration": 1099.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T06C04",
+      "num_snippets": 1824,
+      "duration": 1167.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T06C05",
+      "num_snippets": 1825,
+      "duration": 1168.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T07C04",
+      "num_snippets": 1884,
+      "duration": 1206.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T07C05",
+      "num_snippets": 1888,
+      "duration": 1208.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T08C01",
+      "num_snippets": 1940,
+      "duration": 1241.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T09C01",
+      "num_snippets": 1589,
+      "duration": 1017.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T10C01",
+      "num_snippets": 1828,
+      "duration": 1170.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T11C01",
+      "num_snippets": 1891,
+      "duration": 1210.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T12C03",
+      "num_snippets": 1785,
+      "duration": 1142.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T12C06",
+      "num_snippets": 1784,
+      "duration": 1141.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T12C07",
+      "num_snippets": 1786,
+      "duration": 1143.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T13C03",
+      "num_snippets": 1766,
+      "duration": 1130.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T13C06",
+      "num_snippets": 1765,
+      "duration": 1129.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T13C07",
+      "num_snippets": 1767,
+      "duration": 1131.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T14C03",
+      "num_snippets": 1089,
+      "duration": 697.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T14C06",
+      "num_snippets": 1088,
+      "duration": 696.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T14C07",
+      "num_snippets": 1091,
+      "duration": 698.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T15C03",
+      "num_snippets": 1281,
+      "duration": 820.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T15C06",
+      "num_snippets": 1281,
+      "duration": 820.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T15C07",
+      "num_snippets": 1283,
+      "duration": 821.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T16C03",
+      "num_snippets": 950,
+      "duration": 608.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T16C06",
+      "num_snippets": 949,
+      "duration": 607.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P09T16C07",
+      "num_snippets": 951,
+      "duration": 609.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T01C04",
+      "num_snippets": 1780,
+      "duration": 1139.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T01C05",
+      "num_snippets": 1782,
+      "duration": 1140.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T02C04",
+      "num_snippets": 1371,
+      "duration": 877.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T02C05",
+      "num_snippets": 1374,
+      "duration": 879.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T03C04",
+      "num_snippets": 2122,
+      "duration": 1358.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T03C05",
+      "num_snippets": 2124,
+      "duration": 1359.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T05C04",
+      "num_snippets": 1851,
+      "duration": 1184.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T05C05",
+      "num_snippets": 1852,
+      "duration": 1185.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T06C04",
+      "num_snippets": 1849,
+      "duration": 1183.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T06C05",
+      "num_snippets": 1850,
+      "duration": 1184.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T07C04",
+      "num_snippets": 1825,
+      "duration": 1168.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T07C05",
+      "num_snippets": 1826,
+      "duration": 1169.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T09C01",
+      "num_snippets": 1831,
+      "duration": 1172.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T10C01",
+      "num_snippets": 1823,
+      "duration": 1166.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T11C03",
+      "num_snippets": 1794,
+      "duration": 1148.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T11C06",
+      "num_snippets": 1793,
+      "duration": 1147.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T11C07",
+      "num_snippets": 1796,
+      "duration": 1149.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T12C03",
+      "num_snippets": 1323,
+      "duration": 847.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T12C06",
+      "num_snippets": 1321,
+      "duration": 845.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T12C07",
+      "num_snippets": 1324,
+      "duration": 847.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T13C03",
+      "num_snippets": 1266,
+      "duration": 810.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T13C06",
+      "num_snippets": 1264,
+      "duration": 809.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T13C07",
+      "num_snippets": 1267,
+      "duration": 811.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T14C03",
+      "num_snippets": 1275,
+      "duration": 816.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T14C06",
+      "num_snippets": 1274,
+      "duration": 815.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P10T14C07",
+      "num_snippets": 1276,
+      "duration": 817.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T01C04",
+      "num_snippets": 1193,
+      "duration": 763.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T02C04",
+      "num_snippets": 1545,
+      "duration": 988.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T03C04",
+      "num_snippets": 1844,
+      "duration": 1180.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T04C04",
+      "num_snippets": 1626,
+      "duration": 1041.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T05C04",
+      "num_snippets": 1697,
+      "duration": 1086.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T06C04",
+      "num_snippets": 1273,
+      "duration": 815.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T07C04",
+      "num_snippets": 1630,
+      "duration": 1043.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T08C01",
+      "num_snippets": 1832,
+      "duration": 1173.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T09C01",
+      "num_snippets": 1729,
+      "duration": 1106.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T10C01",
+      "num_snippets": 1579,
+      "duration": 1011.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T11C03",
+      "num_snippets": 848,
+      "duration": 543.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T11C07",
+      "num_snippets": 847,
+      "duration": 542.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T12C03",
+      "num_snippets": 1912,
+      "duration": 1223.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T12C06",
+      "num_snippets": 1910,
+      "duration": 1222.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T13C03",
+      "num_snippets": 2157,
+      "duration": 1380.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T13C06",
+      "num_snippets": 2154,
+      "duration": 1378.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T13C07",
+      "num_snippets": 2158,
+      "duration": 1381.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T14C01",
+      "num_snippets": 1604,
+      "duration": 1027.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P11T15C01",
+      "num_snippets": 1422,
+      "duration": 910.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T01C04",
+      "num_snippets": 1612,
+      "duration": 1032.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T02C04",
+      "num_snippets": 1532,
+      "duration": 980.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T02C05",
+      "num_snippets": 1533,
+      "duration": 981.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T03C04",
+      "num_snippets": 1551,
+      "duration": 992.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T03C05",
+      "num_snippets": 1552,
+      "duration": 993.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T04C05",
+      "num_snippets": 1876,
+      "duration": 1201.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T05C04",
+      "num_snippets": 2117,
+      "duration": 1355.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T05C05",
+      "num_snippets": 2118,
+      "duration": 1356.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T06C04",
+      "num_snippets": 1803,
+      "duration": 1154.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T06C05",
+      "num_snippets": 1804,
+      "duration": 1155.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T07C04",
+      "num_snippets": 1660,
+      "duration": 1062.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T07C05",
+      "num_snippets": 1662,
+      "duration": 1063.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T11C06",
+      "num_snippets": 2067,
+      "duration": 1323.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T11C07",
+      "num_snippets": 2070,
+      "duration": 1325.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T12C06",
+      "num_snippets": 1660,
+      "duration": 1062.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T12C07",
+      "num_snippets": 1662,
+      "duration": 1064.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T13C06",
+      "num_snippets": 1288,
+      "duration": 824.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T13C07",
+      "num_snippets": 1291,
+      "duration": 826.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P12T14C05",
+      "num_snippets": 1801,
+      "duration": 1152.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T03C04",
+      "num_snippets": 2037,
+      "duration": 1304.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T04C04",
+      "num_snippets": 1968,
+      "duration": 1259.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T05C04",
+      "num_snippets": 1867,
+      "duration": 1195.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T06C04",
+      "num_snippets": 1706,
+      "duration": 1091.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T07C04",
+      "num_snippets": 1741,
+      "duration": 1114.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T08C02",
+      "num_snippets": 1798,
+      "duration": 1150.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T09C01",
+      "num_snippets": 991,
+      "duration": 634.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T10C01",
+      "num_snippets": 1837,
+      "duration": 1176.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T10C02",
+      "num_snippets": 1837,
+      "duration": 1175.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T11C01",
+      "num_snippets": 2007,
+      "duration": 1284.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T11C02",
+      "num_snippets": 2006,
+      "duration": 1284.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T12C01",
+      "num_snippets": 1798,
+      "duration": 1150.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T12C02",
+      "num_snippets": 1797,
+      "duration": 1150.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T13C01",
+      "num_snippets": 1695,
+      "duration": 1085.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T13C02",
+      "num_snippets": 1693,
+      "duration": 1083.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T19C01",
+      "num_snippets": 1799,
+      "duration": 1151.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T20C03",
+      "num_snippets": 975,
+      "duration": 624.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T20C06",
+      "num_snippets": 974,
+      "duration": 623.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T20C07",
+      "num_snippets": 972,
+      "duration": 622.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T21C03",
+      "num_snippets": 452,
+      "duration": 289.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T21C06",
+      "num_snippets": 453,
+      "duration": 290.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T21C07",
+      "num_snippets": 451,
+      "duration": 288.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T23C03",
+      "num_snippets": 592,
+      "duration": 379.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T23C06",
+      "num_snippets": 592,
+      "duration": 379.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T23C07",
+      "num_snippets": 590,
+      "duration": 377.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T24C04",
+      "num_snippets": 1647,
+      "duration": 1054.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T24C05",
+      "num_snippets": 1646,
+      "duration": 1053.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T25C04",
+      "num_snippets": 1490,
+      "duration": 953.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P13T25C05",
+      "num_snippets": 1488,
+      "duration": 952.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T01C04",
+      "num_snippets": 1800,
+      "duration": 1152.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T01C05",
+      "num_snippets": 1802,
+      "duration": 1153.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T02C04",
+      "num_snippets": 1942,
+      "duration": 1243.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T02C05",
+      "num_snippets": 1944,
+      "duration": 1244.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T03C04",
+      "num_snippets": 1810,
+      "duration": 1158.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T03C05",
+      "num_snippets": 1815,
+      "duration": 1161.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T04C04",
+      "num_snippets": 2117,
+      "duration": 1354.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T04C05",
+      "num_snippets": 2123,
+      "duration": 1358.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T05C04",
+      "num_snippets": 1940,
+      "duration": 1241.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T05C05",
+      "num_snippets": 1941,
+      "duration": 1242.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T06C04",
+      "num_snippets": 1624,
+      "duration": 1039.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T06C05",
+      "num_snippets": 1625,
+      "duration": 1040.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T07C04",
+      "num_snippets": 1832,
+      "duration": 1173.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T07C05",
+      "num_snippets": 1834,
+      "duration": 1174.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T08C04",
+      "num_snippets": 1517,
+      "duration": 971.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T08C05",
+      "num_snippets": 1518,
+      "duration": 971.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T09C01",
+      "num_snippets": 1802,
+      "duration": 1153.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T09C02",
+      "num_snippets": 1801,
+      "duration": 1153.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T10C01",
+      "num_snippets": 1854,
+      "duration": 1186.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T10C02",
+      "num_snippets": 1853,
+      "duration": 1186.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T11C01",
+      "num_snippets": 1798,
+      "duration": 1151.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T11C02",
+      "num_snippets": 1797,
+      "duration": 1150.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T12C02",
+      "num_snippets": 1798,
+      "duration": 1150.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T13C01",
+      "num_snippets": 1798,
+      "duration": 1151.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T13C02",
+      "num_snippets": 1797,
+      "duration": 1150.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T14C06",
+      "num_snippets": 897,
+      "duration": 574.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T14C07",
+      "num_snippets": 895,
+      "duration": 573.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P14T15C07",
+      "num_snippets": 489,
+      "duration": 313.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T01C04",
+      "num_snippets": 1799,
+      "duration": 1151.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T01C05",
+      "num_snippets": 1801,
+      "duration": 1152.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T02C04",
+      "num_snippets": 1703,
+      "duration": 1090.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T02C05",
+      "num_snippets": 1703,
+      "duration": 1090.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T03C04",
+      "num_snippets": 1680,
+      "duration": 1075.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T03C05",
+      "num_snippets": 1681,
+      "duration": 1076.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T04C04",
+      "num_snippets": 1828,
+      "duration": 1170.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T04C05",
+      "num_snippets": 1830,
+      "duration": 1171.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T05C04",
+      "num_snippets": 1253,
+      "duration": 802.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T05C05",
+      "num_snippets": 1254,
+      "duration": 803.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T06C04",
+      "num_snippets": 1498,
+      "duration": 959.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T06C05",
+      "num_snippets": 1499,
+      "duration": 959.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T07C04",
+      "num_snippets": 1892,
+      "duration": 1210.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T07C05",
+      "num_snippets": 1894,
+      "duration": 1212.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T08C01",
+      "num_snippets": 1801,
+      "duration": 1153.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T08C02",
+      "num_snippets": 1800,
+      "duration": 1152.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T09C01",
+      "num_snippets": 1798,
+      "duration": 1150.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T09C02",
+      "num_snippets": 1797,
+      "duration": 1150.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T10C01",
+      "num_snippets": 2211,
+      "duration": 1415.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T10C02",
+      "num_snippets": 2210,
+      "duration": 1414.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T11C01",
+      "num_snippets": 1957,
+      "duration": 1252.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T11C02",
+      "num_snippets": 1956,
+      "duration": 1252.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T12C01",
+      "num_snippets": 1813,
+      "duration": 1160.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T12C02",
+      "num_snippets": 1812,
+      "duration": 1159.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T13C03",
+      "num_snippets": 1260,
+      "duration": 806.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T13C06",
+      "num_snippets": 1262,
+      "duration": 808.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T13C07",
+      "num_snippets": 1263,
+      "duration": 808.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T14C03",
+      "num_snippets": 628,
+      "duration": 402.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T14C06",
+      "num_snippets": 630,
+      "duration": 403.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T14C07",
+      "num_snippets": 630,
+      "duration": 403.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T15C03",
+      "num_snippets": 737,
+      "duration": 472.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T15C06",
+      "num_snippets": 739,
+      "duration": 473.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T15C07",
+      "num_snippets": 739,
+      "duration": 473.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T16C03",
+      "num_snippets": 1197,
+      "duration": 766.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T16C06",
+      "num_snippets": 1200,
+      "duration": 768.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T16C07",
+      "num_snippets": 1199,
+      "duration": 767.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T17C03",
+      "num_snippets": 984,
+      "duration": 630.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T17C06",
+      "num_snippets": 987,
+      "duration": 631.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P15T17C07",
+      "num_snippets": 986,
+      "duration": 631.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T01C04",
+      "num_snippets": 1864,
+      "duration": 1193.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T01C05",
+      "num_snippets": 1865,
+      "duration": 1193.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T02C04",
+      "num_snippets": 2343,
+      "duration": 1499.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T02C05",
+      "num_snippets": 2344,
+      "duration": 1500.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T03C04",
+      "num_snippets": 2173,
+      "duration": 1390.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T03C05",
+      "num_snippets": 2174,
+      "duration": 1391.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T04C04",
+      "num_snippets": 1510,
+      "duration": 966.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T04C05",
+      "num_snippets": 1511,
+      "duration": 967.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T05C04",
+      "num_snippets": 1490,
+      "duration": 954.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T05C05",
+      "num_snippets": 1492,
+      "duration": 954.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T06C01",
+      "num_snippets": 1799,
+      "duration": 1151.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T06C02",
+      "num_snippets": 1798,
+      "duration": 1150.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T07C01",
+      "num_snippets": 1839,
+      "duration": 1177.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T07C02",
+      "num_snippets": 1838,
+      "duration": 1176.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T08C02",
+      "num_snippets": 1933,
+      "duration": 1237.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T09C01",
+      "num_snippets": 1150,
+      "duration": 736.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T09C02",
+      "num_snippets": 1148,
+      "duration": 735.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T10C01",
+      "num_snippets": 1170,
+      "duration": 748.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T10C02",
+      "num_snippets": 1168,
+      "duration": 748.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T11C01",
+      "num_snippets": 800,
+      "duration": 512.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T11C02",
+      "num_snippets": 799,
+      "duration": 511.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T12C03",
+      "num_snippets": 2282,
+      "duration": 1460.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T12C06",
+      "num_snippets": 2279,
+      "duration": 1459.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T12C07",
+      "num_snippets": 2282,
+      "duration": 1460.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T13C03",
+      "num_snippets": 470,
+      "duration": 301.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T13C06",
+      "num_snippets": 468,
+      "duration": 299.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T13C07",
+      "num_snippets": 471,
+      "duration": 301.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T14C03",
+      "num_snippets": 1429,
+      "duration": 914.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T14C06",
+      "num_snippets": 1426,
+      "duration": 913.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T14C07",
+      "num_snippets": 1429,
+      "duration": 914.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T15C03",
+      "num_snippets": 1490,
+      "duration": 953.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T15C06",
+      "num_snippets": 465,
+      "duration": 297.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P16T15C07",
+      "num_snippets": 1491,
+      "duration": 954.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T01C04",
+      "num_snippets": 1762,
+      "duration": 1127.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T01C05",
+      "num_snippets": 1761,
+      "duration": 1127.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T02C04",
+      "num_snippets": 2110,
+      "duration": 1350.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T02C05",
+      "num_snippets": 2104,
+      "duration": 1346.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T03C04",
+      "num_snippets": 1877,
+      "duration": 1201.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T03C05",
+      "num_snippets": 1875,
+      "duration": 1200.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T04C04",
+      "num_snippets": 1960,
+      "duration": 1254.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T04C05",
+      "num_snippets": 1958,
+      "duration": 1253.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T05C04",
+      "num_snippets": 1909,
+      "duration": 1222.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T05C05",
+      "num_snippets": 1908,
+      "duration": 1221.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T06C04",
+      "num_snippets": 1444,
+      "duration": 924.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T06C05",
+      "num_snippets": 1442,
+      "duration": 923.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T07C02",
+      "num_snippets": 1196,
+      "duration": 765.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T08C01",
+      "num_snippets": 1845,
+      "duration": 1181.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T08C02",
+      "num_snippets": 1844,
+      "duration": 1180.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T09C01",
+      "num_snippets": 1716,
+      "duration": 1098.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T09C02",
+      "num_snippets": 1715,
+      "duration": 1098.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T10C01",
+      "num_snippets": 2251,
+      "duration": 1440.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T10C02",
+      "num_snippets": 2249,
+      "duration": 1439.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T11C03",
+      "num_snippets": 577,
+      "duration": 369.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T11C06",
+      "num_snippets": 578,
+      "duration": 370.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T11C07",
+      "num_snippets": 575,
+      "duration": 368.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T12C03",
+      "num_snippets": 842,
+      "duration": 539.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T12C06",
+      "num_snippets": 843,
+      "duration": 539.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T12C07",
+      "num_snippets": 840,
+      "duration": 538.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T13C03",
+      "num_snippets": 503,
+      "duration": 322.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T13C06",
+      "num_snippets": 503,
+      "duration": 322.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T13C07",
+      "num_snippets": 501,
+      "duration": 320.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T14C03",
+      "num_snippets": 1492,
+      "duration": 954.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T14C06",
+      "num_snippets": 1493,
+      "duration": 955.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T14C07",
+      "num_snippets": 1490,
+      "duration": 953.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T15C03",
+      "num_snippets": 1528,
+      "duration": 978.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T15C06",
+      "num_snippets": 1529,
+      "duration": 979.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P17T15C07",
+      "num_snippets": 1526,
+      "duration": 977.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T01C04",
+      "num_snippets": 3146,
+      "duration": 2013.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T01C05",
+      "num_snippets": 3141,
+      "duration": 2010.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T03C04",
+      "num_snippets": 1683,
+      "duration": 1077.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T03C05",
+      "num_snippets": 1681,
+      "duration": 1076.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T05C04",
+      "num_snippets": 954,
+      "duration": 610.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T05C05",
+      "num_snippets": 952,
+      "duration": 609.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T06C04",
+      "num_snippets": 1810,
+      "duration": 1158.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T06C05",
+      "num_snippets": 1807,
+      "duration": 1156.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T07C04",
+      "num_snippets": 1558,
+      "duration": 997.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T07C05",
+      "num_snippets": 1556,
+      "duration": 996.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T08C04",
+      "num_snippets": 2188,
+      "duration": 1400.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T08C05",
+      "num_snippets": 2186,
+      "duration": 1399.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T09C01",
+      "num_snippets": 2274,
+      "duration": 1455.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T09C02",
+      "num_snippets": 2272,
+      "duration": 1454.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T10C01",
+      "num_snippets": 1946,
+      "duration": 1245.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T10C02",
+      "num_snippets": 1944,
+      "duration": 1244.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T11C01",
+      "num_snippets": 2521,
+      "duration": 1614.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T11C02",
+      "num_snippets": 2520,
+      "duration": 1613.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T12C01",
+      "num_snippets": 2653,
+      "duration": 1698.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T12C02",
+      "num_snippets": 2651,
+      "duration": 1697.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T13C03",
+      "num_snippets": 1242,
+      "duration": 795.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T13C07",
+      "num_snippets": 1244,
+      "duration": 796.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T14C03",
+      "num_snippets": 539,
+      "duration": 345.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T14C07",
+      "num_snippets": 541,
+      "duration": 346.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T15C03",
+      "num_snippets": 1119,
+      "duration": 716.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P18T15C07",
+      "num_snippets": 1121,
+      "duration": 717.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T01C04",
+      "num_snippets": 1697,
+      "duration": 1086.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T01C05",
+      "num_snippets": 1698,
+      "duration": 1087.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T02C04",
+      "num_snippets": 1881,
+      "duration": 1204.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T02C05",
+      "num_snippets": 1882,
+      "duration": 1205.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T03C04",
+      "num_snippets": 1860,
+      "duration": 1190.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T03C05",
+      "num_snippets": 1862,
+      "duration": 1191.68,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T04C04",
+      "num_snippets": 1841,
+      "duration": 1178.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T04C05",
+      "num_snippets": 1842,
+      "duration": 1179.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T05C04",
+      "num_snippets": 1891,
+      "duration": 1210.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T05C05",
+      "num_snippets": 1892,
+      "duration": 1211.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T07C01",
+      "num_snippets": 1932,
+      "duration": 1237.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T08C01",
+      "num_snippets": 2272,
+      "duration": 1454.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T08C02",
+      "num_snippets": 2271,
+      "duration": 1453.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T09C01",
+      "num_snippets": 1912,
+      "duration": 1224.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T09C02",
+      "num_snippets": 1911,
+      "duration": 1223.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T10C01",
+      "num_snippets": 1773,
+      "duration": 1135.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T10C02",
+      "num_snippets": 1775,
+      "duration": 1136.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T11C03",
+      "num_snippets": 868,
+      "duration": 556.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T11C06",
+      "num_snippets": 871,
+      "duration": 557.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T12C03",
+      "num_snippets": 923,
+      "duration": 590.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T12C06",
+      "num_snippets": 925,
+      "duration": 592.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T13C03",
+      "num_snippets": 303,
+      "duration": 194.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T13C06",
+      "num_snippets": 306,
+      "duration": 196.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T14C03",
+      "num_snippets": 703,
+      "duration": 450.52,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P19T14C06",
+      "num_snippets": 706,
+      "duration": 452.32,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T01C04",
+      "num_snippets": 1843,
+      "duration": 1179.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T01C05",
+      "num_snippets": 1842,
+      "duration": 1178.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T02C04",
+      "num_snippets": 1606,
+      "duration": 1028.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T02C05",
+      "num_snippets": 1605,
+      "duration": 1027.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T03C04",
+      "num_snippets": 1735,
+      "duration": 1110.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T03C05",
+      "num_snippets": 1733,
+      "duration": 1109.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T04C04",
+      "num_snippets": 1986,
+      "duration": 1271.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T04C05",
+      "num_snippets": 1984,
+      "duration": 1270.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T05C04",
+      "num_snippets": 1721,
+      "duration": 1101.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T05C05",
+      "num_snippets": 1719,
+      "duration": 1100.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T06C04",
+      "num_snippets": 1969,
+      "duration": 1260.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T06C05",
+      "num_snippets": 1968,
+      "duration": 1259.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T07C04",
+      "num_snippets": 1804,
+      "duration": 1154.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T07C05",
+      "num_snippets": 1802,
+      "duration": 1153.64,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T08C01",
+      "num_snippets": 2135,
+      "duration": 1366.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T09C01",
+      "num_snippets": 1619,
+      "duration": 1036.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T10C01",
+      "num_snippets": 2465,
+      "duration": 1577.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T11C01",
+      "num_snippets": 2097,
+      "duration": 1342.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T12C01",
+      "num_snippets": 1299,
+      "duration": 831.4,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T13C03",
+      "num_snippets": 1726,
+      "duration": 1105.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T13C07",
+      "num_snippets": 1724,
+      "duration": 1103.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T14C07",
+      "num_snippets": 688,
+      "duration": 440.36,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T15C07",
+      "num_snippets": 1097,
+      "duration": 702.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T16C03",
+      "num_snippets": 1758,
+      "duration": 1125.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P20T16C07",
+      "num_snippets": 1757,
+      "duration": 1124.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T01C04",
+      "num_snippets": 1569,
+      "duration": 1004.76,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T01C05",
+      "num_snippets": 1571,
+      "duration": 1005.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T02C04",
+      "num_snippets": 1692,
+      "duration": 1083.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T02C05",
+      "num_snippets": 1693,
+      "duration": 1084.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T03C04",
+      "num_snippets": 1704,
+      "duration": 1090.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T03C05",
+      "num_snippets": 1706,
+      "duration": 1091.92,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T04C04",
+      "num_snippets": 1896,
+      "duration": 1213.96,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T04C05",
+      "num_snippets": 1898,
+      "duration": 1215.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T05C04",
+      "num_snippets": 1998,
+      "duration": 1279.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T05C05",
+      "num_snippets": 2000,
+      "duration": 1280.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T06C04",
+      "num_snippets": 2230,
+      "duration": 1427.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T06C05",
+      "num_snippets": 2231,
+      "duration": 1428.24,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T07C04",
+      "num_snippets": 2066,
+      "duration": 1322.84,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T07C05",
+      "num_snippets": 2068,
+      "duration": 1323.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T08C03",
+      "num_snippets": 373,
+      "duration": 239.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T08C06",
+      "num_snippets": 374,
+      "duration": 239.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T09C01",
+      "num_snippets": 1407,
+      "duration": 900.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T09C02",
+      "num_snippets": 1405,
+      "duration": 899.72,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T10C01",
+      "num_snippets": 2770,
+      "duration": 1773.04,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T10C02",
+      "num_snippets": 2768,
+      "duration": 1772.12,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T11C01",
+      "num_snippets": 2287,
+      "duration": 1464.16,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T11C02",
+      "num_snippets": 2286,
+      "duration": 1463.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T12C03",
+      "num_snippets": 2081,
+      "duration": 1331.88,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T12C06",
+      "num_snippets": 2083,
+      "duration": 1333.48,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T12C07",
+      "num_snippets": 2083,
+      "duration": 1333.2,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T14C03",
+      "num_snippets": 1050,
+      "duration": 672.08,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T14C06",
+      "num_snippets": 1052,
+      "duration": 673.6,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T14C07",
+      "num_snippets": 1052,
+      "duration": 673.28,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T15C03",
+      "num_snippets": 861,
+      "duration": 551.44,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T15C06",
+      "num_snippets": 864,
+      "duration": 553.0,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T15C07",
+      "num_snippets": 863,
+      "duration": 552.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T16C03",
+      "num_snippets": 841,
+      "duration": 538.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T16C06",
+      "num_snippets": 844,
+      "duration": 540.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T16C07",
+      "num_snippets": 843,
+      "duration": 539.8,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T17C01",
+      "num_snippets": 374,
+      "duration": 239.56,
+      "native_fps": 25.0
+    },
+    {
+      "video_id": "P25T17C02",
+      "num_snippets": 371,
+      "duration": 237.48,
+      "native_fps": 25.0
+    }
+  ]
+}
