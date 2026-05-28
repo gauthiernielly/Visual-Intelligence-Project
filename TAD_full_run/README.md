@@ -1,6 +1,6 @@
 # TAD baseline on Toyota Smarthome Untrimmed
 
-This bundle trains an ActionFormer temporal action detector on the TSU
+This part of our project trains an ActionFormer temporal action detector on the TSU
 Cross-Subject split and evaluates it on the 86-video subset shared with the
 VLM-only and Hybrid pipelines. It contains every script, config, output and
 figure used in our analysis of the TAD baseline.
