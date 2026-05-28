@@ -1,37 +1,17 @@
 """
-verify_predictions.py
-=====================
-Sanity-check the predictions JSON produced by ActionFormer/OpenTAD inference
-to confirm it can be consumed downstream by Person 4's hybrid pipeline.
+Sanity-check the canonical predictions JSON before it is handed downstream.
 
-Usage:
-    python verify_predictions.py \
-        --predictions /path/to/predictions.json \
-        --ground-truth /path/to/tsu_cs_mini.json \
-        --num-classes 51
-
-Checks:
-- JSON loads and has a "results" key (or top-level video-id dict — both supported)
-- Every video has a list of segments
-- Every segment has the expected keys: label, label_id, score, segment
-- Segments are sorted by start time
-- Segment boundaries are within [0, video_duration]
-- label_id values are within [0, num_classes - 1]
-- Score values are in [0, 1]
-- Class label/id consistency
-
-Then prints summary stats: #predictions per video, score distribution,
-duration distribution.
+Checks the schema (required keys, sorted by start time, valid label_id, score
+in [0, 1]), checks segment boundaries against the ground-truth duration, and
+prints a small summary.
 """
 
 import argparse
 import json
 from collections import Counter
-from pathlib import Path
 
 
 def get_results(pred_obj):
-    """Accept either {"results": {...}} or a flat {video_id: [...]}."""
     if isinstance(pred_obj, dict) and "results" in pred_obj:
         return pred_obj["results"]
     return pred_obj
@@ -41,18 +21,18 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--predictions", required=True)
     p.add_argument("--ground-truth", required=True,
-                   help="OpenTAD-format ground-truth JSON, used to read durations.")
+                   help="OpenTAD-format GT JSON, used to read video durations")
     p.add_argument("--num-classes", type=int, default=51)
     args = p.parse_args()
 
     print(f"Loading predictions: {args.predictions}")
-    with open(args.predictions, "r") as f:
+    with open(args.predictions) as f:
         pred_obj = json.load(f)
     results = get_results(pred_obj)
     print(f"  videos with predictions: {len(results)}")
 
     print(f"Loading ground truth: {args.ground_truth}")
-    with open(args.ground_truth, "r") as f:
+    with open(args.ground_truth) as f:
         gt = json.load(f)
     gt_db = gt.get("database", gt)
 
@@ -86,8 +66,7 @@ def main():
             start, end = seg["segment"]
 
             if not (0 <= cls_id < args.num_classes):
-                print(f"  [error] {vid}#{i}: label_id={cls_id} "
-                      f"out of [0,{args.num_classes})")
+                print(f"  [error] {vid}#{i}: label_id={cls_id} out of [0,{args.num_classes})")
                 n_problems += 1
             if not (0.0 <= score <= 1.0):
                 print(f"  [error] {vid}#{i}: score={score} out of [0,1]")
@@ -109,21 +88,20 @@ def main():
             total_segments += 1
 
     print("\n--- Summary ---")
-    print(f"  total segments:        {total_segments}")
-    print(f"  problems:              {n_problems}")
-    print(f"  score range:           [{score_min:.3f}, {score_max:.3f}]")
+    print(f"  total segments         : {total_segments}")
+    print(f"  problems               : {n_problems}")
+    print(f"  score range            : [{score_min:.3f}, {score_max:.3f}]")
     if durations:
         durations.sort()
         print(f"  duration min/median/max: "
               f"{durations[0]:.1f} / "
               f"{durations[len(durations)//2]:.1f} / "
               f"{durations[-1]:.1f} sec")
-    print(f"  unique classes:        {len(classes_seen)}")
-    print(f"  most common classes:   "
-          f"{classes_seen.most_common(5)}")
+    print(f"  unique classes         : {len(classes_seen)}")
+    print(f"  most common classes    : {classes_seen.most_common(5)}")
 
     if n_problems == 0:
-        print("\nOK — predictions JSON looks good.")
+        print("\nOK, predictions JSON looks good.")
     else:
         print(f"\n{n_problems} problems found. Fix and re-export.")
 

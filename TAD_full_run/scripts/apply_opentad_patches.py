@@ -1,16 +1,15 @@
 """
-apply_opentad_patches.py
-========================
-Patch OpenTAD's eager imports so missing CUDA extensions / mmcv / mmaction
-don't break ActionFormer's import path. Idempotent: safe to run repeatedly.
+Wrap OpenTAD's eager imports of optional models in try/except so that missing
+CUDA extensions, mmcv or mmaction do not break the ActionFormer import path.
+Idempotent, safe to re-run.
 """
 
 import argparse
 from pathlib import Path
 
 
+# (file_relative_to_opentad, single_line_to_replace, multi_line_replacement)
 PATCHES = [
-    # (file_relative_to_opentad, single_line_to_replace, multi_line_replacement)
     ("opentad/models/roi_heads/roi_extractors/__init__.py",
      "from .roialign_extractor import ROIAlignExtractor",
      ('try:\n'
@@ -40,7 +39,7 @@ PATCHES = [
       '    print(f"[opentad-patch] TadTRTransformer unavailable: {_e}")\n'
       '    TadTRTransformer = None')),
 
-    # boundary_max_pooling_cuda-dependent: AFSD's refinement head
+    # AFSD refinement head requires boundary_max_pooling_cuda.
     ("opentad/models/roi_heads/__init__.py",
      "from .afsd_roi_head import AFSDRefineHead",
      ('try:\n'
@@ -49,7 +48,7 @@ PATCHES = [
       '    print(f"[opentad-patch] AFSDRefineHead unavailable: {_e}")\n'
       '    AFSDRefineHead = None')),
 
-    # Align1D-dependent: VSGN's ROI head (loaded right after AFSD)
+    # VSGN ROI head requires Align1D.
     ("opentad/models/roi_heads/__init__.py",
      "from .vsgn_roi_head import VSGNRoIHead",
      ('try:\n'
@@ -58,7 +57,7 @@ PATCHES = [
       '    print(f"[opentad-patch] VSGNRoIHead unavailable: {_e}")\n'
       '    VSGNRoIHead = None')),
 
-    # boundary_max_pooling_cuda-dependent: AFSD detector itself
+    # AFSD detector requires boundary_max_pooling_cuda.
     ("opentad/models/detectors/__init__.py",
      "from .afsd import AFSD",
      ('try:\n'
@@ -67,7 +66,7 @@ PATCHES = [
       '    print(f"[opentad-patch] AFSD unavailable: {_e}")\n'
       '    AFSD = None')),
 
-    # boundary_max_pooling_cuda-dependent: AFSD's coarse head (likely path)
+    # AFSD coarse head requires boundary_max_pooling_cuda.
     ("opentad/models/dense_heads/__init__.py",
      "from .afsd_coarse_head import AFSDCoarseHead",
      ('try:\n'
@@ -76,7 +75,7 @@ PATCHES = [
       '    print(f"[opentad-patch] AFSDCoarseHead unavailable: {_e}")\n'
       '    AFSDCoarseHead = None')),
 
-    # boundary_max_pooling_cuda-dependent: AFSD neck (likely path)
+    # AFSD neck requires boundary_max_pooling_cuda.
     ("opentad/models/necks/__init__.py",
      "from .afsd_neck import AFSDNeck",
      ('try:\n'
@@ -86,13 +85,13 @@ PATCHES = [
       '    AFSDNeck = None')),
 ]
 
-# heavy backbones requiring mmcv/mmaction — wrap each individually
+# Heavy backbones require mmcv or mmaction. Wrap each one individually.
 HEAVY_BACKBONES = [
-    ("from .re2tal_swin import SwinTransformer3D_inv",       "SwinTransformer3D_inv"),
-    ("from .re2tal_slowfast import ResNet3dSlowFast_inv",    "ResNet3dSlowFast_inv"),
-    ("from .vit import VisionTransformerCP",                 "VisionTransformerCP"),
-    ("from .vit_adapter import VisionTransformerAdapter",    "VisionTransformerAdapter"),
-    ("from .vit_ladder import VisionTransformerLadder",      "VisionTransformerLadder"),
+    ("from .re2tal_swin import SwinTransformer3D_inv",    "SwinTransformer3D_inv"),
+    ("from .re2tal_slowfast import ResNet3dSlowFast_inv", "ResNet3dSlowFast_inv"),
+    ("from .vit import VisionTransformerCP",              "VisionTransformerCP"),
+    ("from .vit_adapter import VisionTransformerAdapter", "VisionTransformerAdapter"),
+    ("from .vit_ladder import VisionTransformerLadder",   "VisionTransformerLadder"),
 ]
 for line, name in HEAVY_BACKBONES:
     PATCHES.append((
@@ -117,12 +116,15 @@ def main():
     for rel, old, new_block in PATCHES:
         path = root / rel
         if not path.exists():
-            print(f"  [skip] missing file: {path}"); continue
+            print(f"  [skip] missing file: {path}")
+            continue
         txt = path.read_text()
         if new_block in txt:
-            print(f"  [skip] already patched: {rel} :: {old[:50]}..."); continue
+            print(f"  [skip] already patched: {rel} :: {old[:50]}...")
+            continue
         if old not in txt:
-            print(f"  [warn] target line not found in {rel}: {old[:60]}"); continue
+            print(f"  [warn] target line not found in {rel}: {old[:60]}")
+            continue
         path.write_text(txt.replace(old, new_block))
         print(f"  [patched] {rel}")
 

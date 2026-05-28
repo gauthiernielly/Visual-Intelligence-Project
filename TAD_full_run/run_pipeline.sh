@@ -1,19 +1,11 @@
 #!/bin/bash
-# Sequential end-to-end pipeline orchestrator.
-# Called by submit_job.sh inside the SLURM allocation.
+# End-to-end pipeline. Called by submit_job.sh inside the SLURM allocation.
 #
-# Honors these env vars (set in submit_job.sh or by the caller):
-#   FEATURES_ONLY=1   -> stop after step 2 (feature extraction)
-#   SKIP_FEATURES=1   -> skip step 2 (assume features already on disk)
-#   RESUME_CKPT=<p>   -> resume training from this checkpoint path
-#   N_GPUS=<n>        -> auto-detected by submit_job.sh; falls back to 1
-#
-# Layout (anchored at the submission directory):
-#   .                                 <- this folder, copied to ~/tsu_full_run/
-#   ├── data_cs_split.json            <- the master annotation file (you provide)
-#   ├── outputs/                      <- everything we produce ends up here
-#   ├── work/                         <- ephemeral build artefacts (OpenTAD checkout, etc.)
-#   └── ...
+# Env-var overrides:
+#   FEATURES_ONLY=1   stop after step 2 (feature extraction)
+#   SKIP_FEATURES=1   skip step 2 (assume features already on disk)
+#   RESUME_CKPT=<p>   resume training from this checkpoint path
+#   N_GPUS=<n>        auto-detected by submit_job.sh, falls back to 1
 
 set -euo pipefail
 
@@ -24,9 +16,8 @@ SCRIPTS="${ROOT}/scripts"
 CFG="${ROOT}/configs"
 mkdir -p "$OUT" "$WORK" "$OUT/figures"
 
-# === Inputs ===
-# Default is the SCITAS-Izar absolute path. Override with DATASET_ROOT env var
-# if your dataset lives elsewhere.
+# Inputs. Default is the SCITAS-Izar absolute path. Override with DATASET_ROOT
+# if your dataset lives elsewhere. DATASET_ROOT must be the parent of Videos_mp4.
 DATASET_ROOT="${DATASET_ROOT:-/work/cs-503/sadgal}"
 VIDEOS_DIR="${DATASET_ROOT}/Videos_mp4"
 DATA_CS_SPLIT="${ROOT}/data_cs_split.json"
@@ -42,7 +33,7 @@ if [[ ! -f "$DATA_CS_SPLIT" ]]; then
   exit 1
 fi
 
-# === Outputs we produce ===
+# Outputs we produce.
 SPLIT_JSON="${OUT}/tsu_cs_full.json"
 CAT_TXT="${OUT}/category_idx.txt"
 FEAT_DIR="${OUT}/features/clip_vitb32"
@@ -52,9 +43,7 @@ CANON_PRED="${OUT}/predictions_canonical.json"
 
 mkdir -p "$FEAT_DIR" "$EXP_DIR"
 
-# ===================================================================
-# Step 1: build the full-dataset annotation file with train/val/test split
-# ===================================================================
+# Step 1: build the train/val/test split annotation file.
 echo
 echo "=== [1/8] Building full split annotation =================="
 python "${SCRIPTS}/build_full_split.py" \
@@ -64,9 +53,7 @@ python "${SCRIPTS}/build_full_split.py" \
   --val-subjects P25 \
   --fps 25.0
 
-# ===================================================================
-# Step 2: extract CLIP features for every video that appears in the split
-# ===================================================================
+# Step 2: extract CLIP features for every video in the split. Resumable.
 if [[ "${SKIP_FEATURES:-0}" == "1" ]]; then
   echo
   echo "=== [2/8] Skipping feature extraction (SKIP_FEATURES=1) ==="
@@ -84,51 +71,44 @@ else
 fi
 
 if [[ "${FEATURES_ONLY:-0}" == "1" ]]; then
-  echo "FEATURES_ONLY=1 — stopping after extraction."
+  echo "FEATURES_ONLY=1, stopping after extraction."
   exit 0
 fi
 
-# ===================================================================
-# Step 3: clone + install OpenTAD into work/, then patch eager imports
-# ===================================================================
+# Step 3: clone OpenTAD, build its CUDA extensions, then patch eager imports
+# so missing extensions or mmcv do not break the ActionFormer code path.
 OPENTAD_DIR="${WORK}/OpenTAD"
 echo
 echo "=== [3/8] Setting up OpenTAD =============================="
 
-# Defensive: torch's cpp_extension.py needs `pkg_resources.packaging`, which is
-# only present in setuptools < 80. Pin and ensure wheel is installed before
-# attempting any extension build.
+# torch.utils.cpp_extension imports pkg_resources, which setuptools 80 removed.
+# Pin setuptools below 70 and make sure wheel is present before any build.
 pip install -q "setuptools<70" wheel
 
 if [[ ! -d "${OPENTAD_DIR}" ]]; then
   git clone https://github.com/sming256/OpenTAD.git "${OPENTAD_DIR}"
 fi
 
-# Build the 3 CUDA extensions one at a time. We pass --no-build-isolation so
-# the build subprocess can `import torch` from this conda env (default modern
-# pip uses build isolation, which doesn't see our env's torch).
-# Align1D may still fail on the Izar env (CUDA arch); the patches that follow
-# route around it. nms and boundary_pooling MUST succeed (NMS is on the
-# ActionFormer code path).
+# Build the three CUDA extensions one at a time. --no-build-isolation is
+# needed so the build subprocess can import torch from this conda env.
+# Align1D may fail on the Izar CUDA arch, the patches that follow route
+# around its absence. NMS is on the ActionFormer code path and must succeed.
 for ext in \
   opentad/models/utils/post_processing/nms \
   opentad/models/roi_heads/roi_extractors/align1d \
   opentad/models/roi_heads/roi_extractors/boundary_pooling
 do
   ( cd "${OPENTAD_DIR}/${ext}" && pip install -q --no-build-isolation . ) || \
-    echo "  WARNING: build failed for ${ext}; patches will route around it."
+    echo "  WARNING: build failed for ${ext}, patches will route around it."
 done
 
 python "${SCRIPTS}/apply_opentad_patches.py" --opentad "${OPENTAD_DIR}"
 
-# Make OpenTAD importable (its tools/train.py inserts itself into sys.path,
-# but our post-process script does `from opentad...` style imports too).
+# Make OpenTAD importable for post-processing scripts that import from opentad.
 export PYTHONPATH="${OPENTAD_DIR}:${PYTHONPATH:-}"
 
-# ===================================================================
-# Step 4: copy our two TSU configs into the OpenTAD config tree,
-# substituting the runtime paths via env-var template expansion.
-# ===================================================================
+# Step 4: copy our TSU configs into the OpenTAD config tree, expanding the
+# runtime path placeholders along the way.
 echo
 echo "=== [4/8] Writing TSU configs into OpenTAD ================"
 TSU_BASE_DIR="${OPENTAD_DIR}/configs/_base_/datasets/tsu"
@@ -150,19 +130,17 @@ sed \
   -e "s|@@WORK_DIR@@|${EXP_DIR}|g" \
   "${CFG}/tsu_clip_full.py" > "${OPENTAD_DIR}/configs/actionformer/tsu_clip_full.py"
 
-# Sanity-parse via mmengine to catch syntax errors early
+# Sanity-parse via mmengine to catch syntax errors before training starts.
 python -c "
 from mmengine.config import Config
 c = Config.fromfile('${OPENTAD_DIR}/configs/actionformer/tsu_clip_full.py')
-print('  config parsed OK; num_classes=', c.model.rpn_head.num_classes,
+print('  config parsed OK, num_classes=', c.model.rpn_head.num_classes,
       'in_channels=', c.model.projection.in_channels,
       'work_dir=', c.work_dir,
       'end_epoch=', c.workflow.end_epoch)
 "
 
-# ===================================================================
-# Step 5: train ActionFormer
-# ===================================================================
+# Step 5: train ActionFormer.
 echo
 echo "=== [5/8] Training ActionFormer ============================"
 NPP="${N_GPUS:-1}"
@@ -179,9 +157,7 @@ fi
     tools/train.py configs/actionformer/tsu_clip_full.py "${TRAIN_ARGS[@]}"
 )
 
-# ===================================================================
-# Step 6: inference -> result_detection.json
-# ===================================================================
+# Step 6: run inference on the test split.
 echo
 echo "=== [6/8] Inference ========================================"
 BEST_CKPT=$(ls -t "${EXP_DIR}"/*/checkpoint/best.pth 2>/dev/null | head -1 || true)
@@ -192,7 +168,7 @@ echo "  using checkpoint: ${BEST_CKPT}"
 
 (
   cd "${OPENTAD_DIR}"
-  # Use the same nproc_per_node as training so test.batch_size=2 stays valid.
+  # Same nproc_per_node as training so test.batch_size=2 stays valid.
   torchrun --nnodes=1 --nproc_per_node="${NPP}" \
     --rdzv_backend=c10d --rdzv_endpoint=localhost:0 \
     tools/test.py configs/actionformer/tsu_clip_full.py \
@@ -200,13 +176,11 @@ echo "  using checkpoint: ${BEST_CKPT}"
     --cfg-options evaluation.subset=testing
 )
 
-# Locate the predictions JSON OpenTAD wrote (with save_dict=True it lands at work_dir/result_detection.json)
+# With save_dict=True, OpenTAD writes the predictions JSON at work_dir/result_detection.json.
 RAW_PRED_FOUND=$(find "${EXP_DIR}" -name "result_detection.json" | head -1)
 echo "  raw predictions JSON: ${RAW_PRED_FOUND}"
 
-# ===================================================================
-# Step 7: post-process -> canonical predictions JSON
-# ===================================================================
+# Step 7: post-process the raw predictions into the canonical JSON.
 echo
 echo "=== [7/8] Post-processing predictions ====================="
 python "${SCRIPTS}/postprocess_predictions.py" \
@@ -221,20 +195,52 @@ python "${SCRIPTS}/verify_predictions.py" \
   --ground-truth "${SPLIT_JSON}" \
   --num-classes 51 | tee "${OUT}/verify.txt"
 
-# ===================================================================
-# Step 8: visualizations
-# ===================================================================
+# Step 7b: apply the matched prefilter on the 86-video evaluation subset.
+VIDEO_LIST="${OUT}/hybrid_eval_86.txt"
+TAD_86_JSON="${OUT}/tad_pipeline_results_86.json"
+TAD_86_CSV="${OUT}/tad_complete_eval_86.csv"
+GT_DIR="${DATASET_ROOT}/Annotation"
+
+if [[ -f "${VIDEO_LIST}" ]]; then
+  python "${SCRIPTS}/prefilter_tad_for_hybrid_eval.py" \
+    --predictions "${CANON_PRED}" \
+    --video-list  "${VIDEO_LIST}" \
+    --output      "${TAD_86_JSON}"
+
+  # Step 7c: run the shared evaluator to get the per-video LCS metrics CSV.
+  if [[ -d "${GT_DIR}" ]]; then
+    python "${SCRIPTS}/complete_eval.py" \
+      --pred  "${TAD_86_JSON}" \
+      --names TAD \
+      --gt    "${GT_DIR}" \
+      --fps   25 \
+      --out   "${TAD_86_CSV}"
+  else
+    echo "  GT_DIR ${GT_DIR} not found, skipping complete_eval.py."
+  fi
+else
+  echo "  ${VIDEO_LIST} missing, skipping prefilter and eval."
+fi
+
+# Step 8: render the figures the document uses. The showcase bars and 3-row
+# Gantts also need the hybrid-pipeline JSON, pass --hybrid-pipeline-json
+# and --hybrid-eval-csv on re-run when those are available.
 echo
 echo "=== [8/8] Generating figures =============================="
 LOG_FILE=$(find "${EXP_DIR}" -name "log.json" | head -1)
-python "${SCRIPTS}/visualize_results.py" \
-  --log         "${LOG_FILE}" \
-  --predictions "${CANON_PRED}" \
-  --annotations "${SPLIT_JSON}" \
-  --out-dir     "${OUT}/figures" \
-  --max-gantt   8
+VIS_ARGS=(
+  --log         "${LOG_FILE}"
+  --predictions "${CANON_PRED}"
+  --annotations "${SPLIT_JSON}"
+  --out-dir     "${OUT}/figures"
+)
+[[ -f "${VIDEO_LIST}" ]] && VIS_ARGS+=(--video-list "${VIDEO_LIST}")
+[[ -d "${GT_DIR}" ]]      && VIS_ARGS+=(--gt-dir "${GT_DIR}")
+[[ -f "${TAD_86_JSON}" ]] && VIS_ARGS+=(--tad-pipeline-json "${TAD_86_JSON}")
+[[ -f "${TAD_86_CSV}" ]]  && VIS_ARGS+=(--tad-eval-csv "${TAD_86_CSV}")
+python "${SCRIPTS}/visualize_results.py" "${VIS_ARGS[@]}"
 
-# Copy the headline log into outputs/ for easy retrieval
+# Copy the training log into outputs/ for easy retrieval.
 cp "${LOG_FILE}" "${OUT}/log.json"
 
 echo

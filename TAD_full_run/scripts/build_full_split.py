@@ -1,17 +1,9 @@
 """
-build_full_split.py
-===================
-Build the full-TSU annotation file for the cluster run from data_cs_split.json.
+Build the OpenTAD-shaped annotation file from data_cs_split.json.
 
-Operations:
-- Hold out N entire subjects from the training set as the validation set
-  (default: P25). The remaining 10 train subjects stay as training.
-- Test set is unchanged (the original CS test split).
-- Add a per-video `frame` field (= round(duration * fps)) required by
-  OpenTAD's ThumosPaddingDataset.
-- Write a `category_idx.txt` (one class per line, alphabetical) for OpenTAD.
-
-Outputs are deterministic given the same inputs.
+Moves --val-subjects from training to validation, leaves the test split alone,
+adds the per-video `frame` field that ThumosPaddingDataset needs, and writes a
+class_idx.txt sorted alphabetically.
 """
 
 import argparse
@@ -22,15 +14,11 @@ from pathlib import Path
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--input", required=True,
-                   help="path to data_cs_split.json")
-    p.add_argument("--output", required=True,
-                   help="output annotation JSON for OpenTAD")
-    p.add_argument("--cat-out", required=True,
-                   help="output category_idx.txt")
+    p.add_argument("--input", required=True, help="path to data_cs_split.json")
+    p.add_argument("--output", required=True, help="output annotation JSON for OpenTAD")
+    p.add_argument("--cat-out", required=True, help="output category_idx.txt")
     p.add_argument("--val-subjects", default="P25",
-                   help="comma-separated subject IDs to move from training to validation "
-                        "(must be a subset of the original training subjects)")
+                   help="comma-separated subject IDs to move from training to validation")
     p.add_argument("--fps", type=float, default=25.0)
     args = p.parse_args()
 
@@ -49,7 +37,7 @@ def main():
     if bad:
         raise SystemExit(
             f"--val-subjects {sorted(bad)} are not in the original training subjects "
-            f"({train_subjects_orig}); cannot move them to validation."
+            f"({train_subjects_orig}), cannot move them to validation."
         )
 
     out_db = {}
@@ -78,12 +66,12 @@ def main():
             f.write(c + "\n")
 
     print(f"Wrote {args.output}")
-    print(f"  videos: {len(out_db)}  ({dict(n_per_subset)})")
+    print(f"  videos        : {len(out_db)}  ({dict(n_per_subset)})")
     print(f"  train subjects: "
           f"{sorted(set(train_subjects_orig) - val_subjects)} "
           f"(moved {sorted(val_subjects)} to validation)")
-    print(f"  test subjects:  {test_subjects}")
-    print(f"  classes file:   {args.cat_out}  ({len(classes)} classes)")
+    print(f"  test subjects : {test_subjects}")
+    print(f"  classes file  : {args.cat_out}  ({len(classes)} classes)")
 
 
 if __name__ == "__main__":

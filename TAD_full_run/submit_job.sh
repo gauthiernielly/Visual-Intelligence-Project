@@ -11,13 +11,12 @@
 #SBATCH --error=tsu_full_%j.err
 
 # Full-TSU TAD training on SCITAS Izar.
-# Usage:
-#   sbatch submit_job.sh                          # default: full pipeline
-#   FEATURES_ONLY=1 sbatch submit_job.sh          # skip training, just extract features
-#   SKIP_FEATURES=1 sbatch submit_job.sh          # skip extraction (assume features done)
-#   RESUME_CKPT=<path> sbatch submit_job.sh       # resume from a previous training checkpoint
 #
-# To use 2 GPUs instead, change `--gres=gpu:1` above to `--gres=gpu:2` and halve --time.
+# Default: full pipeline. Useful env-var overrides:
+#   FEATURES_ONLY=1            stop after CLIP feature extraction
+#   SKIP_FEATURES=1            skip extraction, assume features already on disk
+#   RESUME_CKPT=<path>         resume training from a previous checkpoint
+#   DATASET_ROOT=<path>        parent of Videos_mp4, default /work/cs-503/sadgal
 
 cd "${SLURM_SUBMIT_DIR:-.}"
 
@@ -30,7 +29,7 @@ echo "PWD=$(pwd)"
 echo "DATE=$(date)"
 echo "=================================================="
 
-# Conda activation (Izar non-interactive shells need explicit hook)
+# Source conda. Izar's non-interactive shells need an explicit hook.
 if [[ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]]; then
   source "${HOME}/miniconda3/etc/profile.d/conda.sh"
 elif [[ -f "${HOME}/anaconda3/etc/profile.d/conda.sh" ]]; then
@@ -49,9 +48,9 @@ conda activate tsu || {
 
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=1
-export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-7.0;8.0}"  # V100 = sm_70, A100 = sm_80
+export TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST:-7.0;8.0}"  # V100=sm_70, A100=sm_80
 
-# Detect how many GPUs SLURM gave us; OpenTAD's torchrun needs nproc_per_node to match.
+# OpenTAD's torchrun needs nproc_per_node to match the GPU count SLURM granted.
 N_GPUS=$(nvidia-smi -L 2>/dev/null | wc -l)
 export N_GPUS
 echo "N_GPUS=$N_GPUS"

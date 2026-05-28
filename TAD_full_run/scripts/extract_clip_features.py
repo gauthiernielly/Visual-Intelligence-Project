@@ -1,13 +1,10 @@
 """
-extract_clip_features.py
-========================
 CLIP ViT-B/32 feature extraction for every video referenced by the annotation
-JSON. Resumable: skips videos whose .npy already exists.
+JSON. Skips videos whose .npy already exists, so it is safe to re-run.
 """
 
 import argparse
 import json
-import os
 from pathlib import Path
 
 import numpy as np
@@ -26,7 +23,6 @@ except ImportError:
 
 
 def list_videos_from_ann(video_dir, ann_file):
-    """Only extract features for videos present in the annotation file."""
     with open(ann_file) as f:
         db = json.load(f)["database"]
     out = []
@@ -35,7 +31,8 @@ def list_videos_from_ann(video_dir, ann_file):
         for ext in (".mp4", ".avi", ".mov", ".mkv"):
             p = Path(video_dir) / f"{vid}{ext}"
             if p.exists():
-                out.append(p); break
+                out.append(p)
+                break
         else:
             missing.append(vid)
     if missing:
@@ -47,7 +44,8 @@ def list_videos_from_ann(video_dir, ann_file):
 def video_dur_fps_count(path):
     if DECORD_OK:
         vr = VideoReader(str(path), ctx=cpu(0))
-        n = len(vr); fps = float(vr.get_avg_fps())
+        n = len(vr)
+        fps = float(vr.get_avg_fps())
         return n / max(fps, 1e-6), fps, n
     cap = cv2.VideoCapture(str(path))
     fps = cap.get(cv2.CAP_PROP_FPS)
@@ -57,7 +55,7 @@ def video_dur_fps_count(path):
 
 
 def sample_indices(n_native, native_fps, target_fps, feat_stride):
-    """One snippet every feat_stride/target_fps seconds."""
+    # One snippet every (feat_stride / target_fps) seconds.
     period = feat_stride / target_fps
     duration = n_native / native_fps
     n_snip = int(duration / period)
@@ -94,7 +92,7 @@ def main():
     p.add_argument("--video-dir", required=True)
     p.add_argument("--output-dir", required=True)
     p.add_argument("--ann-file", required=True,
-                   help="annotation JSON; only videos listed here are extracted")
+                   help="annotation JSON, only videos listed here are extracted")
     p.add_argument("--model", default="ViT-B-32")
     p.add_argument("--pretrained", default="laion2b_s34b_b79k")
     p.add_argument("--fps", type=float, default=25.0)
@@ -128,21 +126,28 @@ def main():
         vid = vpath.stem
         out_path = out_dir / f"{vid}.npy"
         if out_path.exists() and not args.overwrite:
-            n_skipped += 1; continue
+            n_skipped += 1
+            continue
 
         try:
             duration, native_fps, n_frames = video_dur_fps_count(vpath)
         except Exception as e:
-            print(f"  [error] {vid}: cannot open ({e})"); n_failed += 1; continue
+            print(f"  [error] {vid}: cannot open ({e})")
+            n_failed += 1
+            continue
 
         idx = sample_indices(n_frames, native_fps, args.fps, args.feat_stride)
         if not idx:
-            print(f"  [warn] {vid}: too short, skipping"); n_failed += 1; continue
+            print(f"  [warn] {vid}: too short, skipping")
+            n_failed += 1
+            continue
 
         try:
             frames = read_frames(vpath, idx)
         except Exception as e:
-            print(f"  [error] {vid}: read failed ({e})"); n_failed += 1; continue
+            print(f"  [error] {vid}: read failed ({e})")
+            n_failed += 1
+            continue
 
         feats = []
         with torch.no_grad():

@@ -1,10 +1,7 @@
 """
-postprocess_predictions.py
-==========================
-Read OpenTAD's `result_detection.json` (per-segment {segment, label, score}),
-augment each segment with the integer `label_id` (looked up from
-category_idx.txt), drop degenerate / low-confidence outputs, sort per video
-by start time, and write a canonical predictions JSON consumable by the
+Read OpenTAD's raw `result_detection.json`, add the integer `label_id` field,
+drop degenerate or low-confidence segments, dedupe segments produced by the
+DDP test sampler, and write the canonical predictions JSON consumed by the
 hybrid stage.
 """
 
@@ -34,10 +31,9 @@ def main():
     canon = {}
     n_kept = n_drop_dur = n_drop_score = n_drop_label = n_drop_dup = 0
     for vid, segs in results.items():
-        # Dedup key: (rounded start, rounded end, label_id). Keeps the highest
-        # score among any duplicates. DDP test-time inference can produce exact
-        # duplicate predictions when DistributedSampler pads the test set by
-        # repeating videos to make len(test_set) divisible by world_size.
+        # Dedup by (rounded start, rounded end, label_id), keep highest score.
+        # The DDP test sampler pads test_set to a multiple of world_size by
+        # repeating videos, so duplicate predictions can show up here.
         seen = {}
         for s in segs:
             label = s["label"]
@@ -66,8 +62,7 @@ def main():
                 "score":    score,
             }
             n_kept += 1
-        out = sorted(seen.values(), key=lambda x: x["segment"][0])
-        canon[vid] = out
+        canon[vid] = sorted(seen.values(), key=lambda x: x["segment"][0])
 
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     with open(args.output, "w") as f:
