@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/sadgal/visual_intelligence/Visual-Intelligence-Project/hybrid_pipeline.py", line 7, in <module>
+    import cv2
+ModuleNotFoundError: No module named 'cv2'
