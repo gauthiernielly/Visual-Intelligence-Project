@@ -2,7 +2,7 @@
 Evaluate temporal segmentation predictions against GT annotations.
 
 Metrics:
-  - Event-mAP at IoU in {0.05, 0.1, 0.3}
+  - Event-mAP at IoU in {0.1, 0.3, 0.5}
   - Global LCS recall, precision and F1-score
   - Per-class recall at IoU >= 0.05
   - Recall by event duration at IoU >= 0.1

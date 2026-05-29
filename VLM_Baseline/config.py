@@ -28,7 +28,7 @@ MAX_NEW_TOKENS = 512
 OUTPUT_DIR = "outputs"
 
 # ── Evaluation Intersection over Union thresholds ────────────────────────────
-MAP_IOU_THRESHOLDS = [0.05, 0.1, 0.3]   # Event-mAP thresholds
+MAP_IOU_THRESHOLDS = [0.1, 0.3, 0.5]   # Event-mAP thresholds
 CLASS_RECALL_IOU = 0.05                 # Per-class recall match threshold
 DURATION_RECALL_IOU = 0.1               # Recall by event duration match threshold
 HALLU_IOU = 0.05                        # Hallucination detection threshold

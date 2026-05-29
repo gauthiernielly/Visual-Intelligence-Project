@@ -1,0 +1,74 @@
+SLURM_JOB_ID=2951646
+HOSTNAME=i36
+ARGS: evaluate --eval_indices eval_indices.json
+Loading predictions from outputs/generated_segments.json ...
+Filtering to subset defined in eval_indices.json ...
+Loading GT annotations from /work/cs-503/sadgal/Annotation ...
+  86 videos  |  2362 predictions  |  6731 GT segments
+
+Computing Event-mAP ...
+Computing Global Average LCS metrics ...
+Computing per-class recall ...
+Computing detection rate by event duration ...
+Computing hallucination analysis ...
+Computing substitution errors ...
+
+── Results ───────────────────────────────────────────
+  mAP@0.1              0.0213
+  mAP@0.3              0.0142
+  mAP@0.5              0.0078
+  Mean recall          6.88 %  (over 51 classes with ≥1 GT instance)
+  Hallucination rate   52.24 %
+  Global LCS Recall    22.30 %
+  Global LCS Precision 59.45 %
+  Global LCS F1-Score  30.89 %
+
+  Detection by duration:
+    <1s       GT: 1951  detected:    8  recall: 0.4 %
+    1-2s      GT: 1722  detected:   18  recall: 1.1 %
+    2-10s     GT: 2219  detected:   64  recall: 2.9 %
+    10-30s    GT:  426  detected:   38  recall: 8.9 %
+    >30s      GT:  413  detected:  220  recall: 53.3 %
+
+  Top hallucinated classes:
+    Walk                       186  (15.1 %)
+    Drink.From_cup             165  (13.4 %)
+    Get_up                     119  (9.6 %)
+    Take_something_off_table    98  (7.9 %)
+    Sit_down                    77  (6.2 %)
+    Enter                       63  (5.1 %)
+    Read                        55  (4.5 %)
+    Put_something_on_table      44  (3.6 %)
+    Use_cupboard                32  (2.6 %)
+    Watch_TV                    30  (2.4 %)
+
+  Top substitution errors (predicted → gt):
+    Read                      → Watch_TV                            ×25
+    Walk                      → Put_something_on_table              ×22
+    Walk                      → Watch_TV                            ×21
+    Walk                      → Get_up                              ×18
+    Use_tablet                → Watch_TV                            ×18
+    Walk                      → Take_something_off_table            ×14
+    Walk                      → Drink.From_cup                      ×13
+    Use_laptop                → Watch_TV                            ×12
+    Watch_TV                  → Cook.Stir                           ×12
+    Watch_TV                  → Walk                                ×11
+
+  Per-subject LCS (recall / precision / F1):
+    P02   R: 19.3 %   P: 62.9 %   F1: 28.6 %   (14 videos)
+    P10   R: 21.4 %   P: 57.4 %   F1: 30.7 %   (13 videos)
+    P11   R: 29.3 %   P: 49.7 %   F1: 35.0 %   (10 videos)
+    P14   R: 23.0 %   P: 67.8 %   F1: 32.7 %   (7 videos)
+    P16   R: 20.6 %   P: 54.6 %   F1: 28.1 %   (16 videos)
+    P18   R: 25.2 %   P: 55.3 %   F1: 33.6 %   (13 videos)
+    P20   R: 19.8 %   P: 70.7 %   F1: 30.1 %   (13 videos)
+──────────────────────────────────────────────────────
+
+Metrics saved to outputs/metrics.json
+Per-video LCS saved to outputs/lcs_per_video.json
+
+Generating figures ...
+Figure saved to outputs/figures/recall_by_duration.png
+Figure saved to outputs/figures/recall_by_duration.html
+Figure saved to outputs/figures/per_class_recall.html
+Timeline viewer saved to outputs/figures/timeline_viewer.html

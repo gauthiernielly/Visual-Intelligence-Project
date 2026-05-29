@@ -1,4 +1,4 @@
-# Visual Intelligence Project — VLM Baseline
+# Pure VLM Baseline
 
 Zero-shot temporal activity detection on the **Toyota Smarthome Untrimmed (TSU)** dataset using a Vision-Language Model (Qwen3-VL-8B-Instruct). This repository contains the VLM baseline approach, one of three methods evaluated in this project alongside a Temporal Action Detection (TAD) model and a hybrid approach.
 
@@ -20,7 +20,7 @@ Evaluated on **86 videos** (Cross-Subject test split, subjects P02/P10/P11/P16/P
 | LCS Recall | 22.3% |
 | LCS Precision | 59.5% |
 | LCS F1 | 30.9% |
-| mAP @ IoU 0.05 | 2.4% |
+| mAP @ IoU 0.1 | 2.13% |
 
 The LCS (Longest Common Subsequence) metrics are computed identically across all three project approaches and are directly comparable. The low mAP reflects the model's difficulty with precise temporal localisation, while the higher LCS precision indicates that predicted event labels are often correct — the main failure mode is over-segmentation and temporal boundary inaccuracy.
 
@@ -66,7 +66,6 @@ VLM_Baseline/
 ### Environment
 
 ```bash
-cd VLM_Baseline
 bash setup_env.sh
 ```
 
@@ -74,7 +73,7 @@ This creates a conda environment named `pure_vlm` with Python 3.10, PyTorch 2.10
 
 ### Data paths
 
-Edit [VLM_Baseline/config.py](VLM_Baseline/config.py) to point to your data:
+Edit [config.py](config.py) to point to your data:
 
 ```python
 VIDEO_DIR = "/path/to/Videos_mp4"   # directory of .mp4 files
@@ -87,8 +86,6 @@ The annotation directory is expected to follow the structure `<GT_DIR>/<subject_
 ## Running the pipeline
 
 ```bash
-cd VLM_Baseline
-
 # Generate predictions for all videos in gen_indices.json
 sbatch submit_job.sh generate
 
@@ -96,7 +93,7 @@ sbatch submit_job.sh generate
 sbatch submit_job.sh evaluate --eval_indices eval_indices.json
 
 # Run generation then evaluation in a single job
-sbatch submit_job.sh all
+sbatch submit_job.sh (all)
 ```
 
 
@@ -120,7 +117,7 @@ sbatch submit_job.sh all
 | `--annotation_dir` | `config.GT_DIR` | Root directory of CSV annotations |
 | `--output_dir` | `outputs/` | Where to read `generated_segments.json` and write results |
 | `--eval_indices` | — | JSON list of video IDs to evaluate (all predictions if omitted) |
-| `--iou_thresholds` | `0.05 0.1 0.3` | IoU thresholds for mAP computation |
+| `--iou_thresholds` | `0.1 0.3 0.5` | IoU thresholds for mAP computation |
 
 ## Outputs
 
@@ -137,7 +134,7 @@ After running evaluate.py the following files are written to `outputs/`:
 
 ## Probing temporal reasoning (Q&A notebook)
 
-[VLM_Baseline/Q&A.ipynb](VLM_Baseline/Q&A.ipynb) is a diagnostic notebook that generates targeted questions and answers to identify where the model's temporal reasoning breaks down — for example, whether it confuses event ordering, misses short events, or hallucinates plausible-sounding but absent activities.
+[Q&A.ipynb](Q&A.ipynb) is a diagnostic notebook that generates targeted questions and answers to identify where the model's temporal reasoning breaks down — for example, whether it confuses event ordering, misses short events, or hallucinates plausible-sounding but absent activities.
 
 
 ## Common issues

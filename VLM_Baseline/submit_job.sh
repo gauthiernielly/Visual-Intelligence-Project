@@ -48,7 +48,7 @@ conda activate pure_vlm || {
 }
 
 # ── Mode dispatch ─────────────────────────────────────────────────────────────
-MODE="${1:-generate}"
+MODE="${1:-all}"
 shift || true   # remaining args forwarded to the selected script
 
 case "$MODE" in
